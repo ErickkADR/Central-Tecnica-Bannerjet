@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Erros Bannercut — Bannerjet Group</title>
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('bj-theme') || 'light');</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/Group.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="images/Bannerjet-Group-logo-White.png" alt="Bannerjet Group">
+    </a>
+    <nav class="header-nav">
+      <a href="index.html">Início</a>
+      <a href="index.html#categorias">Categorias</a>
+      <a href="firmwares.html">Firmwares</a>
+    </nav>
+    <div class="header-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Mudar tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:1">
+    <h1 class="page-hero-title">Erros <span class="accent">Bannercut</span></h1>
+    <p class="page-hero-desc">Tabela completa de erros e alertas das máquinas da linha Bannercut. Encontre o erro e saiba como resolver rapidamente.</p>
+  </div>
+</section>
+
+<div style="padding: 56px 0 64px">
+  <div class="container">
+
+    <!-- BUSCA -->
+    <div class="search-wrapper fade-up">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input
+        type="search"
+        id="firmware-search"
+        class="search-input"
+        placeholder="Pesquisar por código, nome do erro ou equipamento…"
+        autocomplete="off"
+      >
+    </div>
+
+    <!-- AVISO -->
+    <div class="params-intro fade-up" style="margin-bottom:28px">
+      <h3>Como usar esta tabela</h3>
+      <p>
+        Localize o código ou a descrição do erro que aparece no display ou software da sua máquina.
+        Siga os passos indicados na coluna <strong>"Como Resolver"</strong>. Se o problema persistir após as tentativas,
+        entre em contato com o suporte técnico Bannerjet.
+      </p>
+    </div>
+
+    <!-- TABELA -->
+    <div class="table-wrapper fade-up">
+      <table class="data-table" id="firmware-table" style="min-width:700px">
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Nome do Erro</th>
+            <th>Equipamentos</th>
+            <th>Causa</th>
+            <th>Como Resolver</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- ===== PLOTTERS DE PELÍCULA — Série Compacta (exibição: ERR = número) ===== -->
+          <tr style="background:var(--surface-2,#f0f4f8)">
+            <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+              <i class="fa-solid fa-scissors" style="margin-right:6px"></i>Plotters de Película — Série Compacta (exibição no APP: ERR = número)
+            </td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 1</strong></td>
+            <td>Corte fora do limite no eixo X</td>
+            <td>A3 Pro, Craft</td>
+            <td>O tamanho de corte no eixo X ultrapassa o limite da máquina</td>
+            <td>1. Verifique os dados de corte ou teste com outros dados. 2. Verifique o sensor esquerdo da placa do cabeçote. 3. Verifique o cabo do cabeçote. 4. Verifique a conexão entre o cabo e a placa principal. 5. Verifique a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 2</strong></td>
+            <td>Erro nos sensores de limite esquerdo e direito</td>
+            <td>A3 Pro, Craft</td>
+            <td>Falha na detecção dos sensores de fim de curso esquerdo e direito</td>
+            <td>1. Verifique os dois sensores da placa do cabeçote. 2. Verifique o cabo do cabeçote. 3. Verifique a conexão entre o cabo e a placa principal. 4. Verifique a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 3</strong></td>
+            <td>Falha no sensor direito</td>
+            <td>A3 Pro, Craft</td>
+            <td>Erro no sensor do lado direito do cabeçote de corte</td>
+            <td>1. Verifique os dados de corte ou teste com outros dados. 2. Verifique o sensor do lado direito da placa do cabeçote. 3. Verifique o cabo do cabeçote. 4. Verifique a conexão entre o cabo e a placa principal. 5. Verifique a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 4</strong></td>
+            <td>Falha no sensor esquerdo</td>
+            <td>A3 Pro, Craft</td>
+            <td>Erro no sensor do lado esquerdo do cabeçote de corte</td>
+            <td>1. Verifique os dados de corte ou teste com outros dados. 2. Verifique o sensor do lado esquerdo da placa do cabeçote. 3. Verifique o cabo do cabeçote. 4. Verifique a conexão entre o cabo e a placa principal. 5. Verifique a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 5</strong></td>
+            <td>Código de identificação inválido</td>
+            <td>A3 Pro, Craft</td>
+            <td>Erro no código de identificação da máquina</td>
+            <td>Encaminhe a placa principal para troca.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 6</strong></td>
+            <td>Falha no motor servo X ou encoder</td>
+            <td>A3 Pro, Craft</td>
+            <td>Erro no motor servo do eixo X ou no encoder</td>
+            <td>1. Verifique se o cabeçote X desliza suavemente sem travar com a máquina desligada. 2. Verifique se o cabo do motor servo X está conectado corretamente. 3. Verifique se o cabo da placa principal está conectado corretamente. 4. Verifique se a correia do eixo X está tensionada adequadamente. 5. Substitua o motor X ou a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 7</strong></td>
+            <td>Falha no motor servo Y ou encoder</td>
+            <td>A3 Pro, Craft</td>
+            <td>Erro no motor servo do eixo Y ou no encoder</td>
+            <td>1. Verifique se há objetos presos ou enrolados no eixo de alimentação. 2. Verifique se o cabo do motor servo Y está conectado corretamente. 3. Verifique se o cabo da placa principal está conectado corretamente. 4. Substitua o motor Y ou a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 10</strong></td>
+            <td>Erro no chip EEPROM da placa principal</td>
+            <td>A3 Pro, Craft</td>
+            <td>Falha no chip de memória EEPROM da placa-mãe</td>
+            <td>Encaminhe a placa principal para troca.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 11</strong></td>
+            <td>Erro no chip de cache da placa principal</td>
+            <td>A3 Pro, Craft</td>
+            <td>Falha no chip de cache de dados da placa-mãe</td>
+            <td>Encaminhe a placa principal para troca.</td>
+          </tr>
+
+          <!-- ===== PLOTTERS PUBLICITÁRIOS — Série Profissional (exibição: ERR: número no LCD) ===== -->
+          <tr style="background:var(--surface-2,#f0f4f8)">
+            <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+              <i class="fa-solid fa-desktop" style="margin-right:6px"></i>Plotters Publicitários — Série Profissional (exibição no LCD: ERR: número)
+            </td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 1</strong></td>
+            <td>Corte fora do limite no eixo X</td>
+            <td>Profissional V48, Saga 5373</td>
+            <td>O tamanho de corte no eixo X ultrapassa o limite da máquina</td>
+            <td>1. Verifique os dados de corte ou teste com outros dados. 2. Verifique o sensor esquerdo da placa do cabeçote. 3. Verifique o cabo do cabeçote. 4. Verifique a conexão entre o cabo e a placa principal. 5. Verifique a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 2</strong></td>
+            <td>Timeout na alimentação automática por sensor</td>
+            <td>Profissional V48, Saga 5373</td>
+            <td>Função de alimentação automática ativada; sensor não detectou o material dentro do tempo limite</td>
+            <td>1. Limpe o sensor. 2. Verifique se o material está posicionado corretamente. 3. Verifique a conexão do terminal do sensor. 4. Substitua o sensor ou a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 4</strong></td>
+            <td>Falha no reconhecimento das marcas de registro</td>
+            <td>Profissional V48, Saga 5373</td>
+            <td>Reconhecimento de marcas durante o corte por contorno malsucedido</td>
+            <td>1. Verifique se a iluminação da câmera está normal; ajuste o brilho se necessário. 2. Verifique se o porta-lâmina está próximo ao primeiro ponto MARK antes do corte. 3. Verifique se o arquivo de corte selecionado corresponde ao material impresso. 4. Verifique se o modo MARK (ponto ou canto) corresponde à impressão do material. 5. Verifique se a saída de imagem da câmera está normal; se houver ERR, substitua o módulo da câmera ou o cabo do cabeçote.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 8</strong></td>
+            <td>Erro nos sensores de limite esquerdo e direito</td>
+            <td>Profissional V48, Saga 5373</td>
+            <td>Falha na detecção dos sensores de fim de curso esquerdo e direito</td>
+            <td>1. Verifique os dois sensores da placa do cabeçote. 2. Verifique o cabo do cabeçote. 3. Verifique a conexão entre o cabo e a placa principal. 4. Verifique a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 16</strong></td>
+            <td>Falha no motor servo X ou encoder</td>
+            <td>Profissional V48, Saga 5373</td>
+            <td>Erro no motor servo do eixo X ou no encoder</td>
+            <td>1. Verifique se o cabeçote X desliza suavemente sem travar com a máquina desligada. 2. Verifique se o cabo do motor servo X está conectado corretamente. 3. Verifique se o cabo da placa principal está conectado corretamente. 4. Verifique se a correia do eixo X está tensionada adequadamente. 5. Substitua o motor X ou a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 32</strong></td>
+            <td>Falha no motor servo Y ou encoder</td>
+            <td>Profissional V48, Saga 5373</td>
+            <td>Erro no motor servo do eixo Y ou no encoder</td>
+            <td>1. Verifique se há objetos presos ou enrolados no eixo de alimentação. 2. Verifique se o cabo do motor servo Y está conectado corretamente. 3. Verifique se o cabo da placa principal está conectado corretamente. 4. Substitua o motor Y ou a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 64</strong></td>
+            <td>Máquina sem código PID</td>
+            <td>Profissional V48, Saga 5373</td>
+            <td>A máquina não possui código PID configurado</td>
+            <td>Encaminhe a placa principal para troca.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 128</strong></td>
+            <td>Erro no chip de cache da placa principal</td>
+            <td>Profissional V48, Saga 5373</td>
+            <td>Falha no chip de cache de dados da placa-mãe</td>
+            <td>Encaminhe a placa principal para troca.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 256</strong></td>
+            <td>Erro no chip EEPROM da placa principal</td>
+            <td>Profissional V48, Saga 5373</td>
+            <td>Falha no chip de memória EEPROM da placa-mãe</td>
+            <td>Encaminhe a placa principal para troca.</td>
+          </tr>
+
+          <!-- ===== MÁQUINAS DE ETIQUETA — Série com Alimentação Automática (exibição: ERR: 0-número) ===== -->
+          <tr style="background:var(--surface-2,#f0f4f8)">
+            <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+              <i class="fa-solid fa-tag" style="margin-right:6px"></i>Máquinas de Etiqueta — Série com Alimentação Automática (exibição no LCD: ERR: 0-número)
+            </td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 1</strong></td>
+            <td>Corte fora do limite no eixo X</td>
+            <td>Máquinas de Etiqueta Bannercut</td>
+            <td>O tamanho de corte no eixo X ultrapassa o limite da máquina</td>
+            <td>1. Verifique os dados de corte ou teste com outros dados. 2. Verifique o sensor esquerdo da placa do cabeçote. 3. Verifique o cabo do cabeçote. 4. Verifique a conexão entre o cabo e a placa principal. 5. Verifique a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 2</strong></td>
+            <td>Timeout do sensor durante a operação</td>
+            <td>Máquinas de Etiqueta Bannercut</td>
+            <td>O sensor não detectou o material dentro do tempo limite durante a operação</td>
+            <td>1. Limpe cada sensor. 2. Verifique se o material está posicionado corretamente. 3. Verifique a conexão do terminal do sensor. 4. Substitua o sensor ou a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 4</strong></td>
+            <td>Falha no reconhecimento das marcas de registro</td>
+            <td>Máquinas de Etiqueta Bannercut</td>
+            <td>Reconhecimento de marcas durante o corte por contorno malsucedido</td>
+            <td>1. Verifique se a iluminação da câmera está normal; ajuste o brilho se necessário. 2. Verifique se o porta-lâmina está próximo ao primeiro ponto MARK antes do corte. 3. Verifique se o arquivo de corte selecionado corresponde ao material impresso. 4. Verifique se o modo MARK (ponto ou canto) corresponde à impressão do material. 5. Verifique se a saída de imagem da câmera está normal; se houver ERR, substitua o módulo da câmera ou o cabo do cabeçote.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 8</strong></td>
+            <td>Erro nos sensores de limite esquerdo e direito</td>
+            <td>Máquinas de Etiqueta Bannercut</td>
+            <td>Falha na detecção dos sensores de fim de curso esquerdo e direito</td>
+            <td>1. Verifique os dois sensores da placa do cabeçote. 2. Verifique o cabo do cabeçote. 3. Verifique a conexão entre o cabo e a placa principal. 4. Verifique a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 16</strong></td>
+            <td>Arquivo QR code não encontrado</td>
+            <td>Máquinas de Etiqueta Bannercut</td>
+            <td>Arquivo correspondente ao QR code não localizado no modo QR</td>
+            <td>1. Nas configurações avançadas, confirme o local de busca do arquivo QR code selecionado. 2. Confirme se o arquivo com o nome reconhecido pelo QR code existe na pasta USB ou de rede correspondente.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 32</strong></td>
+            <td>Falha no motor servo X ou encoder</td>
+            <td>Máquinas de Etiqueta Bannercut</td>
+            <td>Erro no motor servo do eixo X ou no encoder</td>
+            <td>1. Verifique se o cabeçote X desliza suavemente sem travar com a máquina desligada. 2. Verifique se o cabo do motor servo X está conectado corretamente. 3. Verifique se o cabo da placa principal está conectado corretamente. 4. Verifique se a correia do eixo X está tensionada adequadamente. 5. Substitua o motor X ou a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 64</strong></td>
+            <td>Falha no motor servo Y ou encoder</td>
+            <td>Máquinas de Etiqueta Bannercut</td>
+            <td>Erro no motor servo do eixo Y ou no encoder</td>
+            <td>1. Verifique se há objetos presos ou enrolados no eixo de alimentação. 2. Verifique se o cabo do motor servo Y está conectado corretamente. 3. Verifique se o cabo da placa principal está conectado corretamente. 4. Substitua o motor Y ou a placa principal.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 128</strong></td>
+            <td>Máquina sem código PID</td>
+            <td>Máquinas de Etiqueta Bannercut</td>
+            <td>A máquina não possui código PID configurado</td>
+            <td>Encaminhe a placa principal para troca.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 256</strong></td>
+            <td>Erro no chip de cache da placa principal</td>
+            <td>Máquinas de Etiqueta Bannercut</td>
+            <td>Falha no chip de cache de dados da placa-mãe</td>
+            <td>Encaminhe a placa principal para troca.</td>
+          </tr>
+
+          <tr>
+            <td><strong>ERR 512</strong></td>
+            <td>Erro no chip EEPROM da placa principal</td>
+            <td>Máquinas de Etiqueta Bannercut</td>
+            <td>Falha no chip de memória EEPROM da placa-mãe</td>
+            <td>Encaminhe a placa principal para troca.</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:12px;color:var(--text-3);margin-top:14px">
+      <i class="fa-solid fa-circle-info" style="margin-right:4px"></i>
+      Os códigos de erro variam conforme a série da máquina. Consulte o cabeçalho de cada seção para identificar o formato exibido no seu equipamento.
+    </p>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-col"><h4>Plotters</h4><a href="A3.html">A3 Pro</a><a href="craft.html">Craft</a><a href="profissional-v48.html">Profissional V48</a><a href="saga-5373.html">Saga 5373</a></div>
+      <div class="footer-col"><h4>Recursos</h4><a href="firmwares.html">Firmwares</a><a href="manuais.html">Manuais Técnicos</a><a href="programas.html">Programas</a></div>
+      <div class="footer-col"><h4>Lasers</h4><a href="fibra-laser.html">Fibra Laser</a><a href="laser-co2.html">Laser CO2</a></div>
+      <div class="footer-col"><h4>Suporte</h4><a href="#">WhatsApp (11) xxxx-xxxx</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Bannerjet Group. Todos os direitos reservados.</span>
+      <span class="footer-brand">Central Técnica</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
