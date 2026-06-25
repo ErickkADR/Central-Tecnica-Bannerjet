@@ -1,0 +1,1003 @@
+A3 Servo - Ela faz corte e meio corte, pra vincar ela precisa de uma ferramenta a parte. Primeiro vinca e depois troca a ferramenta e faz o corte
+- Gramatura do papel até 300g
+- Motor servo
+- Velocidade: 1.200 mm/s
+- Limitação na media ( Faz do A4 ao super A3)
+
+A3 pro max 2 - Corte, meio corte. A máquina combina leitura por câmera para marcas de registro, corte rápido e preciso, força elevada e cabeça de vinco dedicada. Com conexões versáteis e software completo, agiliza o fluxo do design ao acabamento.
+- Suporta até 1000 folhas.
+- Alimentação por adsorção ( puxa as folhas por sistema de ar)
+- velocidade de até 1.200 mm/s
+- 2000g de força
+- motor servo
+
+A3 Pro Max 3 se destaca com seu avançado sistema de leitura por câmera, que reconhece as marcas de registro com extrema precisão, atingindo velocidade de até 1.200 mm/s e força de até 2.000 q. Além disso, possui cabeça dedicada para vinco tangencial, permitindo dobras precisas e acabamento profissional em embalagens e materiais promocionais.
+
+A conectividade também é um ponto forte: Wi-Fi, USB e cabo de dados, somados a um painel touch screen sensível e intuitivo, com interface totalmente em português para facilitar o dia a dia da operação. Vem equipada com o robusto software CameraCut, completo e fácil de usar, ideal para maximizar produtividade desde a criação até o corte final.
+
+-----------------------------------------------------------------------------------------
+
+DIFERENÇA DAS PLOTTER DE RECORTE 
+
+- LINHA  C (craft C16 - 60cm e 39cm - C24 60cm) -  750g de força, corta papel até 270g
+C24 - Com pedestal 
+C16 - Sem pedestal
+- Apenas corta, mas adquirindo a ferramenta de vinco a parte, consegue fazer o vinco tambem 
+- corta vinil
+
+-----------------------------------------------------------------------------------------
+ 
+- LINHA V (V24 60cm - V48 1,20mt) linha profissional  -  2000gr de força, corta papel até 300gr, risca PS 1mm e depois você destaca
+OBS: Apenas os modelos V cortam EVA
+- corta vinil
+- OBS: para riscar PS 1mm - precisa usar a lamina de 60
+
+Ambas com pedestal.
+
+-----------------------------------------------------------------------------------------
+
+- LINHA D (D24 60cm - D48 1,20mt) - ela é dupla cabeça - 2000g de força, corta e vinca (dual head), corta papel até 300g - motor passo 
+
+Ambas com pedestal e mesa de apoio.
+
+Basicamente a linha V e D atendem uma gramatura maior e a D faz o corte e o vinco de forma simultanea
+
+Quando o cliente falar que quer Plotter 60cm
+- de 60cm  tenho equipamento de entrada  -  800gr de força, corta papel até 270gr
+Tenho de 60cm e 1,20mt  na linha profissional  -  2000gr de força, corta papel até 300gr, risca PS 1mm e depois você destaca
+- Qual a gramatura do seu material?
+
+V48 1,20mt
+
+- Como ela já é da linha profissional ela consegue cortar qualquer tipo de adesivo, sendo até 300g
+- consegue riscar o ps de 1mm e voce destaca
+- para materias como acetato ela é super indicada, tudo depende da gramatura
+- 2000g de força
+
+V48
+
+Até que largura de mídia consegue entrar nela? (V48)
+
+equipamento possui espaço lateral de 1,30mt 
+mas para o corte tem 1,15mt com a câmera
+e 1,20mt sem a câmera
+
+-----------------------------------------------------------------------------------------
+
+SV60  1,50mt
+
+O modelo SV60 acompanha o software SignMaster que pode ser instalado em um computador, possibilitando a criação de arquivos de corte. Por outro lado, ela acompanha um plugin no Corel Draw que pode ser instalado em quantos computadores desejar.
+
+-----------------------------------------------------------------------------------------
+
+G1
+
+É um equipamento mais robusto, com sistema de vácuo para fixação da bobina, corte extremamente preciso e alinhamento contínuo, ideal para trabalhos mais exigentes e produção constante.
+Ela acompanha o software CutArtistic, com licença para instalação em até 3 computadores.
+Também acompanha plugin para CorelDRAW, igualmente limitado a 3 computadores.
+
+-----------------------------------------------------------------------------------------
+
+V24 - 60cm
+
+É um equipamento bastante procurado para produção de adesivos, letras, decals em vinil e muito mais. Equipamento possui câmera altamente precisa para marcas de registro, conexões Wi-Fi/USB/cabo, painel touch em português e software SignMaste incluso, para criar, organizar e enviar arquivos de corte com mais praticidade no dia a dia. 
+velocidade até 700 mm/s
+força de corte 2.000g
+
+ 60 cm sem marcas de registro / 55cm com marcas de registro
+
+mais detalhes V24 - é um equipamento de pedestal, da linha profissional, com foco em versatilidade de materiais. Ela corta EVA, risca PS de até 1mm, trabalha com folhas e bobinas e utiliza base de corte. Ou seja, entrega mais robustez e variedade, porém com um processo mais manual e voltado para aplicações específicas, não necessariamente para alto volume contínuo de papel.
+
+-----------------------------------------------------------------------------------------
+
+CAMPRO G2 
+
+ a plotter G2 não vem acompanhada de um programa, mas vem acompanhada do plugin SignWork para o CorelDraw. Um equipamento muito robusto, com vácuo para segurar a bobina,  corte extremamente preciso,  e alinhamento continuo.
+
+- NÃO TEM CORTE MATRIZ
+
+-----------------------------------------------------------------------------------------
+
+C02 - recorte
+
+ - Voltagem 220v - Disjuntor de 32A - Use fio de 4mm 
+- 3 tomadas por equipamento no padrão novo brasileiro 20A aterrado.
+- A impressora precisa de nobreack de 3kVA
+- corta acrilico e MDF
+
+-----------------------------------------------------------------------------------------
+
+Fibra laser 30w
+
+Quais materiais consegue fazer? 
+
+objetos metálicos, como chaveiros, facas, peças industriais, canetas, cigarros eletrônicos, garrafas, copos térmicos, cartões de crédito, além de materiais não metálicos como couro, acrílico e PVC.
+
+Equipamento completo com computador, ferramenta de gravação rotativa e ajuste de altura.
+
+Fonte: Raycus
+Cabeçote: RC1001CM-V1-GY
+Programa: Lightbuln
+
+-----------------------------------------------------------------------------------------
+
+Termolaminadoras
+
+A termolaminadora é uma máquina usada para plastificar documentos, aplicando uma película plástica com o uso de calor para protegê-los contra água, sujeira e rasgos. Ela serve para aumentar a durabilidade e melhorar o acabamento de papéis como certificados, crachás, cardápios e materiais escolares. Para usar, basta aquecer a máquina, colocar o documento dentro do envelope próprio de laminação e inserir pelo lado fechado, aguardando sair completamente e esfriar antes de manusear.
+
+-----------------------------------------------------------------------------------------
+
+Diferença L1 e L2
+
+L2 - É voltada para laminação de papel, por atingir 120°
+
+L1 - é voltada para laminação com adesivo transparente, ela trabalha com 60 graus 
+
+da para laminar papel tambem?
+ - se for usar filme BOPP precisa de 120°
+
+diferença da termolaminadora para outras marcas
+
+Nosso equipamento possui estrutura reforçada, aquecimento estável e compatibilidade com diferentes tipos de BOPP, garantindo produtividade, durabilidade e acabamento uniforme. Diferente de modelos convencionais, oferece maior resistência, melhor estabilidade térmica e capacidade para produção contínua, sendo ideal para gráficas rápidas, comunicação visual e personalizados.
+
+- Estrutura reforçada com eixos de ferro, mais resistente que laminadoras convencionais
+- Aquecimento estável e uniforme, reduzindo bolhas e falhas na laminação
+     - Suporta materiais de até 1,2 mm de espessura
+- Maior durabilidade para uso profissional e produção contínua
+- Compatibilidade com diferentes medidas de rolos
+
+-----------------------------------------------------------------------------------------
+
+MESA DE RECORTE NINACUT F3550
+
+
+Equipado com tela touch screen de 5”, detecção automática de bordas, adsorção a vácuo silenciosa e múltiplos métodos de conexão, o plotter de recorte garante cortes estáveis, suaves e de alta precisão. Facilita a transmissão de arquivos de corte com opções variadas de conectividade, via USB, Wi-Fi, rede ou pendrive para maior praticidade. Ideal para criação de diversos materiais promocionais, convites, etiquetas, adesivos,  caixas com cortes precisos e detalhados, e muito mais.. 
+
+Motor servo de até 1200mm/s
+
+-----------------------------------------------------------------------------------------
+
+Refiladora T2
+
+Equipamento possui cortes perfeitos em uma variedade de materiais, desde adesivos vinílicos e lonas até tecidos canvas com a destreza requerida pelo mercado competitivo de impressão. Com uma área de corte generosa de 160cm de largura. Possui inovadores sistemas de corte e de correção, com discos de corte duplo que garantem um acabamento claro e refinado. 
+O sensor de correção X garante um reconhecimento de cores exímio, enquanto o sensor de correção Y amplia a precisão do corte para que cada peça seja um reflexo do seu compromisso com a excelência. 
+
+- Motor servo 
+- Velocidade máxima: 18m linear/minuto
+- Largura Máxima de Corte: 152cm
+
+craft - Equipamento oferece leitura precisa por câmera, detecção de QR Code, painel touch em português, área de corte otimizada, agulha estável e conectividade completa, permitindo operações rápidas, organizadas e eficientes. Permite produzir adesivos personalizados em vinil para etiquetas, brindes, rótulos e pequenos produtos, toppers de bolo e muito mais.. 
+* Velocidade - 700 mm/s
+* Software - SignMaster
+* 800g de força, corta papel até 270g
+
+-----------------------------------------------------------------------------------------
+
+PROGRAMAS - impressoras 
+
+O software é o photprint para ripar e o sistema é o honson para operar a maquina
+photprint: Compatibilidade com BMP, TIFF, JPG, EPS e PDF oferecendo praticidade e controle durante a produção
+
+-----------------------------------------------------------------------------------------
+
+Uv Cilindrica
+RIP - RIIN
+Contolador - PS
+
+JHF (Konica)
+RIP - Print Factory
+Controlador - BYHX
+
+JHF (Ricoh)
+RIP - Print Factory
+Controlador - Hosson
+
+UV1612 (Epson)
+RIP - RIIN
+Controlador - Atools
+
+Infinity Challenger
+RIP - Print Factory
+Controlador - SQL Print
+
+Infinity Hybrid
+RIP - Print Factory
+Controlador - Hosson
+
+UV30
+RIP - RIIN
+Controlador - Hosson
+
+Demais máquinas
+Photoprint e Hosson
+
+-----------------------------------------------------------------------------------------
+
+Diferença T1 e T2
+
+São dois equipamentos diferentes, que possuem a mesma função, mas a capacidade de corte é melhor na T2, ambos equipamento entregam o mesmo objetivo. A T2 é um equipamento mais robusto, profissional, com sistema de movimentação preciso.
+
+-----------------------------------------------------------------------------------------
+
+Ninacut 1613T
+
+suporta material até 1mm, possui vácuo, painel touch, Ethernet e alta precisão para setor industrial e comunicação visual. Ferramentas UCT, EOT e caneta para meio corte, corte total em diversos materiais com controle digital. 
+A ninacut cria displays, rótulos, adesivos e peças personalizadas
+
+velocidade do corte: 500 mm/s
+Tipo de leitura: Câmera
+220v
+Conexão: Ethernet RJ45
+Ferramentas: UCT / EOT / CANETA
+Espessura de corte: Até 1 mm
+
+maquina de impressão rigida (materiais duros e usa superfícies)
+
+flatbeds, HYBRID e infinity
+
+-----------------------------------------------------------------------------------------
+
+exemplos de materiais rigidos (precisa verificar se realmente imprime em cada material citado abaixo)
+
+Acrílico
+PVC
+MDF
+Vidro
+Alumínio
+Madeira
+
+-----------------------------------------------------------------------------------------
+
+diferença DTF UV e UV LIGTH: A diferença é que a DTF Uv é mais dedicada para filmes DTF, e rolo a rolo. Você até consegue imprimir os mesmos matérias que imprimem na Uv 90, mas tem a limitação de medida e ela só trabalha com material fracionado.
+- Já na Uv 90 consegue trabalhar com folha por exemplo, ela tem pinça para prender o material.
+
+UV Light 90 3 Cab. I1600  -  uv light é maior e faz outros tipos de materias, como adesivo metalizado, etc.
+
+UV CILINDRICA 
+
+- ela consegue produzir em média 55 peças por hora. Mas pode variar de acordo com a qualidade desejada, e tamanho do material
+
+- a cabeça de impressão em média tem duração de 2 a 5 anos
+
+- tempo de impressão em garrafa de 600ml mais ou menos - 2 minutos aproximadamente
+
+
+-----------------------------------------------------------------------------------------
+
+(UV A3) 
+2796 - IMPRESSORA BANNERJET UV 30CM - MOD. YA3UV1TX - (1 Cab. TX800) 
+
+Velocidade - 1 metro linear a 20 a 30 min / 4m2 por ai
+Software Compatível - software rin de ripi e software de impressão printexp 
+Voltagem - 220v
+Conexão - de rede 
+Quantidade de Cores - CMKY + white 
+Resolução - 720 x 12 pass 
+Cabeça de impressão - TX800
+
+Ela é mais voltada para impressão de rótulos, adesivagem
+
+- media de tempo que dura a cabeça de impressão: 1 ano a 1 ano e meio
+- custo de impressão por media: é relativo
+- produção por hora: folha A4 - em média 20 minutos
+
+consumiveis 
+
+1651 - CABEÇA DE IMPRESSÃO EPSON TX800 
+2407 - Filme  A  +  B  
+Tinta  CMYK  + branco  +  verniz
+
+================================================================================
+PERGUNTAS FREQUENTES E RESPOSTAS TÉCNICAS
+================================================================================
+
+[A3 Servo]
+PERGUNTA: Como funciona o corte e o vinco na A3 Servo?
+RESPOSTA: A A3 Servo faz corte e meio corte. Para vincar, é necessário trocar a ferramenta: primeiro ela vinca e, depois, troca a ferramenta e realiza o corte.
+MANUAL: https://drive.google.com/file/d/1F8cLJQDwH6DFPmeGis7PajimlrP5ypt2/view?usp=sharing
+
+[A3 Servo]
+PERGUNTA: Quais são as especificações técnicas da A3 Servo?
+RESPOSTA: Suporta gramatura de papel até 300g, possui motor servo, velocidade de 1.200 mm/s e trabalha com mídia do tamanho A4 ao Super A3.
+MANUAL: https://drive.google.com/file/d/1iZnCDWjRIZt8QFj3EVewczXqnPUNprvU/view?usp=sharing
+
+[A3 Pro Max 2]
+PERGUNTA: Quais as principais características da A3 Pro Max 2?
+RESPOSTA: Faz corte e meio corte, combina leitura por câmera para marcas de registro, corte rápido e preciso, força elevada e cabeça de vinco dedicada. Possui conexões versáteis e software completo, agilizando o fluxo do design ao acabamento.
+MANUAL: https://drive.google.com/file/d/1fOoZGs6dreCP84CRnlOqEes3IYt6Quc0/view?usp=sharing
+
+[A3 Pro Max 2]
+PERGUNTA: Quais são as especificações técnicas da A3 Pro Max 2?
+RESPOSTA: Suporta até 1.000 folhas, possui alimentação por adsorção (puxa as folhas por sistema de ar), velocidade de até 1.200 mm/s, força de 2.000g e motor servo.
+MANUAL: https://drive.google.com/file/d/1HzV488RLZfmwqY_8QpjaR5DAPgF_hY1I/view?usp=sharing
+
+[A3 Pro Max 3]
+PERGUNTA: O que diferencia a A3 Pro Max 3?
+RESPOSTA: A A3 Pro Max 3 se destaca com seu avançado sistema de leitura por câmera, que reconhece as marcas de registro com extrema precisão, atingindo velocidade de até 1.200 mm/s e força de até 2.000g. Possui cabeça dedicada para vinco tangencial, permitindo dobras precisas e acabamento profissional em embalagens e materiais promocionais.
+VÍDEO: https://www.youtube.com/watch?v=9KMxADGWXVI
+MANUAL: https://drive.google.com/file/d/1-M4jNRBd-FSaBzUBEwhCjr3D6COuEcFn/view?usp=sharing
+
+[A3 Pro Max 3]
+PERGUNTA: Quais conexões e recursos de software a A3 Pro Max 3 possui?
+RESPOSTA: Conta com Wi-Fi, USB e cabo de dados, painel touch screen sensível e intuitivo com interface totalmente em português. Vem equipada com o software CameraCut, completo e fácil de usar, ideal para maximizar produtividade desde a criação até o corte final.
+MANUAL: https://drive.google.com/file/d/1mqFioR67Uo3vyrz3VI3Z1hjzjZRXNNwA/view?usp=sharing
+
+[Linha C (C16 / C24)]
+PERGUNTA: Qual a diferença entre a C16 e a C24?
+RESPOSTA: A Linha C (Craft C16 de 60cm e 39cm, e C24 de 60cm) tem 750g de força e corta papel até 270g. A C24 vem com pedestal, enquanto a C16 não possui pedestal.
+MANUAL: https://drive.google.com/file/d/1FUZ-LUapTgGW1hPV8dwPHoNKBGbvaZ3Z/view?usp=sharing
+
+[Linha C (C16 / C24)]
+PERGUNTA: A Linha C consegue vincar e cortar vinil?
+RESPOSTA: Apenas corta, mas adquirindo a ferramenta de vinco separadamente, ela também consegue fazer o vinco. Também corta vinil.
+MANUAL: https://drive.google.com/file/d/1oP_xiGRsPmuc94Us_Am0Ismm3IS3f1u1/view?usp=sharing
+
+[Linha V (V24 / V48)]
+PERGUNTA: Quais as especificações da Linha V?
+RESPOSTA: A Linha V (V24 de 60cm e V48 de 1,20m), de uso profissional, tem 2.000g de força, corta papel até 300g e risca PS de 1mm (que depois é destacado). Apenas os modelos V cortam EVA. Também corta vinil. Para riscar o PS de 1mm é necessário usar a lâmina de número 60. Ambos os modelos vêm com pedestal.
+MANUAL: https://drive.google.com/file/d/1KRj5wylJ5obxK0Vc5TYiqv86aYALNWAx/view?usp=sharing
+
+[Linha V (V24 / V48)]
+PERGUNTA: Até que largura de mídia entra na V48?
+RESPOSTA: O equipamento possui espaço lateral de 1,30m. Para o corte, a área útil é de 1,15m com a câmera e de 1,20m sem a câmera.
+MANUAL: https://drive.google.com/file/d/19kU2wd4PZCj-Y9VJKdEgOOnJssmL3Oz1/view?usp=sharing
+
+[Linha V (V24 / V48)]
+PERGUNTA: Quais as vantagens da V48 para o cliente?
+RESPOSTA: Como é da linha profissional, consegue cortar qualquer tipo de adesivo, com gramatura de até 300g, além de riscar o PS de 1mm para depois destacar. É super indicada para materiais como acetato, sempre considerando a gramatura. Possui 2.000g de força.
+
+[Linha V24]
+PERGUNTA: Quais as características específicas da V24?
+RESPOSTA: Equipamento bastante procurado para produção de adesivos, letras e decals em vinil. Possui câmera de alta precisão para marcas de registro, conexões Wi-Fi, USB e cabo, painel touch em português e o software SignMaster incluso para criar, organizar e enviar arquivos de corte. Velocidade de até 700 mm/s e força de corte de 2.000g. A largura útil é de 60cm sem marcas de registro e 55cm com marcas de registro.
+MANUAL: https://drive.google.com/file/d/1KRj5wylJ5obxK0Vc5TYiqv86aYALNWAx/view?usp=sharing
+
+[Linha V24]
+PERGUNTA: A V24 é indicada para qual tipo de produção?
+RESPOSTA: É um equipamento de pedestal, da linha profissional, com foco em versatilidade de materiais. Corta EVA, risca PS de até 1mm, trabalha com folhas e bobinas e utiliza base de corte. Entrega mais robustez e variedade, porém com processo mais manual e voltado a aplicações específicas, não sendo o ideal para alto volume contínuo de papel.
+
+[Linha D (D24 / D48)]
+PERGUNTA: O que diferencia a Linha D das demais?
+RESPOSTA: A Linha D (D24 de 60cm e D48 de 1,20m) é de cabeça dupla, com 2.000g de força. Corta e vinca simultaneamente (dual head), corta papel até 300g e utiliza motor passo. Ambos os modelos vêm com pedestal e mesa de apoio.
+MANUAL: https://drive.google.com/file/d/1TKPoL-K2dwMF9saPoA58Px2VwSt4zNWJ/view?usp=sharing
+
+[Linha D (D24 / D48)]
+PERGUNTA: Qual a diferença entre a Linha V e a Linha D?
+RESPOSTA: Basicamente, as linhas V e D atendem a uma gramatura maior, sendo que a Linha D realiza o corte e o vinco de forma simultânea.
+MANUAL: https://drive.google.com/file/d/1EVnmGmU9QdVdrt-ZJmO2gfqCQqNG2tsJ/view?usp=sharing
+
+[Plotters 60cm (Geral)]
+PERGUNTA: Quando o cliente pede uma plotter de 60cm, o que oferecer?
+RESPOSTA: Para 60cm, há o equipamento de entrada com 800g de força, que corta papel até 270g, e também a opção na linha profissional (60cm ou 1,20m), com 2.000g de força, que corta papel até 300g e risca PS de 1mm para depois destacar. A pergunta-chave para o cliente é: qual a gramatura do material dele?
+
+[Linha SV (SV60)]
+PERGUNTA: O que vem incluso na SV60?
+RESPOSTA: O modelo SV60 (1,50m) acompanha o software SignMaster, que pode ser instalado em um computador para a criação de arquivos de corte. Também acompanha um plugin para o CorelDRAW, que pode ser instalado em quantos computadores o cliente desejar.
+MANUAL: https://drive.google.com/file/d/1SNe3rosB_IotwUYo--jh9PJF_PbvvcM2/view?usp=sharing
+
+[Modelo G1]
+PERGUNTA: Quais as características do Modelo G1?
+RESPOSTA: É um equipamento robusto, com sistema de vácuo para fixação da bobina, corte extremamente preciso e alinhamento contínuo, ideal para trabalhos exigentes e produção constante. Acompanha o software CutArtist, com licença para instalação em até 3 computadores, e também o plugin para CorelDRAW, igualmente limitado a 3 computadores.
+VÍDEO: https://drive.google.com/file/d/1Ew0KQbzowvzH3TyZsiZ8NsXbj_s2V_jS/view?usp=sharing
+MANUAL: https://drive.google.com/file/d/1KvqOfcdyfV08jYMFoL0eNkQa4lthjEJT/view?usp=sharing
+
+[Modelo G2]
+PERGUNTA: O Modelo G2 vem com algum software?
+RESPOSTA: A plotter G2 não vem acompanhada de um programa próprio, mas vem com o plugin SignMaster para o CorelDRAW. É um equipamento muito robusto, com vácuo para segurar a bobina, corte extremamente preciso e alinhamento contínuo. Importante: o Modelo G2 não tem corte em matriz.
+VÍDEO: https://www.youtube.com/watch?v=iZx0HQveDaI
+MANUAL: https://drive.google.com/file/d/1_dCIuCcbfAGCYPhaYa5YPHB8Rzw-5_7p/view?usp=sharing
+
+[C02 (Recorte)]
+PERGUNTA: Quais são os requisitos elétricos da C02?
+RESPOSTA: Voltagem de 220V, disjuntor de 32A e uso de fio de 4mm. São necessárias 3 tomadas por equipamento no padrão novo brasileiro, 20A aterrado. A impressora precisa de nobreak de 3kVA.
+
+[C02 (Recorte)]
+PERGUNTA: Quais materiais a C02 consegue cortar?
+RESPOSTA: Corta acrílico e MDF.
+
+[Fibra Laser 30W]
+PERGUNTA: Quais materiais a Fibra Laser 30W consegue gravar?
+RESPOSTA: Objetos metálicos, como chaveiros, facas, peças industriais, canetas, cigarros eletrônicos, garrafas, copos térmicos e cartões de crédito, além de materiais não metálicos como couro, acrílico e PVC.
+VÍDEO: https://www.youtube.com/watch?v=uv4jbDCT9TE
+MANUAL: https://drive.google.com/file/d/1cIJVsSocN7dfRJtCkLcHOO4GI7-2xyQx/view
+
+[Fibra Laser 30W]
+PERGUNTA: Quais os componentes técnicos da Fibra Laser 30W?
+RESPOSTA: Equipamento completo com computador, ferramenta de gravação rotativa e ajuste de altura. Fonte Raycus, cabeçote RC1001CM-V1-GY e o programa utilizado é o LightBurn.
+VÍDEO: https://drive.google.com/file/d/1SPCFmelRNw4asNmOG4slsSbbdaQZ75CW/view?usp=sharing
+MANUAL: https://drive.google.com/file/d/1cIJVsSocN7dfRJtCkLcHOO4GI7-2xyQx/view
+
+[Termolaminadoras]
+PERGUNTA: Para que serve a termolaminadora e como utilizá-la?
+RESPOSTA: A termolaminadora plastifica documentos, aplicando uma película plástica com calor para protegê-los contra água, sujeira e rasgos. Aumenta a durabilidade e melhora o acabamento de papéis como certificados, crachás, cardápios e materiais escolares. Para usar, basta aquecer a máquina, colocar o documento dentro do envelope próprio de laminação e inseri-lo pelo lado fechado, aguardando sair completamente e esfriar antes de manusear.
+VÍDEO: https://www.youtube.com/watch?v=GfoKwAAND6s
+
+[Laminadora L1 / L2]
+PERGUNTA: Qual a diferença entre a L1 e a L2?
+RESPOSTA: A L2 é voltada para laminação de papel, atingindo 120°C. Já a L1 é voltada para laminação com adesivo transparente, trabalhando a 60°C.
+VÍDEO: https://www.youtube.com/watch?v=xIJXslIBDUQ&t=449s
+
+[Laminadora L1 / L2]
+PERGUNTA: A L1 também lamina papel?
+RESPOSTA: Sim, porém, se for usar filme BOPP, é necessário atingir 120°C.
+VÍDEO: https://www.youtube.com/watch?v=xIJXslIBDUQ&t=449s
+
+[Laminadora L1 / L2]
+PERGUNTA: O que diferencia nossa termolaminadora de outras marcas?
+RESPOSTA: Nosso equipamento possui estrutura reforçada com eixos de ferro (mais resistente que laminadoras convencionais), aquecimento estável e uniforme (reduzindo bolhas e falhas), compatibilidade com diferentes tipos e medidas de rolos de BOPP, suporta materiais de até 1,2mm de espessura e oferece maior durabilidade para uso profissional e produção contínua.
+
+[Mesa de Recorte NinaCut F3550]
+PERGUNTA: Quais as características da Mesa de Recorte NinaCut F3550?
+RESPOSTA: Equipada com tela touch screen de 5", detecção automática de bordas, adsorção a vácuo silenciosa e múltiplos métodos de conexão (USB, Wi-Fi, rede ou pendrive), garante cortes estáveis, suaves e de alta precisão. Ideal para criação de materiais promocionais, convites, etiquetas, adesivos e caixas com cortes precisos. Possui motor servo de até 1.200 mm/s.
+VÍDEO: https://drive.google.com/file/d/1GmO4efCfsEIPTiJVBBsKtFSduhddYY_H/view?usp=sharing
+
+[Refiladora T2]
+PERGUNTA: Quais as características da Refiladora T2?
+RESPOSTA: Realiza cortes perfeitos em diversos materiais, de adesivos vinílicos e lonas até tecidos canvas. Possui área de corte de 160cm de largura, com discos de corte duplo para acabamento claro e refinado. O sensor de correção X garante reconhecimento de cores preciso, enquanto o sensor de correção Y amplia a precisão do corte. Possui motor servo, velocidade máxima de 18m lineares por minuto e largura máxima de corte de 152cm.
+VÍDEO: https://drive.google.com/file/d/1gxIPs0da3Ogy7Ux-woNN5cICyGb9Qwtb/view?usp=sharing
+MANUAL: https://drive.google.com/file/d/1Bacp8i3NyLyLdjCVN7XR4DUY8SpXyAmZ/view
+
+[Diferença T1 e T2]
+PERGUNTA: Qual a diferença entre a Refiladora T1 e a T2?
+RESPOSTA: São dois equipamentos diferentes que possuem a mesma função, mas a capacidade de corte é melhor na T2. Ambos entregam o mesmo objetivo, sendo a T2 um equipamento mais robusto e profissional, com sistema de movimentação mais preciso.
+VÍDEO: https://drive.google.com/file/d/1OEovo8llOEi6_Z2elAu-UBC-u3qDNU3B/view?usp=sharing
+MANUAL: https://drive.google.com/file/d/1Bacp8i3NyLyLdjCVN7XR4DUY8SpXyAmZ/view
+
+[Craft (Plotter de Recorte)]
+PERGUNTA: Quais as características da plotter Craft?
+RESPOSTA: Oferece leitura precisa por câmera, detecção de QR Code, painel touch em português, área de corte otimizada, agulha estável e conectividade completa. Permite produzir adesivos personalizados em vinil para etiquetas, brindes, rótulos, pequenos produtos e toppers de bolo. Velocidade de 700 mm/s, software SignMaster e 800g de força, cortando papel até 270g.
+VÍDEO: https://www.youtube.com/watch?v=PCYq-CxjSvE&t=3s
+
+[Programas - Impressoras]
+PERGUNTA: Quais softwares são usados nas impressoras?
+RESPOSTA: O software utilizado para ripar é o PhotoPrint, e o sistema para operar a máquina é o Hosson. O PhotoPrint tem compatibilidade com os formatos BMP, TIFF, JPG, EPS e PDF, oferecendo praticidade e controle durante a produção.
+
+[RIP e Controladores por Modelo]
+PERGUNTA: Quais RIPs e controladores cada modelo de impressora utiliza?
+RESPOSTA: UV Cilíndrica: RIP RIIN, Controlador PS. JHF (Konica): RIP Print Factory, Controlador BYHX. JHF (Ricoh): RIP Print Factory, Controlador Hosson. UV1612 (Epson): RIP RIIN, Controlador Atools. Infinity Challenger: RIP Print Factory, Controlador SQL Print. Infinity Hybrid: RIP Print Factory, Controlador Hosson. UV30: RIP RIIN, Controlador Hosson. Demais máquinas utilizam PhotoPrint e Hosson.
+
+[NinaCut 1613T]
+PERGUNTA: Quais as especificações da NinaCut 1613T?
+RESPOSTA: Suporta material de até 1mm, possui vácuo, painel touch, conexão Ethernet e alta precisão para o setor industrial e comunicação visual. Conta com ferramentas UCT, EOT e caneta para meio corte e corte total em diversos materiais com controle digital. Cria displays, rótulos, adesivos e peças personalizadas. Velocidade de corte de 500 mm/s, leitura por câmera, voltagem 220V, conexão Ethernet RJ45 e espessura de corte de até 1mm.
+MANUAL: https://drive.google.com/file/u/2/d/1zPV5jhIfd3tl4qW3oqPUu1sEP0SUjrWN/view?usp=drive_link
+
+[Impressoras Rígidas (Flatbed)]
+PERGUNTA: Quais materiais rígidos as impressoras flatbed conseguem imprimir?
+RESPOSTA: As máquinas de impressão rígida (Flatbeds, Hybrid e Infinity) trabalham com materiais duros e usam superfícies como acrílico, PVC, MDF, vidro, alumínio e madeira. É importante verificar a aplicação específica para cada material, pois pode haver variação conforme o modelo.
+
+[UV DTF / UV Light]
+PERGUNTA: Qual a diferença entre a DTF UV e a UV Light?
+RESPOSTA: A DTF UV é mais dedicada para filmes DTF e funciona rolo a rolo. Consegue imprimir os mesmos materiais que a UV 90, mas com limitação de medida, trabalhando apenas com material fracionado. Já a UV 90 trabalha com folha, pois possui pinça para prender o material. A UV Light 90 3 Cab. I1600 é maior e imprime outros tipos de materiais, como adesivo metalizado.
+MANUAL: https://drive.google.com/file/d/1TsGkdKrLz-SUB39zxgLjCGbLWvitsXhw/view
+
+[UV Cilíndrica]
+PERGUNTA: Qual a produtividade da UV Cilíndrica?
+RESPOSTA: Produz, em média, 55 peças por hora, podendo variar de acordo com a qualidade desejada e o tamanho do material. A cabeça de impressão tem duração média de 2 a 5 anos. O tempo de impressão em uma garrafa de 600ml é de aproximadamente 2 minutos.
+
+[UV A3 (Bannerjet YA3UV1TX)]
+PERGUNTA: Quais as especificações da Impressora Bannerjet UV 30cm (Mod. YA3UV1TX)?
+RESPOSTA: Velocidade de 1 metro linear a cada 20-30 minutos (aproximadamente 4m² por hora). Compatível com o software RIN de ripagem e PrintExp para impressão. Voltagem 220V, conexão de rede, 5 cores (CMYK + branco) e resolução de 720 x 12 pass. Utiliza cabeça de impressão TX800. É mais indicada para impressão de rótulos e adesivagem.
+
+[UV A3 (Bannerjet YA3UV1TX)]
+PERGUNTA: Quais os custos e prazos médios de uso da UV A3?
+RESPOSTA: A cabeça de impressão dura, em média, de 1 ano a 1 ano e meio. O custo de impressão por unidade é relativo, dependendo do projeto. A produção por hora é de, em média, 20 minutos para uma folha A4. Os consumíveis incluem a Cabeça de Impressão Epson TX800 (código 1651) e o Filme A+B com tinta CMYK + branco + verniz (código 2407).
+
+================================================================================
+VÍDEOS TÉCNICOS — EQUIPAMENTOS
+================================================================================
+
+--- Linha C / V / SV / D ---
+  Como Montar o Pedestal das Plotters de Recorte
+  Link: https://www.youtube.com/watch?v=PCYq-CxjSvE&t=3s
+  Como Fazer a Limpeza dos Roletes do Equipamento
+  Link: https://www.youtube.com/watch?v=L2sSNsEyh1I
+  Como Fazer a Troca dos Roletes V do Equipamento
+  Link: https://drive.google.com/file/d/1rCU9o1MibcEtxAt60T7_-riuolwQVscp/view?usp=sharing
+  Como Fazer a Troca dos Roletes C do Equipamento
+  Link: https://drive.google.com/file/d/1rCU9o1MibcEtxAt60T7_-riuolwQVscp/view?usp=sharing
+  Como Fazer o Alinhamento de Câmera do Equipamento
+  Link: https://www.youtube.com/watch?v=9YsXq22EQN4
+  Esquema do Alinhamento Longe do Sensor
+  Link: https://drive.google.com/file/d/18cCobdTVZOve0vT2Wz12YNA4vNy_08No/view
+  Como Ajustar o Offset Utilizando o SignMaster
+  Link: https://www.youtube.com/watch?v=6bNOWAtXwHo
+  Como Fazer o Ajuste de Escala no seu Equipamento
+  Link: https://www.youtube.com/watch?v=cnIMZw7LtYI
+  Como Ajustar o LED do seu Equipamento
+  Link: https://www.youtube.com/watch?v=5vtNUptOpgw
+  Como Utilizar a Marcação Automática do Equipamento
+  Link: https://www.youtube.com/watch?v=5vtNUptOpgw
+  Como Utilizar o Corte em Matriz no Equipamento
+  Link: https://www.youtube.com/watch?v=nNi0hcOcEqc
+  Como Conectar WiFi e USB Utilizando o SignMaster
+  Link: https://www.youtube.com/watch?v=iK1UKG5Y4UE&t=4s
+
+--- Linha A3 ---
+  Como Reduzir a Velocidade da Puxada das Folhas na sua Plotter
+  Link: https://drive.google.com/file/d/1YSiHxvUdOJoDU0A_pixhvE7q4sn8RTtJ/view?usp=sharing
+  Como Ajustar o Rolete Branco da sua Plotter
+  Link: https://drive.google.com/file/d/18l06NB8WB2foRVdik_kMAeXFo0VpO89k/view?usp=sharing
+  Máquina Não Puxa a Folha: Como Fazer a Limpeza dos Sensores
+  Link: https://www.youtube.com/watch?v=7WmQ8aoTSeU&t=1s
+  Como Realizar a Troca da Mola do Equipamento
+  Link: https://www.youtube.com/watch?v=HrPmKhJV9DA
+  Como Ajustar a Trava da Base do Equipamento
+  Link: https://drive.google.com/file/d/1NGx26u1zOtXDytn9Fv0BkrH-XKFG8iOK/view
+  Como Ajustar o LED da Câmera do Equipamento
+  Link: https://www.youtube.com/watch?v=5vtNUptOpgw
+  Como Utilizar a Marcação e Leitura Automática (Auto Original Point)
+  Link: https://www.youtube.com/watch?v=GAbjA_w5q-c
+  Como Zerar e Ajustar o Offset do Equipamento
+  Link: https://drive.google.com/file/d/1IHXLtAAp7gUR3HDIpkFj-ur-m4zQKnWF/view?usp=sharing
+  Como Fazer a Limpeza dos Roletes do Equipamento
+  Link: https://www.youtube.com/watch?v=oVts9zlcazo
+  Como Conectar o CameraCut na Plotter Via WiFi e USB
+  Link: https://www.youtube.com/watch?v=shZCQu6UFaY
+  Como Fazer o Corte em Repetição (Laço)
+  Link: https://www.youtube.com/watch?v=IOr6-moeZ6g
+  Confira o Checklist da sua Plotter da Linha A3
+  Link: https://www.youtube.com/watch?v=-r_hNVh6FeA
+  Como Realizar a Montagem da sua Plotter da Linha A3
+  Link: https://www.youtube.com/watch?v=9KMxADGWXVI
+  Como Fazer o Corte em Matriz na A3 Pro
+  Link: https://drive.google.com/file/d/1SK0ISg2ryYJJgagvkp_IByJuxk6P7Zw9/view
+
+--- Fibra Laser ---
+  Como Realizar a Montagem da Fibra Laser
+  Link: https://www.youtube.com/watch?v=uv4jbDCT9TE
+  Como Ajustar a Altura do Foco Automático da Fibra Laser
+  Link: https://www.youtube.com/watch?v=aF3c5yEvizg
+  Como Ajustar os Feixes de Luz na Fibra Laser
+  Link: https://www.youtube.com/watch?v=242qmrq5Dq4
+  Como Ajustar a Ferramenta Rotativa da sua Fibra Laser
+  Link: https://www.youtube.com/watch?v=-Q_ZYrLGK6U
+  Como Realizar a Troca da Lente da sua Fibra Laser
+  Link: https://www.youtube.com/watch?v=P_BQn_Fny1E
+  Como Ajustar os Principais Parâmetros da Fibra Laser
+  Link: https://drive.google.com/file/d/1cA9LszFyMfSOuTxXjO4G_mnfAVHOi4_Z/view?usp=sharing
+  Como Criar Arquivos para Gravação a Laser Utilizando o EZCAD
+  Link: https://drive.google.com/file/d/1SPCFmelRNw4asNmOG4slsSbbdaQZ75CW/view?usp=sharing
+  Como Criar Arquivos para a Fibra Laser Usando o ChatGPT
+  Link: https://drive.google.com/file/d/1YPEjcM1TRxHdlv_seV42z3hyBNC19fMG/view?usp=sharing
+  Como Fazer a Pré-Visualização da Gravação na Fibra Laser Utilizando o EZCAD
+  Link: https://www.youtube.com/watch?v=MlelwFfJlUQ
+  Como Ajustar a Escala das Gravações na Fibra Laser Utilizando o EZCAD
+  Link: https://www.youtube.com/watch?v=hCEdW_XtrRI
+  Como Utilizar a Ferramenta Rotativa na Fibra Laser Utilizando o EZCAD
+  Link: https://www.youtube.com/watch?v=39vjvil7310
+
+--- NinaCut Saga 5373 ---
+  Como Realizar a Montagem da sua NinaCut Saga 5373
+  Link: https://www.youtube.com/watch?v=jFnIYl48Jsw
+  Como Utilizar o Display do Equipamento na NinaCut Saga 5373
+  Link: https://drive.google.com/file/d/1SUMlqPLrZRwk6bjEBYXGKF0MJWS60Get/view?usp=sharing
+  Como Criar Arquivos Utilizando sua NinaCut Saga 5373
+  Link: https://drive.google.com/file/d/1SUMlqPLrZRwk6bjEBYXGKF0MJWS60Get/view?usp=sharing
+  Como Enviar o Corte na sua NinaCut Saga 5373
+  Link: https://drive.google.com/file/d/1OsBtJgjjV8rHtzqzN-XniOEoXlKkGvB6/view?usp=sharing
+  Como Configurar Presets na sua NinaCut Saga 5373
+  Link: https://drive.google.com/file/d/1UhihMVSMC1V-8zy4jvv7Obtx9r6ZpURF/view?usp=sharing
+  Como Realizar o Alinhamento de Câmera no seu Equipamento da Saga
+  Link: https://www.youtube.com/watch?v=dgrPzMmKXbQ
+
+--- Refiladora T1 ---
+  Como Utilizar o Painel do Equipamento na Refiladora T1
+  Link: https://drive.google.com/file/d/1OEovo8llOEi6_Z2elAu-UBC-u3qDNU3B/view?usp=sharing
+  Primeiros Passos para Utilizar a Refiladora T1
+  Link: https://drive.google.com/file/d/12Yo-6y2buof3md6e3h6A8PHSs-ERQ4U-/view?usp=sharing
+  Como Utilizar o Debobinador na Refiladora T1
+  Link: https://drive.google.com/file/d/1ZpOmqe7BFbEpzNNOCjpIKDKuBFR7f_gq/view?usp=sharing
+  Como Colocar o Material na Refiladora T1
+  Link: https://drive.google.com/file/d/1PMKXvelLdVEJeNRl5FwHOvYogq9uhv9A/view?usp=sharing
+  Como Passar o Material na Refiladora T1
+  Link: https://drive.google.com/file/d/1gxIPs0da3Ogy7Ux-woNN5cICyGb9Qwtb/view?usp=sharing
+  Dicas para Ajustar o Material na Refiladora T1
+  Link: https://drive.google.com/file/d/1gaRQ-_Kgc7qLEVJkT75D0TgFZJrS_s0r/view?usp=sharing
+  Como Ajustar a Câmera da Refiladora T1
+  Link: https://drive.google.com/file/d/1VeKTieiGzjQTXneYx_q7KzzQtbtWErxs/view?usp=sharing
+  Como Posicionar as Lâminas na Refiladora T1
+  Link: https://drive.google.com/file/d/1ZDKTVoDXU_KyCiEWAt4L7lncdQs-ZCq7/view?usp=sharing
+  Como Iniciar o Corte na Refiladora T1
+  Link: https://drive.google.com/file/d/1MNw_HpSST2AsCjtu5UFnjwyEenTJLcSu/view?usp=sharing
+  Dicas Finais para Utilizar a Refiladora T1
+  Link: https://drive.google.com/file/d/1e_4T2L2LuKzEUj9iuG2EgLvlNtJyFVrB/view?usp=sharing
+
+--- Geral BannerCut ---
+  Como Cortar Arquivos Direto do Pendrive Utilizando o BannerCut
+  Link: https://www.youtube.com/watch?v=Yzl0hT4q2P0&t=5s
+  Como Conectar o WiFi Utilizando o BannerCut
+  Link: https://www.youtube.com/watch?v=V8azKQu1tbw
+  Como Posicionar a Caneta Utilizando o BannerCut
+  Link: https://www.youtube.com/watch?v=r9C3setKnlc&t=1s
+  Como Inverter o Eixo Y Utilizando o BannerCut
+  Link: https://www.youtube.com/watch?v=7RCdLzsEg8o
+  Como Fazer o Teste de Força Utilizando o BannerCut
+  Link: https://www.youtube.com/watch?v=esvbC40omiE
+  Diferenças Entre o Envio do Corte Com e Sem Leitura das Marcações
+  Link: https://drive.google.com/file/d/170wq69Gy_cpRslVcOfQFM9e-vfryrnux/view?usp=sharing
+  Como Salvar a Força Utilizada no BannerCut
+  Link: https://drive.google.com/file/d/18PQSEB6z43pJI4vd4kivMSiHOntlGqz5/view?usp=sharing
+  Como Restaurar o Padrão de Fábrica (Reset) na Plotter Utilizando o BannerCut
+  Link: https://drive.google.com/file/d/1U-QfAViP9tYB_Kv7YUG_2JqUBF0hvXsI/view?usp=sharing
+
+--- Modelo G2 ---
+  Como Montar o Pedestal do Modelo G2
+  Link: https://www.youtube.com/watch?v=d_318RbKzKo
+  Como Instalar o Plugin do SignMaster para o CorelDRAW no Modelo G2
+  Link: https://www.youtube.com/watch?v=iZx0HQveDaI
+  Tutorial do Plugin para CorelDRAW no Modelo G2
+  Link: https://drive.google.com/file/d/11nofu9sO8g8tuQbWgHVWewbsIelGqNMn/view?usp=sharing
+
+--- Vincadeira e Serrilhadeira ---
+  Como Realizar a Montagem da sua Vincadeira e Serrilhadeira
+  Link: https://drive.google.com/file/d/1KTrcR77TBxAfGjS6yGEyZGGlh66WF9Ip/view?usp=sharing
+  Entenda as Principais Funções da sua Vincadeira e Serrilhadeira
+  Link: https://drive.google.com/file/d/13tdmyvsdmK2U6EmkAQA-mgnSXZIWDyto/view?usp=sharing
+
+--- Modelo G1 ---
+  Como Montar o Pedestal do Modelo G1
+  Link: https://drive.google.com/file/d/1Ew0KQbzowvzH3TyZsiZ8NsXbj_s2V_jS/view?usp=sharing
+  Como Conectar o WiFi no Modelo G1
+  Link: https://drive.google.com/file/d/1kLsN9-8ZWvyfNlfm3OWOhl2uKnNxfSKR/view?usp=sharing
+  Como Realizar o Alinhamento de Câmera no seu Equipamento da Saga
+  Link: https://www.youtube.com/watch?v=dgrPzMmKXbQ
+  Como Atualizar sua Plotter do Modelo G1
+  Link: https://drive.google.com/file/d/1aFdUW5vaeKqXHh2O3wOl7rlSJIdx0izm/view?usp=sharing
+
+--- Guilhotina 49cm ---
+  Como Realizar a Montagem da Nova Guilhotina 49cm
+  Link: https://drive.google.com/file/d/1l-NICUv-V_n4t8Z-oeiYw8P66hLed8K4/view?usp=sharing
+  Confira Todas as Funcionalidades do Painel da sua Guilhotina Bannerjet
+  Link: https://www.youtube.com/watch?v=mNkx2qS8GSQ&list=PLbVu_W5Kn63613iIxHvs_r9vosePIz5Ps&index=4
+  Como Fazer os Ajustes Iniciais na Guilhotina 49cm
+  Link: https://www.youtube.com/watch?v=y5UiPcIFQec&list=PLbVu_W5Kn63613iIxHvs_r9vosePIz5Ps&index=3
+  Como Fazer o Alinhamento de Corte na Guilhotina
+  Link: https://www.youtube.com/watch?v=mYq9ey1cjZo
+  Como Trocar a Lâmina da Guilhotina
+  Link: https://www.youtube.com/watch?v=zhto0ziCACE&list=PLbVu_W5Kn63613iIxHvs_r9vosePIz5Ps&index=1
+  Como Corrigir o Erro 6 na Guilhotina
+  Link: https://www.youtube.com/watch?v=3xq1qLaJSXk
+
+--- CellCut ---
+  Como Utilizar o Equipamento CellCut
+  Link: https://drive.google.com/file/d/1RNeSRxNydt7ruJ6bWja3WcOPFss2AsDm/view?usp=sharing
+  Como Limpar os Dados (Cleaning/Update) no CellCut
+  Link: https://drive.google.com/file/d/1cP3ellBJx9GlrBWuqmycNabxS_00DEQ3/view?usp=sharing
+  Como Atualizar o Equipamento CellCut
+  Link: https://drive.google.com/file/d/1DqU5UZztFLmIvDcbNTNrjZfVzDdtG8Wo/view?usp=sharing
+  Como Atualizar os Modelos no CellCut
+  Link: https://drive.google.com/file/d/1mLSiQ07zvukcP7vj9liAqHehVrw8IRkH/view?usp=sharing
+
+--- Termo A3 ---
+  Como Utilizar o Equipamento Termo A3
+  Link: https://www.youtube.com/watch?v=gNkuUEGT04w
+  Como Fazer a Troca de Cilindro no Termo A3
+  Link: https://drive.google.com/file/d/1EzDjp2wMD7Fkag6lZ8Xyc6saR3bYCVKS/view
+
+--- Encadernadora HotMelt ---
+  Como Fazer os Ajustes Físicos na Fresa da sua Encadernadora
+  Link: https://drive.google.com/file/d/1zMEe4ct6gCtURRwWYKKVlqx3aP13QYPe/view?usp=sharing
+  Como Utilizar a sua Nova Encadernadora Bannerjet
+  Link: https://drive.google.com/file/d/1tnP1JkdQB6-tHWXkl4A0SZJwpCame2HG/view?usp=sharing
+  Como Realizar a Montagem da sua Encadernadora
+  Link: https://drive.google.com/file/d/1dHaJEum-TGmCj0Oi67NrzQv8YLgjpbTx/view?usp=sharing
+
+--- A3 Pro Max 3 ---
+  Como Realizar a Montagem da sua A3 Pro Max 3
+  Link: https://www.youtube.com/watch?v=BP0ZqUngK_c
+
+--- Laminadora L1 ---
+  Como Realizar a Montagem da Laminadora L1
+  Link: https://www.youtube.com/watch?v=CLCgV9NwhgQ
+  Como Utilizar a Laminadora L1
+  Link: https://www.youtube.com/watch?v=xIJXslIBDUQ&t=449s
+
+--- Guilhotina A3 ---
+  Como Realizar a Montagem da Nova Guilhotina A3
+  Link: https://drive.google.com/file/d/1Zm900ymxQkma_yk2COJadwfJcg3nErdT/view?usp=sharing
+  Como Utilizar a Nova Guilhotina A3
+  Link: https://drive.google.com/file/d/18Dim2A5aCEIdv8T_OO6aPe9EuIwEmqNX/view?usp=sharing
+
+--- Termolaminadora Pro ---
+  Como Realizar a Montagem da Termolaminadora Pro
+  Link: https://www.youtube.com/watch?v=WnuRq5e-EjA
+  Como Utilizar a Termolaminadora Pro
+  Link: https://www.youtube.com/watch?v=GfoKwAAND6s
+  Como Ajustar a Correia da Termolaminadora Pro
+  Link: https://drive.google.com/file/d/18Uzj3SYtuAld9jeA-yXggWX7PddYBOUE/view
+
+--- Solda de Letra ---
+  Como Realizar a Instalação da Letra Solda Bannerjet
+  Link: https://drive.google.com/file/d/1MAnqLW8USCetTVvAaWZw4LuCpXBfhRGe/view?usp=sharing
+
+--- Mesa de Corte F3550 ---
+  Conheça a Mesa de Corte F3550
+  Link: https://drive.google.com/file/d/1GmO4efCfsEIPTiJVBBsKtFSduhddYY_H/view?usp=sharing
+
+--- A3 Twin Head ---
+  Como Criar Arquivos Utilizando a A3 Twin
+  Link: https://www.youtube.com/watch?v=kRRVeYInaFE
+
+--- Dobradeira Letra Caixa ---
+  Como Realizar a Montagem da sua Dobradeira Letra Caixa
+  Link: https://drive.google.com/file/d/1MMm81q1TTbuK4HTH1dKubiyc30h65rmy/view?usp=sharing
+
+================================================================================
+VÍDEOS TÉCNICOS — SOFTWARES
+================================================================================
+
+--- LightBurn ---
+  Como Instalar o LightBurn para sua Fibra Laser Bannerjet
+  Link: https://drive.google.com/file/d/1p7uQlZu8MkAJwk5VzagVVuWbSPIMoRlK/view
+
+--- CorelDRAW ---
+  Como Criar Moldes Prontos e Padronizar seus Serviços Utilizando o CorelDRAW
+  Link: https://drive.google.com/file/d/1p7uQlZu8MkAJwk5VzagVVuWbSPIMoRlK/view
+  Como Imprimir seu Arquivo sem Linha de Contorno Utilizando o CorelDRAW
+  Link: https://drive.google.com/file/d/1NOH3SX7Z91-GM3E7JYNkqfM5YPrFobvt/view
+
+--- Silhouette Studio ---
+  Como Exportar Arquivos do Silhouette Studio para o SignMaster
+  Link: https://drive.google.com/file/d/10fKi4boCvGEYrAcWPFUdAGnjTucDp4PK/view
+
+--- EZCAD ---
+  Como Criar Arquivos para Gravação a Laser Utilizando o EZCAD
+  Link: https://drive.google.com/file/d/1SPCFmelRNw4asNmOG4slsSbbdaQZ75CW/view?usp=sharing
+  Como Alinhar a Pré-Visualização da Gravação na Fibra Laser Utilizando o EZCAD
+  Link: https://www.youtube.com/watch?v=MlelwFfJlUQ
+  Como Ajustar a Escala das Gravações na Fibra Laser Utilizando o EZCAD
+  Link: https://www.youtube.com/watch?v=hCEdW_XtrRI
+  Como Utilizar a Ferramenta Rotativa na Fibra Laser Utilizando o EZCAD
+  Link: https://www.youtube.com/watch?v=39vjvil7310
+
+--- Plugin SignMaster ---
+  Como Fazer a Instalação do Plugin SignMaster no CorelDRAW
+  Link: https://www.youtube.com/watch?v=hxA48kaS0BA&t=21s
+  Como Transformar sua Plotter de Recorte em Refiladora Utilizando o Plugin SignMaster
+  Link: https://www.youtube.com/watch?v=ngAh0HreV7I&t=722s
+
+--- SignMaster ---
+  Como Instalar o SignMaster
+  Link: https://www.youtube.com/watch?v=epm7I-GJXTI
+  Como Desativar a Licença do SignMaster
+  Link: https://www.youtube.com/watch?v=-Vi-1bscyfA
+  Como Ativar sua Licença Utilizando o Site Oficial do SignMaster
+  Link: https://drive.google.com/file/d/1sdWftKvvSbm6K6j3BopUPuUD6IusC9c8/view?usp=sharing
+  Como Fazer a Calibração do Corte com Compensação de Lâmina no SignMaster
+  Link: https://www.youtube.com/watch?v=1ZsmAF0NZyk
+  Como Limpar o Histórico de Cortes do seu SignMaster
+  Link: https://drive.google.com/file/d/14jk31Y4lWaZnW4nX0gPZVinLYLP0JOei/view?usp=sharing
+  Como Salvar seu Projeto Como Arquivo PLT ou CUT no SignMaster
+  Link: https://drive.google.com/file/d/1m20JmAVmy5H8GP-qIW3wDNfkAEGZsALL/view?usp=sharing
+  Como Conectar WiFi e USB Utilizando o SignMaster
+  Link: https://www.youtube.com/watch?v=iK1UKG5Y4UE
+  Como Instalar o Driver Utilizando o SignMaster
+  Link: https://www.youtube.com/watch?v=EBKYF4wCJoE
+  Como Conectar via USB Utilizando o SignMaster
+  Link: https://www.youtube.com/watch?v=scjmW5KHXiI&list=PLxc7L97eFV4OXEK3CYRGtdKXoQUMPeC6n&index=23
+  Como Criar seu Arquivo de Corte Utilizando o SignMaster
+  Link: https://www.youtube.com/watch?v=PT79pkAeLuU&t=2s
+  Como Fazer Corte e Vinco Utilizando o SignMaster
+  Link: https://drive.google.com/file/d/1cC7woXbPjhUB1z8vyO9OENm3LSUqqAJA/view?usp=sharing
+  Como Criar Caixinhas sem Ferramenta de Vinco no SignMaster
+  Link: https://drive.google.com/file/d/1lVKsVCE7rITrAgoF0EXXo3LCNO--wmaN/view?usp=sharing
+  Como Criar um Arquivo com Meio Corte e Corte Total no SignMaster
+  Link: https://drive.google.com/file/d/1vhowE4QBgRQZxO-C9tqVguoN4ZTikoBe/view?usp=sharing
+  Como Criar Topo de Bolo Utilizando o SignMaster
+  Link: https://drive.google.com/file/d/12kG3bOa7ls0Zo7IIHe2R0CaKEceYhYtG/view?usp=sharing
+  Como Fazer o Corte com QR Code Via Pendrive Utilizando o SignMaster
+  Link: https://www.youtube.com/watch?v=TnUZSizTucE
+  Como Criar um Servidor de QR Code com o SignMaster Pro
+  Link: https://drive.google.com/file/d/11L3wsVckfpj-YAvl5ZdXmX1ZYw6Tzm8Y/view?usp=sharing
+  Como Ajustar a Sangria do Corte nos seus Arquivos do SignMaster
+  Link: https://drive.google.com/file/d/1MMLD005gkw_LL8LJ97XmvP5J23EWMbfX/view?usp=sharing
+  Como Criar Linhas de Corte Manuais Utilizando o SignMaster
+  Link: https://drive.google.com/file/d/1Spc6LEL2Go4M_ReW9wPqAJ1GtQWh3t2f/view?usp=sharing
+
+--- CameraCut ---
+  Como Criar um Adesivo com Meio Corte e Corte Total Utilizando o CameraCut
+  Link: https://drive.google.com/file/d/1lXozQq73wFj0J5CaZBvsl0phVlnz2MbE/view
+  Como Instalar o CameraCut e seus Plugins
+  Link: https://www.youtube.com/watch?v=YdHiY5nbu9E
+  Como Habilitar o Plugin do CameraCut no CorelDRAW
+  Link: https://drive.google.com/file/d/1-S3338w-B1UyHAj7oFJ-FPaR78SCHz1o/view?usp=sharing
+  Como Habilitar o Plugin do CameraCut no Illustrator
+  Link: https://drive.google.com/file/d/1DiD7cgSge85W4X1CdG5IW_9VfXEEpSUF/view?usp=sharing
+  Como Desativar e Desinstalar o CameraCut
+  Link: https://www.youtube.com/watch?v=eQ47nc050Pg
+  Como Conectar o CameraCut na Plotter Via WiFi e USB
+  Link: https://www.youtube.com/watch?v=shZCQu6UFaY
+  Como Fazer a Leitura do QR Code Buscando Corte Via WiFi no CameraCut
+  Link: https://www.youtube.com/watch?v=D6uRoLy_DgQ
+  Como Fazer o Upgrade para a Versão Pro do CameraCut
+  Link: https://drive.google.com/file/d/1vHeyBq5jjtHFrZHu176a4PoA_IFkTAAN/view?usp=sharing
+  Como Alterar o Idioma do CameraCut de Chinês para Inglês
+  Link: https://drive.google.com/file/d/1xmDfuLziRVrDe9jmxJcxzfMooXWNNbDU/view
+  Como Criar um Arquivo de Corte Teste Utilizando o CameraCut
+  Link: https://drive.google.com/file/d/137sQc0ARfAdX7_mVRRdo_iexMfMF0bmg/view?usp=sharing
+  Como Fazer o Corte Direto Utilizando o CameraCut
+  Link: https://drive.google.com/file/d/1d4non8wu4SbDRsbHKdpzdu0D6-L5IK7f/view?usp=drive_link
+  Como Criar Arquivos de Caixa com Corte e Vinco Utilizando o CameraCut
+  Link: https://drive.google.com/file/d/1bzr2FnT1T8Z6EB0hVxoMn7uJwRKObIEB/view?usp=sharing
+  Como Criar Corte Pontilhado e Serrilhado Utilizando o CameraCut
+  Link: https://drive.google.com/file/d/1xl1f8ZbHdleGQwLQb_5UhpKHHgAqYHku/view?usp=sharing
+  Como Ajustar a Sangria do Corte nos seus Arquivos do CameraCut
+  Link: https://drive.google.com/file/d/1W5s63UN-jmOqixEtmCzDauLTA6ijRX0Y/view?usp=sharing
+  Como Criar um Arquivo com Meio Corte e Corte Total Utilizando o CameraCut
+  Link: https://drive.google.com/file/d/1PNbu67i4KRFvze12u47FxVloQRqAhgGg/view?usp=sharing
+
+--- CameraCut – Illustrator ---
+  Como Habilitar o Plugin do CameraCut no Illustrator
+  Link: https://drive.google.com/file/d/1DiD7cgSge85W4X1CdG5IW_9VfXEEpSUF/view?usp=sharing
+  Como Enviar o Arquivo de Corte Direto pelo Illustrator
+  Link: https://www.youtube.com/watch?v=CRPDZe4M3hQ
+
+--- CameraCut – CorelDRAW ---
+  Como Habilitar o Plugin do CameraCut no CorelDRAW
+  Link: https://drive.google.com/file/d/1-S3338w-B1UyHAj7oFJ-FPaR78SCHz1o/view?usp=sharing
+  Como Criar Arquivo de Corte em Ondas (Waves) para Stickers no CorelDRAW
+  Link: https://www.youtube.com/watch?v=bqDO5ZwBn7U
+  Como Fazer Corte Pontilhado, Serrilhado e Dobradura sem Ferramenta de Vinco
+  Link: https://www.youtube.com/watch?v=EeUSpNNS6QQ
+  Como Criar Arquivo de Caixinha com Corte e Vinco no CorelDRAW Utilizando o CameraCut
+  Link: https://www.youtube.com/watch?v=n28P38G2tU8
+  Como Fazer o Corte Pontilhado (Dashed Lines) Utilizando o Plugin CameraCut
+  Link: https://drive.google.com/file/d/1nIm1k49apKb3wef7J8iUn6B5pyBTtgdM/view?usp=sharing
+
+--- CutArtist ---
+  Como Instalar o CutArtist e o Plugin no CorelDRAW
+  Link: https://drive.google.com/file/d/105v4mqNaK8jtvZtVRHhmSBezB26m4mSJ/view?usp=sharing
+  Aprenda as Funcionalidades Básicas do CutArtist
+  Link: https://drive.google.com/file/d/1AmKr3_-dQFLW1dJ8h7BEOaBZIshd_Rtj/view?usp=sharing
+  Como Criar Arquivos de Corte Utilizando o Plugin do CutArtist no CorelDRAW
+  Link: https://drive.google.com/file/d/1DzIohAA5gbL0pVuPzUsR-achHjhVvp3w/view?usp=sharing
+  Como Criar Arquivos de Caixinhas Utilizando o CutArtist
+  Link: https://drive.google.com/file/d/1zJX_3hRUddj65D2o2dtZx8AFURX4Ue3D/view?usp=sharing
+  Como Configurar Presets do seu Corte no CutArtist
+  Link: https://drive.google.com/file/d/11_UkiIk8rB8qnxCc6d_oxRakldwb_MIR/view?usp=sharing
+  Como Fazer o Corte em Matriz Utilizando o CutArtist
+  Link: https://drive.google.com/file/d/1jMIsAURlV37jHumk8z6B9XWoVnq7OqEs/view?usp=sharing
+  Como Ajustar a Qualidade do seu Arquivo de Corte Utilizando o CutArtist
+  Link: https://drive.google.com/file/d/1cX1EMFliuZLH8-Vdbr2eYjWJsWEmPQ96/view?usp=sharing
+
+================================================================================
+PROCEDIMENTOS DE MANUTENÇÃO
+================================================================================
+
+--- A3 Pro ---
+  Como Realizar a Troca do Cabo Flat Longo da sua A3 Pro
+  Link: https://drive.google.com/file/d/1TZOpSQKpWltlKfKyD3Yp_mYyU_0ik0ZD/view
+  Como Realizar a Troca da Fonte da sua A3 Pro
+  Link: https://drive.google.com/file/d/1W2qBHsnRhVCpqN3JE27z2eSY0GWzuz1H/view
+  Como Realizar a Troca do Teflon de Silicone na sua A3 Pro
+  Link: https://drive.google.com/file/d/1aIseV7mO0p3UnHGjojhM3tIiRC0rElHV/view
+  Como Realizar a Troca do Teflon Carpete do Equipamento
+  Link: https://drive.google.com/file/d/1ltt8Mo7w9PuCLHVu2CPTYKGLZyJ2XMAA/view?usp=sharing
+  Como Realizar a Limpeza da Coluna do Carro de Recorte da sua A3
+  Link: https://drive.google.com/file/d/1DVViFyT3Xo9IOmjLHQajZaQIigcMShpK/view
+  Como Ajustar a Solenoide da sua Plotter da Linha A3
+  Link: https://drive.google.com/file/d/1Hz31UsoljZ-PUwBEgfWedQPNtUfCVl-u/view
+  Como Ajustar os Roletes Guias da sua Plotter de Recorte
+  Link: https://drive.google.com/file/d/1tIQIqaoAD3G0MdsNIJC4ehOnBAbODezg/view
+  Como Ajustar a Polia e a Correia da A3
+  Link: https://drive.google.com/file/d/1ZQht2qcZOre-Jzq9cqTU1XLX2UzGvAPa/view
+  Como Inverter o Flat do Carrinho do Equipamento
+  Link: https://drive.google.com/file/d/1QaChkYxZWoVSWazqVxD4naRDcEPvkW9h/view
+  Como Utilizar o Módulo de Tracionamento para Puxar a Folha
+  Link: https://www.youtube.com/shorts/16j3mfTp0Nk
+  Como Realizar a Troca da Fonte da sua Plotter da Linha A3 Servo e Pro Max
+  Link: https://drive.google.com/file/d/1Px0uNFzIk-Y6-Tr4puFtp87REt3gBQye/view
+  Tutorial: Como Nivelar os Roletes Frontais da A3
+  Link: https://drive.google.com/file/d/1t13TKyGMD4r6HV1gefipqIyTWI5zYOWC/view
+
+================================================================================
+MANUAIS TÉCNICOS (PDFs)
+================================================================================
+
+--- Linha Saga ---
+  Manual Técnico - Saga Roll
+  Link: https://drive.google.com/file/d/1tTiGYfmGyhqfjQbTfhyPqg9ZpEtQWASD/view
+
+--- A3 Pro ---
+  Manual de Utilização A3 Pro
+  Link: https://drive.google.com/file/d/1-C-JPVzTt8dwkXJQKu69bK1iX-iX_jGe/view?usp=sharing
+  Manual do Equipamento A3 Pro
+  Link: https://drive.google.com/file/d/10bmQzoW2lJvC7x8P7D_xU_Vx8mp5xNOS/view?usp=sharing
+
+--- A3 Servo ---
+  Manual de Utilização A3 Servo
+  Link: https://drive.google.com/file/d/1F8cLJQDwH6DFPmeGis7PajimlrP5ypt2/view?usp=sharing
+  Manual do Equipamento A3 Servo
+  Link: https://drive.google.com/file/d/1iZnCDWjRIZt8QFj3EVewczXqnPUNprvU/view?usp=sharing
+
+--- A3 Pro Max ---
+  Manual de Utilização A3 Pro Max
+  Link: https://drive.google.com/file/d/1UMmy9rHNyGxFkjKf29JVIdzlDxUdeyJa/view?usp=sharing
+  Manual do Equipamento A3 Pro Max
+  Link: https://drive.google.com/file/d/1MpeT6TkMsCD5lEE-Vo6nJ_Agm6GLBeVd/view?usp=sharing
+
+--- A3 Pro Max 2 ---
+  Manual de Utilização A3 Pro Max 2
+  Link: https://drive.google.com/file/d/1fOoZGs6dreCP84CRnlOqEes3IYt6Quc0/view?usp=sharing
+  Manual do Equipamento A3 Pro Max 2
+  Link: https://drive.google.com/file/d/1HzV488RLZfmwqY_8QpjaR5DAPgF_hY1I/view?usp=sharing
+
+--- A3 Pro Max 3 ---
+  Manual de Utilização A3 Pro Max 3
+  Link: https://drive.google.com/file/d/1-M4jNRBd-FSaBzUBEwhCjr3D6COuEcFn/view?usp=sharing
+  Manual do Equipamento A3 Pro Max 3
+  Link: https://drive.google.com/file/d/1mqFioR67Uo3vyrz3VI3Z1hjzjZRXNNwA/view?usp=sharing
+
+--- A3 Twin ---
+  Manual de Utilização A3 Twin
+  Link: https://drive.google.com/file/d/11m_QtagFMidk7FJLneTgTxQW2KFs1OPd/view?usp=sharing
+  Manual do Equipamento A3 Twin
+  Link: https://drive.google.com/file/d/1XmzeYvRU0nMipqhl9dwsJrCqqrAdLYSb/view?usp=sharing
+
+--- Linha C16 ---
+  Manual de Utilização dos Equipamentos da Linha C16
+  Link: https://drive.google.com/file/d/1FUZ-LUapTgGW1hPV8dwPHoNKBGbvaZ3Z/view?usp=sharing
+  Manual dos Equipamentos da Linha C16
+  Link: https://drive.google.com/file/d/1oP_xiGRsPmuc94Us_Am0Ismm3IS3f1u1/view?usp=sharing
+
+--- Linha D ---
+  Manual de Utilização da Linha D
+  Link: https://drive.google.com/file/d/1TKPoL-K2dwMF9saPoA58Px2VwSt4zNWJ/view?usp=sharing
+  Manual dos Equipamentos da Linha D
+  Link: https://drive.google.com/file/d/1EVnmGmU9QdVdrt-ZJmO2gfqCQqNG2tsJ/view?usp=sharing
+
+--- Linha G1 ---
+  Manual Técnico G1
+  Link: https://drive.google.com/file/d/1KvqOfcdyfV08jYMFoL0eNkQa4lthjEJT/view?usp=sharing
+
+--- Linha G2 ---
+  Manual Técnico G2
+  Link: https://drive.google.com/file/d/1_dCIuCcbfAGCYPhaYa5YPHB8Rzw-5_7p/view?usp=sharing
+
+--- Linha V ---
+  Manual de Utilização da Linha V
+  Link: https://drive.google.com/file/d/1KRj5wylJ5obxK0Vc5TYiqv86aYALNWAx/view?usp=sharing
+  Manual dos Equipamentos da Linha V
+  Link: https://drive.google.com/file/d/19kU2wd4PZCj-Y9VJKdEgOOnJssmL3Oz1/view?usp=sharing
+
+--- Linha SV ---
+  Manual de Utilização da Linha SV
+  Link: https://drive.google.com/file/d/1SNe3rosB_IotwUYo--jh9PJF_PbvvcM2/view?usp=sharing
+  Manual dos Equipamentos da Linha SV
+  Link: https://drive.google.com/file/d/1KRkQi6--NoNVEBB1DhErCHkjjUPve130/view?usp=sharing
+
+--- NinaCut 1613T ---
+  Manual NinaCut 1613T
+  Link: https://drive.google.com/file/u/2/d/1zPV5jhIfd3tl4qW3oqPUu1sEP0SUjrWN/view?usp=drive_link
+
+--- I1600 DTF Series ---
+  Manual I1600 DTF Series - Impressora Inkjet Série DTF
+  Link: https://drive.google.com/file/d/1TsGkdKrLz-SUB39zxgLjCGbLWvitsXhw/view
+
+--- Acabamentos ---
+  Manual Ilhoseira Automática - Operações e Configurações
+  Link: https://drive.google.com/file/d/1EP2MX2KLJJhRiB00BMenCfYpJO6llN9z/view
+  Manual Refiladora T1
+  Link: https://drive.google.com/file/d/1Bacp8i3NyLyLdjCVN7XR4DUY8SpXyAmZ/view
+  Manual Guilhotina A3
+  Link: https://drive.google.com/file/d/1aGvBLzel8upa1oamAF9a95SOS48P8HDO/view
+
+--- Acrílico ---
+  Manual Dobradeira de Acrílico
+  Link: https://drive.google.com/file/d/1l9_NbZrwX-YkreHD7eCaM3L9ZkSpgQ8z/view
+  Manual Polideira de Acrílico
+  Link: https://drive.google.com/file/d/1QXp_OUbsE--EgEei4xuJyrrG4Nf_0dw3/view
+
+--- Fibra Laser ---
+  Manual Fibra Laser
+  Link: https://drive.google.com/file/d/1cIJVsSocN7dfRJtCkLcHOO4GI7-2xyQx/view
+
+--- Plugin SignMaster ---
+  Manual Plugin BannerCut para CorelDRAW
+  Link: https://drive.google.com/file/d/14w5yuyDp-VRWX7U6HN0EKbvPFNYIlEtG/view
+
+================================================================================
+REPOSITÓRIOS DE ARQUIVOS
+================================================================================
+  Arquivos de Corte: https://drive.google.com/drive/u/2/folders/1jcPo4nWvje6-UipmTFuLe9WYf2GgiJRK
+  Arquivos de Impressão: https://drive.google.com/drive/u/2/folders/1qe2rzmBlLrsVA5_sPSQix5W3A46cWN74
+  Arquivos de Laser: https://drive.google.com/drive/u/2/folders/1sTI3XnjzttKx2xfQG9UMSSwYiZnHFCDa

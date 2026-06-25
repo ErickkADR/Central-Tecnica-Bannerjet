@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso Técnico — Bannerjet Group</title>
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('bj-theme') || 'light');</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="curso.css">
+  <link rel="shortcut icon" href="images/Group.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="images/Bannerjet-Group-logo-White.png" alt="Bannerjet Group">
+    </a>
+    <nav class="header-nav">
+      <a href="index.html">Início</a>
+      <a href="https://www.youtube.com/@BannerjetBr" target="_blank">Youtube</a>
+      <a href="https://miro.com/welcomeonboard/U05hZUhOVUpXcU5DT0REZ21WSkVTTmh3SGM0VzJQT1BwVGg4eHVlVUYzeW0xRkVIZGp2YjhLendpdVhTdi9qMDV2YytjNjJOVXd3eGtiQkNCK25Rd1cvZEFQWHlEQWM1TnQ2SHVsam1Yb1Fwd1h0UjhkeitDKy8xeWxIU2pvSHFyVmtkMG5hNDA3dVlncnBvRVB2ZXBnPT0hdjE=?share_link_id=570254932659" target="_blank">Fluxograma</a>
+    </nav>
+    <div class="header-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Mudar tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="app"></div>
+
+<!-- QUIZ MODAL -->
+<div id="quiz-modal" class="bj-modal hidden">
+  <div class="bj-modal-backdrop"></div>
+  <div class="bj-modal-box" id="quiz-box"></div>
+</div>
+
+<!-- CERTIFICATE MODAL -->
+<div id="cert-modal" class="bj-modal hidden">
+  <div class="bj-modal-backdrop"></div>
+  <div class="bj-modal-box cert-box" id="cert-box"></div>
+</div>
+
+<!-- Progresso FAB -->
+<button id="prog-fab" class="ct-prog-fab" onclick="toggleProgressPanel()" title="Meu Progresso">
+  <i class="fa-solid fa-chart-line"></i>
+  <span>Progresso</span>
+</button>
+
+<!-- Painel de Progresso -->
+<div id="progress-panel" class="ct-prog-panel">
+  <div class="ct-prog-overlay" onclick="closeProgressPanel()"></div>
+  <div class="ct-prog-drawer">
+    <div class="ct-prog-head">
+      <span class="ct-prog-head-title">
+        <i class="fa-solid fa-chart-line"></i> Meu Progresso
+      </span>
+      <button class="ct-prog-close" onclick="closeProgressPanel()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="ct-prog-body" id="prog-body"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+<script src="curso.js"></script>
+</body>
+</html>

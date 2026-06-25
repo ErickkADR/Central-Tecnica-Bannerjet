@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suas Anotações — Bannerjet Group</title>
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('bj-theme') || 'light');</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/Group.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    html, body { height: 100%; }
+    body { display: flex; flex-direction: column; overflow: hidden; }
+    header { flex-shrink: 0; }
+
+    .notes-app {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+
+    /* ── SIDEBAR ── */
+    .notes-sidebar {
+      width: 260px;
+      min-width: 260px;
+      background: var(--surface);
+      border-right: 1.5px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .sb-header {
+      padding: 18px 14px 14px;
+      border-bottom: 1.5px solid var(--border);
+      flex-shrink: 0;
+    }
+    .sb-brand {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+    }
+    .sb-brand-icon {
+      width: 30px; height: 30px; border-radius: 8px;
+      background: var(--gradient);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 13px; flex-shrink: 0;
+    }
+    .sb-brand-text .t { font-size: 13px; font-weight: 700; color: var(--text-1); }
+    .sb-brand-text .s { font-size: 11px; color: var(--text-2); }
+    .new-btn {
+      width: 100%; padding: 9px 12px; background: var(--gradient);
+      border: none; border-radius: var(--r-sm); color: white;
+      font-family: var(--font); font-size: 12px; font-weight: 700;
+      cursor: pointer; display: flex; align-items: center; gap: 7px;
+      transition: opacity .2s;
+    }
+    .new-btn:hover { opacity: .88; }
+    .sb-search-wrap {
+      padding: 10px 14px;
+      border-bottom: 1.5px solid var(--border);
+      flex-shrink: 0;
+    }
+    .sb-search {
+      width: 100%;
+      padding: 7px 11px 7px 30px;
+      background: var(--surface-2);
+      border: 1.5px solid var(--border);
+      border-radius: var(--r-sm);
+      font-family: var(--font); font-size: 12px; color: var(--text-1);
+    }
+    .sb-search:focus { outline: none; border-color: var(--g2); }
+    .sb-search-rel { position: relative; }
+    .sb-search-rel i { position: absolute; left: 9px; top: 50%; transform: translateY(-50%); font-size: 10px; color: var(--text-3); }
+    .notes-list { flex: 1; overflow-y: auto; padding: 6px; }
+    .notes-list::-webkit-scrollbar { width: 3px; }
+    .notes-list::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+    .note-item {
+      padding: 9px 10px; border-radius: var(--r-sm);
+      cursor: pointer; position: relative;
+      transition: background .15s;
+    }
+    .note-item:hover { background: var(--surface-2); }
+    .note-item.active {
+      background: var(--surface-2);
+    }
+    .note-item.active::before {
+      content:''; position:absolute; left:0; top:4px; bottom:4px;
+      width:3px; background: var(--gradient); border-radius:0 3px 3px 0;
+    }
+    .ni-title {
+      font-size: 13px; font-weight: 600; color: var(--text-1);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      padding-right: 22px;
+    }
+    .ni-date { font-size: 11px; color: var(--text-3); margin-top: 2px; }
+    .ni-del {
+      position: absolute; right: 6px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; color: var(--text-3); cursor: pointer;
+      font-size: 11px; padding: 4px; border-radius: 4px;
+      opacity: 0; transition: opacity .15s, color .15s;
+    }
+    .note-item:hover .ni-del { opacity: 1; }
+    .ni-del:hover { color: #ef4444; }
+    .sb-empty { text-align: center; padding: 28px 14px; color: var(--text-3); font-size: 12px; }
+    .sb-footer {
+      padding: 11px 14px;
+      border-top: 1.5px solid var(--border);
+      flex-shrink: 0;
+    }
+    .sb-footer a {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 12px; color: var(--text-2); transition: color .15s;
+    }
+    .sb-footer a:hover { color: var(--text-1); }
+
+    /* ── EDITOR ── */
+    .notes-editor {
+      flex: 1; display: flex; flex-direction: column; overflow: hidden;
+    }
+    .editor-toolbar {
+      display: flex; align-items: center; gap: 1px;
+      padding: 8px 32px; border-bottom: 1.5px solid var(--border);
+      background: var(--surface); flex-shrink: 0; flex-wrap: wrap;
+    }
+    .tb-btn {
+      padding: 6px 9px; background: none; border: none;
+      border-radius: var(--r-xs); color: var(--text-2); font-size: 12px;
+      cursor: pointer; transition: background .15s, color .15s;
+      font-family: var(--font); min-width: 30px;
+      display: flex; align-items: center; justify-content: center;
+      line-height: 1;
+    }
+    .tb-btn:hover { background: var(--surface-2); color: var(--text-1); }
+    .tb-sep { width: 1px; height: 18px; background: var(--border); margin: 0 5px; flex-shrink: 0; }
+    .tb-meta { margin-left: auto; font-size: 11px; color: var(--text-3); }
+    .editor-scroll { flex: 1; overflow-y: auto; }
+    .editor-content {
+      max-width: 760px; width: 100%;
+      margin: 0 auto; padding: 52px 48px;
+    }
+    @media(max-width:900px) { .editor-content { padding: 32px 24px; } }
+    .note-title-input {
+      display: block; width: 100%;
+      font-size: 34px; font-weight: 800; color: var(--text-1);
+      background: none; border: none; outline: none;
+      font-family: var(--font); resize: none; line-height: 1.3;
+      padding: 0; margin-bottom: 4px; overflow: hidden;
+    }
+    .note-title-input::placeholder { color: var(--text-3); }
+    .note-divider { height: 1.5px; background: var(--border); margin: 16px 0 26px; }
+    .note-body {
+      min-height: 360px; outline: none;
+      font-size: 15px; line-height: 1.85; color: var(--text-1);
+    }
+    .note-body:focus:empty::before,
+    .note-body:empty::before {
+      content: "Comece a escrever…";
+      color: var(--text-3); pointer-events: none; display: block;
+    }
+    .note-body h1 { font-size: 26px; font-weight: 800; margin: 24px 0 10px; line-height: 1.3; }
+    .note-body h2 { font-size: 20px; font-weight: 700; margin: 20px 0 8px; line-height: 1.4; }
+    .note-body h3 { font-size: 16px; font-weight: 600; margin: 16px 0 6px; line-height: 1.4; }
+    .note-body p { margin: 0 0 6px; }
+    .note-body ul, .note-body ol { margin: 8px 0; padding-left: 26px; }
+    .note-body li { margin: 3px 0; }
+    .note-body blockquote {
+      border-left: 3px solid var(--g2); padding: 8px 16px;
+      margin: 14px 0; color: var(--text-2);
+      background: var(--surface-2); border-radius: 0 var(--r-sm) var(--r-sm) 0;
+    }
+    .note-body code {
+      background: var(--surface-2); border: 1.5px solid var(--border);
+      border-radius: var(--r-xs); padding: 1px 5px;
+      font-family: 'Courier New', monospace; font-size: 13px;
+    }
+    .note-body pre {
+      background: var(--surface-2); border: 1.5px solid var(--border);
+      border-radius: var(--r-sm); padding: 16px; margin: 14px 0;
+      white-space: pre-wrap; font-family: 'Courier New', monospace; font-size: 13px;
+    }
+    .note-body a { color: var(--g2); text-decoration: underline; }
+    /* Empty state */
+    .editor-empty {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 48px; color: var(--text-3);
+    }
+    .editor-empty i { font-size: 52px; margin-bottom: 18px; opacity: .25; }
+    .editor-empty h3 { font-size: 18px; color: var(--text-2); margin-bottom: 8px; }
+    .editor-empty p { font-size: 14px; }
+    .editor-empty .empty-cta {
+      margin-top: 24px; padding: 11px 26px;
+      background: var(--gradient); border: none; border-radius: var(--r-sm);
+      color: white; font-family: var(--font); font-size: 13px; font-weight: 700;
+      cursor: pointer; transition: opacity .2s;
+    }
+    .editor-empty .empty-cta:hover { opacity: .88; }
+
+    @media(max-width:768px) {
+      .notes-app { flex-direction: column; overflow: auto; }
+      .notes-sidebar { width: 100%; min-width: 0; height: 260px; border-right: none; border-bottom: 1.5px solid var(--border); }
+      .notes-editor { min-height: 60vh; }
+      .note-title-input { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="images/Bannerjet-Group-logo-White.png" alt="Bannerjet Group">
+    </a>
+    <nav class="header-nav">
+      <a href="index.html">Início</a>
+      <a href="videos.html">Vídeos</a>
+      <a href="manuais.html">Manuais</a>
+    </nav>
+    <div class="header-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Mudar tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="notes-app">
+
+  <!-- SIDEBAR -->
+  <aside class="notes-sidebar">
+    <div class="sb-header">
+      <div class="sb-brand">
+        <div class="sb-brand-icon"><i class="fa-solid fa-pen-nib"></i></div>
+        <div class="sb-brand-text">
+          <div class="t">Suas Anotações</div>
+          <div class="s">Notas técnicas pessoais</div>
+        </div>
+      </div>
+      <button class="new-btn" id="new-btn">
+        <i class="fa-solid fa-plus"></i> Nova Anotação
+      </button>
+    </div>
+
+    <div class="sb-search-wrap">
+      <div class="sb-search-rel">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" class="sb-search" id="sb-search" placeholder="Buscar anotações…">
+      </div>
+    </div>
+
+    <div class="notes-list" id="notes-list"></div>
+
+    <div class="sb-footer">
+      <a href="index.html"><i class="fa-solid fa-arrow-left"></i> Voltar ao início</a>
+    </div>
+  </aside>
+
+  <!-- EDITOR -->
+  <main class="notes-editor">
+
+    <div class="editor-toolbar" id="toolbar" style="display:none">
+      <button class="tb-btn" onclick="f('bold')" title="Negrito (Ctrl+B)"><i class="fa-solid fa-bold"></i></button>
+      <button class="tb-btn" onclick="f('italic')" title="Itálico (Ctrl+I)"><i class="fa-solid fa-italic"></i></button>
+      <button class="tb-btn" onclick="f('underline')" title="Sublinhado (Ctrl+U)"><i class="fa-solid fa-underline"></i></button>
+      <button class="tb-btn" onclick="f('strikeThrough')" title="Tachado"><i class="fa-solid fa-strikethrough"></i></button>
+      <div class="tb-sep"></div>
+      <button class="tb-btn" onclick="fb('h1')" title="Título 1" style="font-size:11px;font-weight:700">H1</button>
+      <button class="tb-btn" onclick="fb('h2')" title="Título 2" style="font-size:11px;font-weight:700">H2</button>
+      <button class="tb-btn" onclick="fb('h3')" title="Título 3" style="font-size:11px;font-weight:700">H3</button>
+      <button class="tb-btn" onclick="fb('p')" title="Parágrafo" style="font-size:11px">P</button>
+      <div class="tb-sep"></div>
+      <button class="tb-btn" onclick="f('insertUnorderedList')" title="Lista de tópicos"><i class="fa-solid fa-list-ul"></i></button>
+      <button class="tb-btn" onclick="f('insertOrderedList')" title="Lista numerada"><i class="fa-solid fa-list-ol"></i></button>
+      <div class="tb-sep"></div>
+      <button class="tb-btn" onclick="fb('blockquote')" title="Citação"><i class="fa-solid fa-quote-left"></i></button>
+      <button class="tb-btn" onclick="fcode()" title="Código inline"><i class="fa-solid fa-code"></i></button>
+      <div class="tb-sep"></div>
+      <button class="tb-btn" onclick="delNote()" title="Excluir anotação" style="color:#ef4444">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+      <span class="tb-meta" id="tb-meta"></span>
+    </div>
+
+    <div id="empty-state" class="editor-empty">
+      <i class="fa-regular fa-note-sticky"></i>
+      <h3>Nenhuma anotação selecionada</h3>
+      <p>Crie uma nova anotação ou selecione uma existente na barra lateral.</p>
+      <button class="empty-cta" onclick="createNote()">
+        <i class="fa-solid fa-plus" style="margin-right:8px"></i>Criar primeira anotação
+      </button>
+    </div>
+
+    <div id="editor-active" style="display:none;flex:1;overflow-y:auto;flex-direction:column">
+      <div class="editor-content">
+        <textarea id="note-title" class="note-title-input" placeholder="Sem título" rows="1"></textarea>
+        <div class="note-divider"></div>
+        <div class="note-body" id="note-body" contenteditable="true" spellcheck="false"></div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+<script>
+const KEY = 'bj-notes-v2';
+
+function getState() {
+  try { return JSON.parse(localStorage.getItem(KEY)) || { notes:[], activeId:null }; }
+  catch(e) { return { notes:[], activeId:null }; }
+}
+function setState(s) { localStorage.setItem(KEY, JSON.stringify(s)); }
+function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2,6); }
+function fmt(ts) {
+  return new Date(ts).toLocaleDateString('pt-BR', { day:'2-digit', month:'short', year:'2-digit' });
+}
+
+const listEl = document.getElementById('notes-list');
+const sbSearch = document.getElementById('sb-search');
+const emptyEl = document.getElementById('empty-state');
+const activeEl = document.getElementById('editor-active');
+const toolbarEl = document.getElementById('toolbar');
+const titleInput = document.getElementById('note-title');
+const bodyEl = document.getElementById('note-body');
+const metaEl = document.getElementById('tb-meta');
+let cid = null, timer = null;
+
+function renderList(q='') {
+  const { notes, activeId } = getState();
+  listEl.innerHTML = '';
+  const flt = q ? notes.filter(n => (n.title+n.content).toLowerCase().includes(q)) : notes;
+  const sorted = [...flt].sort((a,b)=>b.updatedAt-a.updatedAt);
+  if (!sorted.length) {
+    listEl.innerHTML = `<div class="sb-empty"><i class="fa-regular fa-note-sticky" style="font-size:22px;display:block;margin-bottom:8px;opacity:.3"></i>${q?'Nenhuma encontrada.':'Nenhuma anotação ainda.<br>Crie a sua primeira!'}</div>`;
+    return;
+  }
+  sorted.forEach(n => {
+    const el = document.createElement('div');
+    el.className = 'note-item' + (n.id===activeId?' active':'');
+    el.innerHTML = `
+      <div class="ni-title">${n.title||'Sem título'}</div>
+      <div class="ni-date">${fmt(n.updatedAt)}</div>
+      <button class="ni-del" title="Excluir"><i class="fa-solid fa-trash"></i></button>
+    `;
+    el.addEventListener('click', e => { if(!e.target.closest('.ni-del')) openNote(n.id); });
+    el.querySelector('.ni-del').addEventListener('click', e => { e.stopPropagation(); askDelete(n.id); });
+    listEl.appendChild(el);
+  });
+}
+
+function openNote(id) {
+  const s = getState();
+  const n = s.notes.find(x=>x.id===id);
+  if (!n) return;
+  s.activeId = id; cid = id; setState(s);
+  emptyEl.style.display = 'none';
+  activeEl.style.display = 'flex';
+  toolbarEl.style.display = 'flex';
+  titleInput.value = n.title||'';
+  bodyEl.innerHTML = n.content||'';
+  metaEl.textContent = 'Salvo ' + fmt(n.updatedAt);
+  autoH();
+  renderList(sbSearch.value.toLowerCase().trim());
+}
+
+function createNote() {
+  const s = getState();
+  const n = { id:uid(), title:'', content:'', createdAt:Date.now(), updatedAt:Date.now() };
+  s.notes.unshift(n); s.activeId = n.id; setState(s);
+  renderList(); openNote(n.id); titleInput.focus();
+}
+
+function askDelete(id) {
+  const s = getState();
+  const n = s.notes.find(x=>x.id===id);
+  if (!n || !confirm(`Excluir "${n.title||'Sem título'}"?`)) return;
+  s.notes = s.notes.filter(x=>x.id!==id);
+  if (s.activeId===id) s.activeId = s.notes[0]?.id||null;
+  setState(s);
+  renderList();
+  if (s.activeId) openNote(s.activeId);
+  else { cid=null; emptyEl.style.display='flex'; activeEl.style.display='none'; toolbarEl.style.display='none'; }
+}
+
+function delNote() { if(cid) askDelete(cid); }
+
+function scheduleSave() {
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    if (!cid) return;
+    const s = getState();
+    const n = s.notes.find(x=>x.id===cid);
+    if (!n) return;
+    n.title = titleInput.value||'';
+    n.content = bodyEl.innerHTML;
+    n.updatedAt = Date.now();
+    setState(s);
+    metaEl.textContent = 'Salvo ' + fmt(n.updatedAt);
+    renderList(sbSearch.value.toLowerCase().trim());
+  }, 600);
+}
+
+function autoH() {
+  titleInput.style.height = 'auto';
+  titleInput.style.height = titleInput.scrollHeight + 'px';
+}
+
+// Formatting
+function f(cmd) { bodyEl.focus(); document.execCommand(cmd, false, null); }
+function fb(tag) { bodyEl.focus(); document.execCommand('formatBlock', false, tag); }
+function fcode() {
+  bodyEl.focus();
+  const sel = window.getSelection();
+  if (sel && !sel.isCollapsed) {
+    document.execCommand('insertHTML', false, `<code>${sel.toString()}</code>`);
+  } else {
+    document.execCommand('insertHTML', false, `<code>código</code>`);
+  }
+}
+
+// Events
+document.getElementById('new-btn').addEventListener('click', createNote);
+titleInput.addEventListener('input', () => { autoH(); scheduleSave(); });
+titleInput.addEventListener('keydown', e => { if(e.key==='Enter'){e.preventDefault();bodyEl.focus();} });
+bodyEl.addEventListener('input', scheduleSave);
+sbSearch.addEventListener('input', () => renderList(sbSearch.value.toLowerCase().trim()));
+
+// Init
+const initState = getState();
+renderList();
+if (initState.activeId) openNote(initState.activeId);
+</script>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca de Vídeos — Bannerjet Group</title>
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('bj-theme') || 'light');</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/Group.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .search-sticky {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
+      border-bottom: 1.5px solid var(--border);
+      padding: 16px 0;
+    }
+    .video-section { padding: 40px 0; }
+    .video-section.alt { background: var(--surface-2); border-top: 1.5px solid var(--border); border-bottom: 1.5px solid var(--border); }
+    .carousel-wrap { position: relative; }
+    .carousel-row {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 8px 4px 16px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-2) transparent;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .carousel-row::-webkit-scrollbar { height: 4px; }
+    .carousel-row::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 4px; }
+    .vid-card {
+      min-width: 260px;
+      max-width: 260px;
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      scroll-snap-align: start;
+      flex-shrink: 0;
+      text-decoration: none;
+      display: block;
+      transition: box-shadow .2s var(--ease), transform .2s var(--ease);
+    }
+    .vid-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .vid-thumb-wrap { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--surface-2); }
+    .vid-thumb { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .vid-play-overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,.28);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity .2s;
+    }
+    .vid-card:hover .vid-play-overlay { opacity: 1; }
+    .vid-play-overlay i { font-size: 36px; color: white; filter: drop-shadow(0 2px 8px rgba(0,0,0,.5)); }
+    .vid-body { padding: 12px 14px 14px; }
+    .vid-equip {
+      font-size: 10px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase;
+      background: var(--gradient);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 5px;
+    }
+    .vid-title { font-size: 13px; font-weight: 600; color: var(--text-1); line-height: 1.4; }
+    .carousel-arrow {
+      position: absolute; top: 50%; transform: translateY(-58%);
+      width: 34px; height: 34px; border-radius: 50%;
+      background: var(--surface); border: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; z-index: 2; font-size: 12px; color: var(--text-1);
+      box-shadow: var(--shadow-sm); transition: all .2s; line-height: 1;
+    }
+    .carousel-arrow:hover { background: var(--gradient); border-color: transparent; color: white; }
+    .carousel-arrow.prev { left: -14px; }
+    .carousel-arrow.next { right: -14px; }
+    @media(max-width:640px) { .carousel-arrow { display: none; } }
+
+    /* Search results */
+    .search-count { font-size: 13px; color: var(--text-2); margin: 24px 0 4px; }
+    .search-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      padding-bottom: 40px;
+    }
+    .vsc-card {
+      background: var(--surface); border: 1.5px solid var(--border);
+      border-radius: var(--r-lg); overflow: hidden;
+      transition: box-shadow .2s var(--ease), transform .2s var(--ease);
+    }
+    .vsc-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .vsc-thumb-wrap { position: relative; aspect-ratio: 16/9; overflow: hidden; background: var(--surface-2); }
+    .vsc-thumb-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .vsc-play-link {
+      position: absolute; inset: 0; background: rgba(0,0,0,.25);
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; transition: opacity .2s;
+    }
+    .vsc-card:hover .vsc-play-link { opacity: 1; }
+    .vsc-play-link i { font-size: 40px; color: white; }
+    .vsc-body { padding: 14px 16px 16px; }
+    .vsc-cat {
+      font-size: 10px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase;
+      background: var(--gradient);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      margin-bottom: 5px;
+    }
+    .vsc-title { font-size: 14px; font-weight: 700; color: var(--text-1); margin-bottom: 5px; }
+    .vsc-desc { font-size: 12px; color: var(--text-2); line-height: 1.5; margin-bottom: 14px; }
+    .vsc-copy {
+      width: 100%; padding: 9px; background: var(--surface-2);
+      border: 1.5px solid var(--border); border-radius: var(--r-sm);
+      font-size: 12px; font-weight: 600; color: var(--text-2);
+      cursor: pointer; transition: all .2s var(--ease);
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      font-family: var(--font);
+    }
+    .vsc-copy:hover { background: var(--gradient); border-color: transparent; color: white; -webkit-text-fill-color: white; }
+    .vsc-copy.copied { background: #22c55e; border-color: #22c55e; color: white; -webkit-text-fill-color: white; }
+    .no-results { grid-column: 1/-1; text-align: center; color: var(--text-2); padding: 56px; font-size: 15px; }
+
+    /* Request section */
+    .request-section { padding: 64px 0; background: var(--surface-2); border-top: 1.5px solid var(--border); }
+    .request-card {
+      background: var(--surface); border: 1.5px solid var(--border);
+      border-radius: var(--r-xl); padding: 40px; max-width: 600px;
+      margin: 0 auto; text-align: center;
+    }
+    .request-card h2 { font-size: 22px; font-weight: 700; margin-bottom: 10px; }
+    .request-card > p { font-size: 14px; color: var(--text-2); margin-bottom: 24px; }
+    .request-textarea {
+      width: 100%; padding: 14px 16px; background: var(--bg);
+      border: 1.5px solid var(--border); border-radius: var(--r);
+      font-family: var(--font); font-size: 14px; color: var(--text-1);
+      resize: vertical; min-height: 96px; margin-bottom: 14px; transition: border-color .2s;
+    }
+    .request-textarea:focus { outline: none; border-color: var(--g2); }
+    .request-send {
+      width: 100%; padding: 14px; background: var(--gradient); border: none;
+      border-radius: var(--r); font-family: var(--font); font-size: 14px; font-weight: 700;
+      color: white; cursor: pointer; transition: opacity .2s, transform .2s;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+    }
+    .request-send:hover { opacity: .9; transform: translateY(-1px); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="images/Bannerjet-Group-logo-White.png" alt="Bannerjet Group">
+    </a>
+    <nav class="header-nav">
+      <a href="index.html">Início</a>
+      <a href="index.html#categorias">Categorias</a>
+      <a href="manuais.html">Manuais</a>
+    </nav>
+    <div class="header-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Mudar tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:1">
+    <h1 class="page-hero-title">Biblioteca de <span class="accent">Vídeos</span></h1>
+    <p class="page-hero-desc">Todos os tutoriais dos equipamentos Bannerjet organizados por categoria. Pesquise o tema e compartilhe o link com uma mensagem pronta.</p>
+  </div>
+</section>
+
+<!-- SEARCH (sticky) -->
+<div class="search-sticky">
+  <div class="container">
+    <div class="search-wrapper" style="margin-bottom:0">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="search" id="video-search" class="search-input" placeholder="Pesquisar vídeos… ex: montagem, câmera, guilhotina, laser…" autocomplete="off">
+    </div>
+  </div>
+</div>
+
+<!-- CAROUSELS VIEW -->
+<div id="carousels-view">
+
+  <section class="video-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Plotters de Recorte</h2>
+      </div>
+      <div class="carousel-wrap">
+        <button class="carousel-arrow prev" onclick="scrollCar('cp',-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carousel-row" id="cp"></div>
+        <button class="carousel-arrow next" onclick="scrollCar('cp',1)"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Laminadoras</h2>
+      </div>
+      <div class="carousel-wrap">
+        <button class="carousel-arrow prev" onclick="scrollCar('cl',-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carousel-row" id="cl"></div>
+        <button class="carousel-arrow next" onclick="scrollCar('cl',1)"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Fibra Laser</h2>
+      </div>
+      <div class="carousel-wrap">
+        <button class="carousel-arrow prev" onclick="scrollCar('cfl',-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carousel-row" id="cfl"></div>
+        <button class="carousel-arrow next" onclick="scrollCar('cfl',1)"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section alt">
+    <div class="container">
+      <div class="section-header fade-up">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Acabamentos</h2>
+      </div>
+      <div class="carousel-wrap">
+        <button class="carousel-arrow prev" onclick="scrollCar('ca',-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="carousel-row" id="ca"></div>
+        <button class="carousel-arrow next" onclick="scrollCar('ca',1)"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- SEARCH VIEW -->
+<div id="search-view" hidden>
+  <div class="container">
+    <div class="search-count" id="search-count"></div>
+    <div class="search-grid" id="search-results"></div>
+  </div>
+</div>
+
+<!-- REQUEST FORM -->
+<section class="request-section">
+  <div class="container">
+    <div class="request-card">
+      <h2>Não achou o vídeo que precisa?</h2>
+      <p>Descreva o tema ou a dúvida técnica e envie pelo WhatsApp — nossa equipe avalia criar o tutorial.</p>
+      <textarea id="req-text" class="request-textarea" placeholder="Ex: Como configurar o corte de vinil no Profissional V48 via USB…"></textarea>
+      <button class="request-send" id="req-btn">
+        <i class="fa-brands fa-whatsapp" style="font-size:18px"></i>
+        Enviar via WhatsApp
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Plotters</h4>
+        <a href="A3.html">A3 Pro</a>
+        <a href="craft.html">Craft</a>
+        <a href="profissional-v48.html">Profissional V48</a>
+        <a href="saga-5373.html">Saga 5373</a>
+      </div>
+      <div class="footer-col">
+        <h4>Laminadoras</h4>
+        <a href="termolaminadora-pro.html">Termolaminadora Pro</a>
+        <a href="laminadora-l1.html">Laminadora L1</a>
+        <a href="laminadora-l2.html">Laminadora L2</a>
+      </div>
+      <div class="footer-col">
+        <h4>Lasers</h4>
+        <a href="fibra-laser.html">Fibra Laser</a>
+        <a href="laser-co2.html">Laser CO2</a>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="manuais.html">Manuais</a>
+        <a href="auxilio-plotter.html">Auxílios Plotter</a>
+        <a href="anotacoes.html">Suas Anotações</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Bannerjet Group. Todos os direitos reservados.</span>
+      <span class="footer-brand">Central Técnica</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+const WA = '5511999999999'; // Atualize com o número do WhatsApp
+
+const VIDS = [
+  // Plotters de Recorte
+  { id:'9KMxADGWXVI', title:'Montagem da A3 Pro', desc:'Como montar e configurar a plotter A3 Pro passo a passo', equip:'A3 Pro', cat:'cp' },
+  { id:'shZCQu6UFaY', title:'CameraCut WiFi', desc:'Configuração do CameraCut via conexão WiFi na A3 Pro', equip:'A3 Pro', cat:'cp' },
+  { id:'9YsXq22EQN4', title:'Alinhamento da Câmera', desc:'Como alinhar corretamente a câmera para corte contorno', equip:'A3 / Craft / V48', cat:'cp' },
+  { id:'7WmQ8aoTSeU', title:'Sensores da A3 Pro', desc:'Funcionamento e ajuste dos sensores da plotter A3 Pro', equip:'A3 Pro', cat:'cp' },
+  { id:'GAbjA_w5q-c', title:'Marcação Automática', desc:'Como usar a função de marcação automática de pontos de registro', equip:'A3 Pro', cat:'cp' },
+  { id:'oVts9zlcazo', title:'Limpeza dos Roletes', desc:'Procedimento correto para limpeza e manutenção dos roletes de tração', equip:'A3 Pro', cat:'cp' },
+  { id:'IOr6-moeZ6g', title:'Corte de Laço', desc:'Técnica de corte de laço para materiais com refile nas bordas', equip:'A3 Pro', cat:'cp' },
+  { id:'-r_hNVh6FeA', title:'Checklist A3 Pro', desc:'Lista de verificação para garantir operação correta da A3 Pro', equip:'A3 Pro', cat:'cp' },
+  { id:'HrPmKhJV9DA', title:'Troca de Mola', desc:'Como trocar a mola do cabeçote de corte da A3 Pro', equip:'A3 Pro', cat:'cp' },
+  { id:'5vtNUptOpgw', title:'LED da Câmera', desc:'Ajuste do LED da câmera para melhor leitura das marcas de registro', equip:'A3 Pro / V48', cat:'cp' },
+  { id:'bqDO5ZwBn7U', title:'Stickers no CorelDRAW', desc:'Como preparar e exportar stickers no CorelDRAW para corte contorno', equip:'A3 Pro', cat:'cp' },
+  { id:'r9C3setKnlc', title:'Posicionar a Caneta', desc:'Como posicionar corretamente a caneta ou ferramenta de corte', equip:'A3 Pro', cat:'cp' },
+  { id:'PCYq-CxjSvE', title:'Montagem Craft / V48', desc:'Montagem completa das plotters Craft e Profissional V48', equip:'Craft / V48', cat:'cp' },
+  { id:'L2sSNsEyh1I', title:'Configuração Craft / V48', desc:'Configuração inicial e primeiros passos com a Craft e a V48', equip:'Craft / V48', cat:'cp' },
+  { id:'iK1UKG5Y4UE', title:'Operação Craft / V48', desc:'Operação prática das plotters Craft e V48 no dia a dia', equip:'Craft / V48', cat:'cp' },
+  { id:'6bNOWAtXwHo', title:'Recursos Avançados Craft / V48', desc:'Recursos avançados e funcionalidades extras das plotters Craft e V48', equip:'Craft / V48', cat:'cp' },
+  { id:'cnIMZw7LtYI', title:'Dicas Craft / V48', desc:'Dicas de produtividade e boas práticas para Craft e V48', equip:'Craft / V48', cat:'cp' },
+  { id:'nNi0hcOcEqc', title:'Exclusivo Profissional V48', desc:'Funcionalidades exclusivas da Profissional V48', equip:'Profissional V48', cat:'cp' },
+  { id:'jFnIYl48Jsw', title:'Montagem Saga 5373', desc:'Montagem e instalação completa da plotter Saga 5373 de rolo', equip:'Saga 5373', cat:'cp' },
+  { id:'dgrPzMmKXbQ', title:'Alinhamento Câmera Saga 5373', desc:'Como alinhar a câmera de corte contorno da Saga 5373', equip:'Saga 5373', cat:'cp' },
+  // Laminadoras
+  { id:'WnuRq5e-EjA', title:'Montagem da Termolaminadora', desc:'Montagem completa da Termolaminadora Pro e Standard', equip:'Termolaminadora', cat:'cl' },
+  { id:'GfoKwAAND6s', title:'Como Usar a Termolaminadora', desc:'Operação, ajustes e dicas para plastificação com a Termolaminadora', equip:'Termolaminadora', cat:'cl' },
+  { id:'CLCgV9NwhgQ', title:'Montagem da Laminadora L1', desc:'Montagem e configuração inicial da Laminadora L1 de frio', equip:'Laminadora L1', cat:'cl' },
+  { id:'xIJXslIBDUQ', title:'Como Usar a Laminadora L1 / L2', desc:'Operação prática e técnicas de laminação com as laminadoras L1 e L2', equip:'Laminadora L1 / L2', cat:'cl', start:449 },
+  // Fibra Laser
+  { id:'uv4jbDCT9TE', title:'Montagem da Fibra Laser', desc:'Montagem e instalação completa do equipamento Fibra Laser', equip:'Fibra Laser', cat:'cfl' },
+  { id:'aF3c5yEvizg', title:'Foco Automático', desc:'Configuração e uso do sistema de foco automático da Fibra Laser', equip:'Fibra Laser', cat:'cfl' },
+  { id:'242qmrq5Dq4', title:'Feixes de Luz', desc:'Entendendo os feixes de luz e alinhamento óptico do laser', equip:'Fibra Laser', cat:'cfl' },
+  { id:'-Q_ZYrLGK6U', title:'Ferramenta Rotativa', desc:'Como instalar e usar o anexo de ferramenta rotativa para gravação cilíndrica', equip:'Fibra Laser', cat:'cfl' },
+  { id:'P_BQn_Fny1E', title:'Troca de Lente', desc:'Procedimento correto para substituição da lente da cabeça de gravação', equip:'Fibra Laser', cat:'cfl' },
+  { id:'MlelwFfJlUQ', title:'Pré-visualização no EzCad', desc:'Como usar a pré-visualização para posicionamento preciso da gravação', equip:'Fibra Laser', cat:'cfl' },
+  { id:'hCEdW_XtrRI', title:'Escala e Dimensionamento', desc:'Como escalar e dimensionar objetos corretamente no software EzCad', equip:'Fibra Laser', cat:'cfl' },
+  { id:'39vjvil7310', title:'Rotativa no EzCad', desc:'Como configurar e usar o anexo rotativo diretamente no EzCad', equip:'Fibra Laser', cat:'cfl' },
+  // Acabamentos
+  { id:'mNkx2qS8GSQ', title:'Painel da Guilhotina', desc:'Conhecendo o painel de controle digital das guilhotinas Bannerjet', equip:'Guilhotina', cat:'ca' },
+  { id:'y5UiPcIFQec', title:'Ajustes Iniciais da Guilhotina', desc:'Como realizar os ajustes iniciais e primeiras configurações da guilhotina', equip:'Guilhotina', cat:'ca' },
+  { id:'mYq9ey1cjZo', title:'Alinhamento de Corte', desc:'Como calibrar o alinhamento de corte para resultados precisos e sem desvio', equip:'Guilhotina', cat:'ca' },
+  { id:'zhto0ziCACE', title:'Troca de Lâmina', desc:'Procedimento seguro para substituição da lâmina da guilhotina', equip:'Guilhotina', cat:'ca' },
+  { id:'3xq1qLaJSXk', title:'Resolvendo o Erro 6', desc:'Como identificar a causa e corrigir o Erro 6 na guilhotina elétrica', equip:'Guilhotina Elétrica', cat:'ca' },
+];
+
+// Render carousels
+VIDS.forEach(v => {
+  const row = document.getElementById(v.cat);
+  if (!row) return;
+  const link = `https://youtu.be/${v.id}${v.start ? '?t=' + v.start : ''}`;
+  const thumb = `https://img.youtube.com/vi/${v.id}/hqdefault.jpg`;
+  const card = document.createElement('a');
+  card.href = link;
+  card.target = '_blank';
+  card.rel = 'noopener';
+  card.className = 'vid-card';
+  card.innerHTML = `
+    <div class="vid-thumb-wrap">
+      <img class="vid-thumb" src="${thumb}" alt="${v.title}" loading="lazy">
+      <div class="vid-play-overlay"><i class="fa-solid fa-play"></i></div>
+    </div>
+    <div class="vid-body">
+      <div class="vid-equip">${v.equip}</div>
+      <div class="vid-title">${v.title}</div>
+    </div>
+  `;
+  row.appendChild(card);
+});
+
+function scrollCar(id, dir) {
+  const r = document.getElementById(id);
+  if (r) r.scrollBy({ left: dir * 580, behavior: 'smooth' });
+}
+
+// Search
+const searchEl = document.getElementById('video-search');
+const carouselView = document.getElementById('carousels-view');
+const searchView = document.getElementById('search-view');
+const countEl = document.getElementById('search-count');
+const resultsEl = document.getElementById('search-results');
+
+searchEl.addEventListener('input', () => {
+  const q = searchEl.value.toLowerCase().trim();
+  if (!q) {
+    carouselView.hidden = false;
+    searchView.hidden = true;
+    return;
+  }
+  carouselView.hidden = true;
+  searchView.hidden = false;
+  const catLabels = { cp:'Plotters de Recorte', cl:'Laminadoras', cfl:'Fibra Laser', ca:'Acabamentos' };
+  const hits = VIDS.filter(v =>
+    v.title.toLowerCase().includes(q) ||
+    v.desc.toLowerCase().includes(q) ||
+    v.equip.toLowerCase().includes(q) ||
+    catLabels[v.cat].toLowerCase().includes(q)
+  );
+  countEl.textContent = `${hits.length} vídeo${hits.length !== 1 ? 's' : ''} encontrado${hits.length !== 1 ? 's' : ''}`;
+  resultsEl.innerHTML = '';
+  if (!hits.length) {
+    resultsEl.innerHTML = '<p class="no-results">Nenhum vídeo encontrado. Tente outro termo ou solicite abaixo.</p>';
+    return;
+  }
+  hits.forEach(v => {
+    const link = `https://youtu.be/${v.id}${v.start ? '?t=' + v.start : ''}`;
+    const thumb = `https://img.youtube.com/vi/${v.id}/hqdefault.jpg`;
+    const catLabel = catLabels[v.cat];
+    const copyMsg = `📹 *${v.title}*\n${v.desc}\n\nAssista em: ${link}`;
+    const card = document.createElement('div');
+    card.className = 'vsc-card';
+    card.innerHTML = `
+      <div class="vsc-thumb-wrap">
+        <img src="${thumb}" alt="${v.title}" loading="lazy">
+        <a href="${link}" target="_blank" rel="noopener" class="vsc-play-link"><i class="fa-solid fa-play"></i></a>
+      </div>
+      <div class="vsc-body">
+        <div class="vsc-cat">${catLabel} · ${v.equip}</div>
+        <div class="vsc-title">${v.title}</div>
+        <div class="vsc-desc">${v.desc}</div>
+        <button class="vsc-copy"><i class="fa-solid fa-copy"></i> Copiar link com descrição</button>
+      </div>
+    `;
+    const btn = card.querySelector('.vsc-copy');
+    btn.addEventListener('click', () => {
+      const copy = () => {
+        btn.innerHTML = '<i class="fa-solid fa-check"></i> Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => { btn.innerHTML = '<i class="fa-solid fa-copy"></i> Copiar link com descrição'; btn.classList.remove('copied'); }, 2500);
+      };
+      navigator.clipboard?.writeText(copyMsg).then(copy).catch(() => {
+        const ta = document.createElement('textarea');
+        ta.value = copyMsg;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        copy();
+      });
+    });
+    resultsEl.appendChild(card);
+  });
+});
+
+// WhatsApp request
+document.getElementById('req-btn').addEventListener('click', () => {
+  const txt = document.getElementById('req-text').value.trim();
+  if (!txt) { document.getElementById('req-text').focus(); return; }
+  const msg = encodeURIComponent(`Olá! Gostaria de solicitar um vídeo tutorial:\n\n${txt}`);
+  window.open(`https://api.whatsapp.com/send?phone=${WA}&text=${msg}`, '_blank');
+});
+</script>
+</body>
+</html>

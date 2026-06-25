@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auxílios Impressoras — Bannerjet Group</title>
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('bj-theme') || 'light');</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/Group.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .aux-tabs {
+      display: flex; gap: 0; border-bottom: 2px solid var(--border);
+      margin-bottom: 36px;
+    }
+    .aux-tab {
+      padding: 12px 28px; background: none; border: none;
+      font-family: var(--font); font-size: 14px; font-weight: 600;
+      color: var(--text-2); cursor: pointer; position: relative;
+      transition: color .2s;
+    }
+    .aux-tab::after {
+      content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 2px;
+      background: var(--gradient); transform: scaleX(0); transition: transform .2s;
+    }
+    .aux-tab.active { color: var(--text-1); }
+    .aux-tab.active::after { transform: scaleX(1); }
+    .aux-tab:hover { color: var(--text-1); }
+    .aux-panel[hidden] { display: none; }
+
+    .logic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .logic-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 22px;
+    }
+    .logic-card-title {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 15px; font-weight: 700; color: var(--text-1);
+      margin-bottom: 12px;
+    }
+    .logic-card-title i.badge {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--gradient);
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 14px; flex-shrink: 0;
+    }
+    .logic-card p { font-size: 13px; color: var(--text-2); line-height: 1.7; margin-bottom: 10px; }
+    .logic-card p:last-child { margin-bottom: 0; }
+    .logic-steps { list-style: none; padding: 0; margin: 10px 0 0; }
+    .logic-steps li {
+      display: flex; gap: 10px; align-items: flex-start;
+      font-size: 13px; color: var(--text-2); line-height: 1.6; margin-bottom: 8px;
+    }
+    .step-num {
+      min-width: 22px; height: 22px; border-radius: 50%;
+      background: var(--gradient); color: white;
+      font-size: 11px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .tip-box {
+      background: var(--surface); border: 1.5px solid var(--border);
+      border-radius: var(--r-lg); padding: 20px 24px;
+      margin-top: 24px;
+    }
+    .tip-box h4 { font-size: 14px; font-weight: 700; margin-bottom: 10px; color: var(--text-1); }
+    .tip-box ul { padding-left: 18px; margin: 0; }
+    .tip-box li { font-size: 13px; color: var(--text-2); line-height: 1.7; margin-bottom: 4px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="header-logo"><img src="images/Bannerjet-Group-logo-White.png" alt="Bannerjet Group"></a>
+    <nav class="header-nav">
+      <a href="index.html">Início</a>
+      <a href="index.html#categorias">Categorias</a>
+      <a href="manuais.html">Manuais</a>
+    </nav>
+    <div class="header-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Mudar tema"><i class="fa-solid fa-moon"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:1">
+    <h1 class="page-hero-title">Auxílios <span class="accent">Impressoras</span></h1>
+    <p class="page-hero-desc">Perfil de cores, parâmetros de impressão e lógica de configuração das impressoras Bannerjet — tudo em um só lugar.</p>
+  </div>
+</section>
+
+<div style="padding: 48px 0 64px">
+  <div class="container">
+
+    <!-- TABS -->
+    <div class="aux-tabs" role="tablist">
+      <button class="aux-tab active" id="tab-cores" role="tab" onclick="switchTab('cores')">
+        <i class="fa-solid fa-palette" style="margin-right:8px"></i>Perfil de Cores
+      </button>
+      <button class="aux-tab" id="tab-param" role="tab" onclick="switchTab('param')">
+        <i class="fa-solid fa-sliders" style="margin-right:8px"></i>Parâmetros
+      </button>
+      <button class="aux-tab" id="tab-logic" role="tab" onclick="switchTab('logic')">
+        <i class="fa-solid fa-lightbulb" style="margin-right:8px"></i>Lógica de Configuração
+      </button>
+    </div>
+
+    <!-- PANEL: PERFIL DE CORES -->
+    <div class="aux-panel" id="panel-cores" role="tabpanel">
+
+      <div class="params-intro fade-up" style="margin-bottom:32px">
+        <h3>Como instalar um perfil de cores</h3>
+        <p>
+          Baixe o arquivo <code style="background:var(--surface-2);padding:2px 6px;border-radius:4px;font-size:12px">.icc</code> ou <code style="background:var(--surface-2);padding:2px 6px;border-radius:4px;font-size:12px">.icm</code> correspondente ao seu equipamento.
+          No Windows, clique com o botão direito sobre o arquivo e selecione <strong>"Instalar perfil"</strong>.
+          Em seguida, configure o perfil no software RIP ou driver da impressora nas configurações de gerenciamento de cor.
+        </p>
+      </div>
+
+      <div class="table-wrapper fade-up">
+        <table class="data-table color-profiles-table" style="min-width:500px">
+          <thead>
+            <tr>
+              <th>Equipamento</th>
+              <th>Descrição do Perfil</th>
+              <th>Arquivo</th>
+              <th>Download</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Preencher com perfis disponíveis -->
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--text-3);margin-top:14px">
+        <i class="fa-solid fa-circle-info" style="margin-right:4px"></i>
+        Os perfis são específicos por combinação de equipamento + mídia + tinta. Consulte o suporte técnico caso seu setup não esteja listado.
+      </p>
+    </div><!-- /panel-cores -->
+
+    <!-- PANEL: PARÂMETROS -->
+    <div class="aux-panel" id="panel-param" role="tabpanel" hidden>
+
+      <div class="params-intro fade-up">
+        <h3>Parâmetros de Impressão</h3>
+        <p>
+          Os parâmetros de impressão afetam diretamente a qualidade, velocidade e consumo de tinta.
+          Configure com base no tipo de mídia e na finalidade do trabalho — prova de cor, produção ou alta qualidade.
+        </p>
+        <div class="param-tags">
+          <span class="param-tag">Resolução (dpi)</span>
+          <span class="param-tag">Número de passes</span>
+          <span class="param-tag">Velocidade de impressão</span>
+          <span class="param-tag">Modo bidirecional</span>
+          <span class="param-tag">Secagem entre passes</span>
+          <span class="param-tag">Perfil ICC</span>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px; margin: 28px 0 40px;" class="fade-up">
+
+        <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:20px">
+          <div style="font-weight:700;font-size:14px;margin-bottom:6px;color:var(--text-1)"><i class="fa-solid fa-expand" style="margin-right:8px;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"></i>Resolução (dpi)</div>
+          <p style="font-size:13px;color:var(--text-2);line-height:1.7">Pontos por polegada. Quanto maior, mais definida é a imagem — e mais lenta a impressão. Resolução típica: 720 dpi para produção, 1440 dpi para alta qualidade.</p>
+        </div>
+
+        <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:20px">
+          <div style="font-weight:700;font-size:14px;margin-bottom:6px;color:var(--text-1)"><i class="fa-solid fa-layer-group" style="margin-right:8px;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"></i>Número de Passes</div>
+          <p style="font-size:13px;color:var(--text-2);line-height:1.7">Quantidade de vezes que o cabeçote passa sobre a mesma área. Mais passes = impressão mais uniforme e menos bandas visíveis, porém mais lenta.</p>
+        </div>
+
+        <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:20px">
+          <div style="font-weight:700;font-size:14px;margin-bottom:6px;color:var(--text-1)"><i class="fa-solid fa-arrows-left-right" style="margin-right:8px;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"></i>Modo Bidirecional</div>
+          <p style="font-size:13px;color:var(--text-2);line-height:1.7">O cabeçote imprime nas duas direções (ida e volta). Aumenta a velocidade em até 2x, mas pode introduzir micro-desalinhamentos visíveis em linhas finas. Ideal para produção em massa.</p>
+        </div>
+
+        <div style="background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:20px">
+          <div style="font-weight:700;font-size:14px;margin-bottom:6px;color:var(--text-1)"><i class="fa-solid fa-wind" style="margin-right:8px;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text"></i>Secagem entre Passes</div>
+          <p style="font-size:13px;color:var(--text-2);line-height:1.7">Tempo de espera entre cada passada do cabeçote. Mídias absorventes precisam de mais tempo para evitar borramento. Mídias impermeáveis (vinil) toleram tempo mínimo.</p>
+        </div>
+
+      </div>
+
+      <h2 class="page-heading fade-up">Tabela de Parâmetros por Equipamento e Mídia</h2>
+      <div class="table-wrapper fade-up">
+        <table class="data-table" style="min-width:800px">
+          <thead>
+            <tr>
+              <th>Equipamento</th>
+              <th>Mídia</th>
+              <th>Resolução</th>
+              <th>Passes</th>
+              <th>Bidir.</th>
+              <th>Vel.</th>
+              <th>Perfil ICC</th>
+              <th>Observações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Preencher com dados reais de parâmetros de impressão -->
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--text-3);margin-top:12px">
+        <i class="fa-solid fa-circle-info" style="margin-right:4px"></i>
+        Configure sempre conforme o perfil ICC vinculado a cada combinação de equipamento e mídia.
+      </p>
+    </div><!-- /panel-param -->
+
+    <!-- PANEL: LÓGICA DE CONFIGURAÇÃO -->
+    <div class="aux-panel" id="panel-logic" role="tabpanel" hidden>
+
+      <div class="params-intro fade-up">
+        <h3>Lógica de Configuração das Impressoras</h3>
+        <p>
+          A qualidade de impressão depende de uma cadeia de decisões bem ordenadas — desde a preparação do arquivo
+          até a calibração de cor e o tipo de mídia. Siga o fluxo abaixo para garantir resultados consistentes.
+        </p>
+      </div>
+
+      <div class="logic-grid fade-up">
+
+        <div class="logic-card">
+          <div class="logic-card-title">
+            <i class="fa-solid fa-1 badge"></i>
+            Prepare o arquivo corretamente
+          </div>
+          <p>Um arquivo mal preparado compromete a impressão independentemente de qualquer configuração posterior.</p>
+          <ul class="logic-steps">
+            <li><span class="step-num">A</span><span>Trabalhe sempre em modo de cor <strong>CMYK</strong> no CorelDRAW ou Photoshop.</span></li>
+            <li><span class="step-num">B</span><span>Resolução mínima de <strong>100–150 dpi</strong> no tamanho final de impressão (banners: 72–100 dpi é aceitável).</span></li>
+            <li><span class="step-num">C</span><span>Embuta todas as fontes ao exportar o PDF ou converta para curvas antes de enviar ao RIP.</span></li>
+            <li><span class="step-num">D</span><span>Verifique se há perfil ICC embutido no arquivo — o RIP pode interpretar cores de forma inesperada sem ele.</span></li>
+          </ul>
+        </div>
+
+        <div class="logic-card">
+          <div class="logic-card-title">
+            <i class="fa-solid fa-2 badge"></i>
+            Configure o software RIP
+          </div>
+          <p>O RIP (PhotoPrint, Print Factory, SQL Print) é o responsável pela tradução do arquivo em dados de impressão:</p>
+          <ul class="logic-steps">
+            <li><span class="step-num">1</span><span>Selecione a impressora e o perfil de mídia corretos no RIP.</span></li>
+            <li><span class="step-num">2</span><span>Carregue o perfil ICC correspondente ao equipamento + mídia.</span></li>
+            <li><span class="step-num">3</span><span>Defina a intenção de renderização (Perceptual para fotos, Relativa para sólidos).</span></li>
+            <li><span class="step-num">4</span><span>Configure o modo de cor de saída e o limite máximo de tinta (ink limit) para evitar encharcamento.</span></li>
+          </ul>
+        </div>
+
+        <div class="logic-card">
+          <div class="logic-card-title">
+            <i class="fa-solid fa-3 badge"></i>
+            Escolha a resolução e número de passes
+          </div>
+          <p>A escolha depende do balanço entre velocidade e qualidade requerida:</p>
+          <ul class="logic-steps">
+            <li><span class="step-num">A</span><span><strong>Produção rápida (provas/interno):</strong> 360–540 dpi, 4–6 passes, bidirecional.</span></li>
+            <li><span class="step-num">B</span><span><strong>Produção padrão (entrega ao cliente):</strong> 720 dpi, 8 passes, bidirecional ou unidirecional.</span></li>
+            <li><span class="step-num">C</span><span><strong>Alta qualidade (lojas, feiras, eventos):</strong> 1080–1440 dpi, 12–16 passes, unidirecional.</span></li>
+          </ul>
+        </div>
+
+        <div class="logic-card">
+          <div class="logic-card-title">
+            <i class="fa-solid fa-4 badge"></i>
+            Ajuste a mídia e a temperatura
+          </div>
+          <p>A mídia deve estar bem tensionada e o ambiente com temperatura e umidade controladas:</p>
+          <ul class="logic-steps">
+            <li><span class="step-num">1</span><span>Tensione a mídia uniformemente — ondulações causam bandas e riscos de cabeçote.</span></li>
+            <li><span class="step-num">2</span><span>Temperatura ideal do ambiente: 18–28 °C. Umidade: 40–60 %.</span></li>
+            <li><span class="step-num">3</span><span>Se a impressora tem aquecedor de mídia, ajuste para a faixa recomendada pelo fabricante do substrato.</span></li>
+            <li><span class="step-num">4</span><span>Mídias de rolo: verifique o alinhamento lateral para evitar desvio acumulado em trabalhos longos.</span></li>
+          </ul>
+        </div>
+
+        <div class="logic-card">
+          <div class="logic-card-title">
+            <i class="fa-solid fa-5 badge"></i>
+            Valide com prova de cor
+          </div>
+          <p>Antes de imprimir a tiragem completa, valide o resultado com uma prova:</p>
+          <ul class="logic-steps">
+            <li><span class="step-num">1</span><span>Imprima uma tira de cores (CMYK + secundárias) para avaliar a saturação e a precisão de cor.</span></li>
+            <li><span class="step-num">2</span><span>Compare com o arquivo original em um monitor calibrado ou com uma referência impressa aprovada.</span></li>
+            <li><span class="step-num">3</span><span>Se houver desvio, ajuste o perfil ICC ou os parâmetros de linearização no RIP.</span></li>
+            <li><span class="step-num">4</span><span>Repita a prova até aprovar antes de iniciar a produção em série.</span></li>
+          </ul>
+        </div>
+
+        <div class="logic-card">
+          <div class="logic-card-title">
+            <i class="fa-solid fa-6 badge"></i>
+            Manutenção preventiva
+          </div>
+          <p>A manutenção regular evita a maioria dos problemas de qualidade e cabeçote entupido:</p>
+          <ul class="logic-steps">
+            <li><span class="step-num">A</span><span>Realize limpeza de cabeçote diariamente antes de começar a impressão.</span></li>
+            <li><span class="step-num">B</span><span>Execute teste de jatos semanalmente e substitua os jatos com falha se persistirem após 3 limpezas.</span></li>
+            <li><span class="step-num">C</span><span>Nunca deixe a impressora parada por mais de 48h sem executar limpeza preventiva.</span></li>
+            <li><span class="step-num">D</span><span>Verifique e limpe o sistema de capping e a feltro do limpador mensalmente.</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="tip-box fade-up" style="margin-top:32px">
+        <h4><i class="fa-solid fa-star" style="margin-right:8px;color:#f59e0b"></i>Checklist Antes de Imprimir</h4>
+        <ul>
+          <li>Arquivo em CMYK com resolução adequada para o tamanho final.</li>
+          <li>Perfil ICC correto carregado no RIP para o equipamento e a mídia usados.</li>
+          <li>Mídia tensionada e alinhada, temperatura e umidade do ambiente dentro da faixa ideal.</li>
+          <li>Limpeza de cabeçote realizada e teste de jatos aprovado (sem ausência de jatos).</li>
+          <li>Prova de cor aprovada antes da tiragem completa.</li>
+          <li>Ink limit configurado no RIP para evitar encharcamento da mídia.</li>
+        </ul>
+      </div>
+
+    </div><!-- /panel-logic -->
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-col"><h4>Impressoras</h4><a href="uv-90cm.html">UV 90 cm</a><a href="eco-solvente-180cm.html">Eco Solvente 180 cm</a><a href="uv-a3.html">UV A3</a><a href="infiniti-challenger.html">Infiniti Challenger</a></div>
+      <div class="footer-col"><h4>Auxílios</h4><a href="auxilio-plotter.html">Plotter</a><a href="auxilio-laser.html">Laser</a><a href="auxilio-impressoras.html">Impressoras</a></div>
+      <div class="footer-col"><h4>Recursos</h4><a href="manuais.html">Manuais</a><a href="videos.html">Vídeos</a><a href="anotacoes.html">Anotações</a></div>
+      <div class="footer-col"><h4>Início</h4><a href="index.html">Central Técnica</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Bannerjet Group. Todos os direitos reservados.</span>
+      <span class="footer-brand">Central Técnica</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function switchTab(t) {
+  ['cores','param','logic'].forEach(id => {
+    document.getElementById('panel-' + id).hidden = (id !== t);
+    document.getElementById('tab-' + id).classList.toggle('active', id === t);
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+A3 Servo - Ela faz corte e meio corte, pra vincar ela precisa de uma ferramenta a parte. Primeiro vinca e depois troca a ferramenta e faz o corte
+- Gramatura do papel até 300g
+- Motor servo
+- Velocidade: 1.200 mm/s
+- Limitação na media ( Faz do A4 ao super A3)
+
+A3 pro max 2 - Corte, meio corte. A máquina combina leitura por câmera para marcas de registro, corte rápido e preciso, força elevada e cabeça de vinco dedicada. Com conexões versáteis e software completo, agiliza o fluxo do design ao acabamento.
+- Suporta até 1000 folhas.
+- Alimentação por adsorção ( puxa as folhas por sistema de ar)
+- velocidade de até 1.200 mm/s
+- 2000g de força
+- motor servo
+
+A3 Pro Max 3 se destaca com seu avançado sistema de leitura por câmera, que reconhece as marcas de registro com extrema precisão, atingindo velocidade de até 1.200 mm/s e força de até 2.000 q. Além disso, possui cabeça dedicada para vinco tangencial, permitindo dobras precisas e acabamento profissional em embalagens e materiais promocionais.
+
+A conectividade também é um ponto forte: Wi-Fi, USB e cabo de dados, somados a um painel touch screen sensível e intuitivo, com interface totalmente em português para facilitar o dia a dia da operação. Vem equipada com o robusto software CameraCut, completo e fácil de usar, ideal para maximizar produtividade desde a criação até o corte final.
+
+-----------------------------------------------------------------------------------------
+
+DIFERENÇA DAS PLOTTER DE RECORTE 
+
+- LINHA  C (craft C16 - 60cm e 39cm - C24 60cm) -  750g de força, corta papel até 270g
+C24 - Com pedestal 
+C16 - Sem pedestal
+- Apenas corta, mas adquirindo a ferramenta de vinco a parte, consegue fazer o vinco tambem 
+- corta vinil
+
+-----------------------------------------------------------------------------------------
+ 
+- LINHA V (V24 60cm - V48 1,20mt) linha profissional  -  2000gr de força, corta papel até 300gr, risca PS 1mm e depois você destaca
+OBS: Apenas os modelos V cortam EVA
+- corta vinil
+- OBS: para riscar PS 1mm - precisa usar a lamina de 60
+
+Ambas com pedestal.
+
+-----------------------------------------------------------------------------------------
+
+- LINHA D (D24 60cm - D48 1,20mt) - ela é dupla cabeça - 2000g de força, corta e vinca (dual head), corta papel até 300g - motor passo 
+
+Ambas com pedestal e mesa de apoio.
+
+Basicamente a linha V e D atendem uma gramatura maior e a D faz o corte e o vinco de forma simultanea
+
+Quando o cliente falar que quer Plotter 60cm
+- de 60cm  tenho equipamento de entrada  -  800gr de força, corta papel até 270gr
+Tenho de 60cm e 1,20mt  na linha profissional  -  2000gr de força, corta papel até 300gr, risca PS 1mm e depois você destaca
+- Qual a gramatura do seu material?
+
+V48 1,20mt
+
+- Como ela já é da linha profissional ela consegue cortar qualquer tipo de adesivo, sendo até 300g
+- consegue riscar o ps de 1mm e voce destaca
+- para materias como acetato ela é super indicada, tudo depende da gramatura
+- 2000g de força
+
+V48
+
+Até que largura de mídia consegue entrar nela? (V48)
+
+equipamento possui espaço lateral de 1,30mt 
+mas para o corte tem 1,15mt com a câmera
+e 1,20mt sem a câmera
+
+-----------------------------------------------------------------------------------------
+
+SV60  1,50mt
+
+O modelo SV60 acompanha o software SignMaster que pode ser instalado em um computador, possibilitando a criação de arquivos de corte. Por outro lado, ela acompanha um plugin no Corel Draw que pode ser instalado em quantos computadores desejar.
+
+-----------------------------------------------------------------------------------------
+
+G1
+
+É um equipamento mais robusto, com sistema de vácuo para fixação da bobina, corte extremamente preciso e alinhamento contínuo, ideal para trabalhos mais exigentes e produção constante.
+Ela acompanha o software CutArtistic, com licença para instalação em até 3 computadores.
+Também acompanha plugin para CorelDRAW, igualmente limitado a 3 computadores.
+
+-----------------------------------------------------------------------------------------
+
+V24 - 60cm
+
+É um equipamento bastante procurado para produção de adesivos, letras, decals em vinil e muito mais. Equipamento possui câmera altamente precisa para marcas de registro, conexões Wi-Fi/USB/cabo, painel touch em português e software SignMaste incluso, para criar, organizar e enviar arquivos de corte com mais praticidade no dia a dia. 
+velocidade até 700 mm/s
+força de corte 2.000g
+
+ 60 cm sem marcas de registro / 55cm com marcas de registro
+
+mais detalhes V24 - é um equipamento de pedestal, da linha profissional, com foco em versatilidade de materiais. Ela corta EVA, risca PS de até 1mm, trabalha com folhas e bobinas e utiliza base de corte. Ou seja, entrega mais robustez e variedade, porém com um processo mais manual e voltado para aplicações específicas, não necessariamente para alto volume contínuo de papel.
+
+-----------------------------------------------------------------------------------------
+
+CAMPRO G2 
+
+ a plotter G2 não vem acompanhada de um programa, mas vem acompanhada do plugin SignWork para o CorelDraw. Um equipamento muito robusto, com vácuo para segurar a bobina,  corte extremamente preciso,  e alinhamento continuo.
+
+- NÃO TEM CORTE MATRIZ
+
+-----------------------------------------------------------------------------------------
+
+C02 - recorte
+
+ - Voltagem 220v - Disjuntor de 32A - Use fio de 4mm 
+- 3 tomadas por equipamento no padrão novo brasileiro 20A aterrado.
+- A impressora precisa de nobreack de 3kVA
+- corta acrilico e MDF
+
+-----------------------------------------------------------------------------------------
+
+Fibra laser 30w
+
+Quais materiais consegue fazer? 
+
+objetos metálicos, como chaveiros, facas, peças industriais, canetas, cigarros eletrônicos, garrafas, copos térmicos, cartões de crédito, além de materiais não metálicos como couro, acrílico e PVC.
+
+Equipamento completo com computador, ferramenta de gravação rotativa e ajuste de altura.
+
+Fonte: Raycus
+Cabeçote: RC1001CM-V1-GY
+Programa: Lightbuln
+
+-----------------------------------------------------------------------------------------
+
+Termolaminadoras
+
+A termolaminadora é uma máquina usada para plastificar documentos, aplicando uma película plástica com o uso de calor para protegê-los contra água, sujeira e rasgos. Ela serve para aumentar a durabilidade e melhorar o acabamento de papéis como certificados, crachás, cardápios e materiais escolares. Para usar, basta aquecer a máquina, colocar o documento dentro do envelope próprio de laminação e inserir pelo lado fechado, aguardando sair completamente e esfriar antes de manusear.
+
+-----------------------------------------------------------------------------------------
+
+Diferença L1 e L2
+
+L2 - É voltada para laminação de papel, por atingir 120°
+
+L1 - é voltada para laminação com adesivo transparente, ela trabalha com 60 graus 
+
+da para laminar papel tambem?
+ - se for usar filme BOPP precisa de 120°
+
+diferença da termolaminadora para outras marcas
+
+Nosso equipamento possui estrutura reforçada, aquecimento estável e compatibilidade com diferentes tipos de BOPP, garantindo produtividade, durabilidade e acabamento uniforme. Diferente de modelos convencionais, oferece maior resistência, melhor estabilidade térmica e capacidade para produção contínua, sendo ideal para gráficas rápidas, comunicação visual e personalizados.
+
+- Estrutura reforçada com eixos de ferro, mais resistente que laminadoras convencionais
+- Aquecimento estável e uniforme, reduzindo bolhas e falhas na laminação
+     - Suporta materiais de até 1,2 mm de espessura
+- Maior durabilidade para uso profissional e produção contínua
+- Compatibilidade com diferentes medidas de rolos
+
+-----------------------------------------------------------------------------------------
+
+MESA DE RECORTE NINACUT F3550
+
+
+Equipado com tela touch screen de 5”, detecção automática de bordas, adsorção a vácuo silenciosa e múltiplos métodos de conexão, o plotter de recorte garante cortes estáveis, suaves e de alta precisão. Facilita a transmissão de arquivos de corte com opções variadas de conectividade, via USB, Wi-Fi, rede ou pendrive para maior praticidade. Ideal para criação de diversos materiais promocionais, convites, etiquetas, adesivos,  caixas com cortes precisos e detalhados, e muito mais.. 
+
+Motor servo de até 1200mm/s
+
+-----------------------------------------------------------------------------------------
+
+Refiladora T2
+
+Equipamento possui cortes perfeitos em uma variedade de materiais, desde adesivos vinílicos e lonas até tecidos canvas com a destreza requerida pelo mercado competitivo de impressão. Com uma área de corte generosa de 160cm de largura. Possui inovadores sistemas de corte e de correção, com discos de corte duplo que garantem um acabamento claro e refinado. 
+O sensor de correção X garante um reconhecimento de cores exímio, enquanto o sensor de correção Y amplia a precisão do corte para que cada peça seja um reflexo do seu compromisso com a excelência. 
+
+- Motor servo 
+- Velocidade máxima: 18m linear/minuto
+- Largura Máxima de Corte: 152cm
+
+craft - Equipamento oferece leitura precisa por câmera, detecção de QR Code, painel touch em português, área de corte otimizada, agulha estável e conectividade completa, permitindo operações rápidas, organizadas e eficientes. Permite produzir adesivos personalizados em vinil para etiquetas, brindes, rótulos e pequenos produtos, toppers de bolo e muito mais.. 
+* Velocidade - 700 mm/s
+* Software - SignMaster
+* 800g de força, corta papel até 270g
+
+-----------------------------------------------------------------------------------------
+
+PROGRAMAS - impressoras 
+
+O software é o photprint para ripar e o sistema é o honson para operar a maquina
+photprint: Compatibilidade com BMP, TIFF, JPG, EPS e PDF oferecendo praticidade e controle durante a produção
+
+-----------------------------------------------------------------------------------------
+
+Uv Cilindrica
+RIP - RIIN
+Contolador - PS
+
+JHF (Konica)
+RIP - Print Factory
+Controlador - BYHX
+
+JHF (Ricoh)
+RIP - Print Factory
+Controlador - Hosson
+
+UV1612 (Epson)
+RIP - RIIN
+Controlador - Atools
+
+Infinity Challenger
+RIP - Print Factory
+Controlador - SQL Print
+
+Infinity Hybrid
+RIP - Print Factory
+Controlador - Hosson
+
+UV30
+RIP - RIIN
+Controlador - Hosson
+
+Demais máquinas
+Photoprint e Hosson
+
+-----------------------------------------------------------------------------------------
+
+Diferença T1 e T2
+
+São dois equipamentos diferentes, que possuem a mesma função, mas a capacidade de corte é melhor na T2, ambos equipamento entregam o mesmo objetivo. A T2 é um equipamento mais robusto, profissional, com sistema de movimentação preciso.
+
+-----------------------------------------------------------------------------------------
+
+Ninacut 1613T
+
+suporta material até 1mm, possui vácuo, painel touch, Ethernet e alta precisão para setor industrial e comunicação visual. Ferramentas UCT, EOT e caneta para meio corte, corte total em diversos materiais com controle digital. 
+A ninacut cria displays, rótulos, adesivos e peças personalizadas
+
+velocidade do corte: 500 mm/s
+Tipo de leitura: Câmera
+220v
+Conexão: Ethernet RJ45
+Ferramentas: UCT / EOT / CANETA
+Espessura de corte: Até 1 mm
+
+maquina de impressão rigida (materiais duros e usa superfícies)
+
+flatbeds, HYBRID e infinity
+
+-----------------------------------------------------------------------------------------
+
+exemplos de materiais rigidos (precisa verificar se realmente imprime em cada material citado abaixo)
+
+Acrílico
+PVC
+MDF
+Vidro
+Alumínio
+Madeira
+
+-----------------------------------------------------------------------------------------
+
+diferença DTF UV e UV LIGTH: A diferença é que a DTF Uv é mais dedicada para filmes DTF, e rolo a rolo. Você até consegue imprimir os mesmos matérias que imprimem na Uv 90, mas tem a limitação de medida e ela só trabalha com material fracionado.
+- Já na Uv 90 consegue trabalhar com folha por exemplo, ela tem pinça para prender o material.
+
+UV Light 90 3 Cab. I1600  -  uv light é maior e faz outros tipos de materias, como adesivo metalizado, etc.
+
+UV CILINDRICA 
+
+- ela consegue produzir em média 55 peças por hora. Mas pode variar de acordo com a qualidade desejada, e tamanho do material
+
+- a cabeça de impressão em média tem duração de 2 a 5 anos
+
+- tempo de impressão em garrafa de 600ml mais ou menos - 2 minutos aproximadamente
+
+
+-----------------------------------------------------------------------------------------
+
+(UV A3) 
+2796 - IMPRESSORA BANNERJET UV 30CM - MOD. YA3UV1TX - (1 Cab. TX800) 
+
+Velocidade - 1 metro linear a 20 a 30 min / 4m2 por ai
+Software Compatível - software rin de ripi e software de impressão printexp 
+Voltagem - 220v
+Conexão - de rede 
+Quantidade de Cores - CMKY + white 
+Resolução - 720 x 12 pass 
+Cabeça de impressão - TX800
+
+Ela é mais voltada para impressão de rótulos, adesivagem
+
+- media de tempo que dura a cabeça de impressão: 1 ano a 1 ano e meio
+- custo de impressão por media: é relativo
+- produção por hora: folha A4 - em média 20 minutos
+
+consumiveis 
+
+1651 - CABEÇA DE IMPRESSÃO EPSON TX800 
+2407 - Filme  A  +  B  
+Tinta  CMYK  + branco  +  verniz

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auxílios Plotter — Bannerjet Group</title>
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('bj-theme') || 'light');</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/Group.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    .aux-tabs {
+      display: flex; gap: 0; border-bottom: 2px solid var(--border);
+      margin-bottom: 36px;
+    }
+    .aux-tab {
+      padding: 12px 28px; background: none; border: none;
+      font-family: var(--font); font-size: 14px; font-weight: 600;
+      color: var(--text-2); cursor: pointer; position: relative;
+      transition: color .2s;
+    }
+    .aux-tab::after {
+      content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 2px;
+      background: var(--gradient); transform: scaleX(0); transition: transform .2s;
+    }
+    .aux-tab.active { color: var(--text-1); }
+    .aux-tab.active::after { transform: scaleX(1); }
+    .aux-tab:hover { color: var(--text-1); }
+    .aux-panel[hidden] { display: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="header-logo"><img src="images/Bannerjet-Group-logo-White.png" alt="Bannerjet Group"></a>
+    <nav class="header-nav">
+      <a href="index.html">Início</a>
+      <a href="index.html#categorias">Categorias</a>
+      <a href="manuais.html">Manuais</a>
+    </nav>
+    <div class="header-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Mudar tema"><i class="fa-solid fa-moon"></i></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container" style="position:relative;z-index:1">
+    <h1 class="page-hero-title">Auxílios <span class="accent">Plotter</span></h1>
+    <p class="page-hero-desc">Todos os firmwares e a tabela de erros das plotters Bannercut em um só lugar.</p>
+  </div>
+</section>
+
+<div style="padding: 48px 0 64px">
+  <div class="container">
+
+    <!-- TABS -->
+    <div class="aux-tabs" role="tablist">
+      <button class="aux-tab active" id="tab-fw" role="tab" aria-selected="true" onclick="switchTab('fw')">
+        <i class="fa-solid fa-microchip" style="margin-right:8px"></i>Firmwares
+      </button>
+      <button class="aux-tab" id="tab-err" role="tab" aria-selected="false" onclick="switchTab('err')">
+        <i class="fa-solid fa-triangle-exclamation" style="margin-right:8px"></i>Erros
+      </button>
+    </div>
+
+    <!-- PANEL: FIRMWARES -->
+    <div class="aux-panel" id="panel-fw" role="tabpanel">
+
+      <div class="search-wrapper">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="search" id="firmware-search" class="search-input"
+          placeholder="Pesquisar por equipamento, arquivo ou descrição…" autocomplete="off">
+      </div>
+
+      <div class="table-wrapper">
+        <table class="data-table" id="firmware-table" style="min-width:700px">
+          <thead>
+            <tr>
+              <th>Equipamento</th>
+              <th>Nome do Arquivo</th>
+              <th>Data</th>
+              <th>Descrição / Correção</th>
+              <th>Download</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-microchip" style="margin-right:6px"></i>Bannercut A3 Pro
+              </td>
+            </tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Pro</a></td><td>A3PRO_2024.07.09-6.bin</td><td>Jul 2024</td><td>Firmware versão Jul/2024</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Pro/A3PRO_2024.07.09-6.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Pro</a></td><td>A3PRO_V24.09.26.bin</td><td>Set 2024</td><td>Firmware versão Set/2024</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Pro/A3PRO_V24.09.26.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Pro</a></td><td>A3_V20241113.bin</td><td>Nov 2024</td><td>Firmware versão Nov/2024 (mais recente)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Pro/A3_V20241113.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Pro</a></td><td>vUpDate.exe</td><td>—</td><td>Programa de atualização de firmware</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/vUpDate.exe" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-microchip" style="margin-right:6px"></i>Bannercut A3 Pro Max
+              </td>
+            </tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Pro Max</a></td><td>PROMAXT250417.bin</td><td>Abr 2025</td><td>Firmware versão Abr/2025</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/Pro%20Max%202025%20011/PROMAXT250417.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Pro Max 2</a></td><td>A3PROMAX2_20250810_PGSFXFF.bin</td><td>Ago 2025</td><td>Firmware versão Ago/2025 (mais recente)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Pro%20Max%202/A3PROMAX2_20250810_PGSFXFF.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-microchip" style="margin-right:6px"></i>Bannercut A3 Light
+              </td>
+            </tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Light</a></td><td>A_20190905_RAM_SPEED.bin</td><td>Set 2019</td><td>Otimização de velocidade da memória RAM</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/A_20190905_RAM_SPEED.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Light</a></td><td>A_20191118.bin</td><td>Nov 2019</td><td>Firmware versão Nov/2019</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/A_20191118.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Light</a></td><td>A_20191119.bin</td><td>Nov 2019</td><td>Firmware versão Nov/2019</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/A_20191119.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Light</a></td><td>A3_20191119.bin</td><td>Nov 2019</td><td>Firmware A3 versão Nov/2019</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/A3_20191119.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Light</a></td><td>Autopaper_20201028.bin</td><td>Out 2020</td><td>Suporte à alimentação automática de papel</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/Autopaper_20201028.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Light</a></td><td>Autopaper_20201028_fast.bin</td><td>Out 2020</td><td>Alimentação automática com Fast Scan</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/Autopaper_20201028_fast.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Light</a></td><td>A3MAX-3_220221.bin</td><td>Fev 2022</td><td>Firmware A3 MAX versão Fev/2022</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/A3MAX-3_220221.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Light</a></td><td>A3 light_2210182.bin</td><td>Out 2022</td><td>Firmware versão Out/2022</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/A3%20light_2210182.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Light</a></td><td>A3 Light QR_V2306162.bin</td><td>Jun 2023</td><td>Suporte ao modo QR Code</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/A3%20Light%20QR_V2306162.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Light</a></td><td>Campro FirmwareUpdate 6.7.exe</td><td>—</td><td>Programa de atualização de firmware Campro v6.7</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/Campro%20FirmwareUpdate%206.7.exe" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-microchip" style="margin-right:6px"></i>Bannercut A3 Servo
+              </td>
+            </tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Servo</a></td><td>A3SERVO_24_07_03.bin</td><td>Jul 2024</td><td>Firmware A3 Servo versão Jul/2024</td><td><a href="../FIRMWARES%20AQUI/Mod%20A3%20Servo/A3SERVO_24_07_03.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Servo</a></td><td>T240703.bin</td><td>Jul 2024</td><td>Firmware A3 Servo 2024 versão Jul/2024</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Servo%202024/T240703.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Servo</a></td><td>V24.07096.bin</td><td>Jul 2024</td><td>Firmware A3 Servo 2022 versão Jul/2024</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Servo%202022/V24.07096.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-microchip" style="margin-right:6px"></i>Bannercut Craft
+              </td>
+            </tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft</a></td><td>C_20190612.bin</td><td>Jun 2019</td><td>Firmware versão Jun/2019</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/C_20190612.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft</a></td><td>C_20190901.bin</td><td>Set 2019</td><td>Firmware versão Set/2019</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/C_20190901.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft</a></td><td>C_20191104.bin</td><td>Nov 2019</td><td>Firmware versão Nov/2019</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/C_20191104.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft</a></td><td>C_20191226.bin</td><td>Dez 2019</td><td>Firmware versão Dez/2019</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/C_20191226.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft</a></td><td>C_V11061.bin</td><td>—</td><td>Firmware versão especial V11061</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/C_V11061.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft</a></td><td>C200312-fast scan.bin</td><td>Mar 2020</td><td>Suporte a Fast Scan (câmera de leitura rápida)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/C200312-fast%20scan.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft</a></td><td>C_20200724.bin</td><td>Jul 2020</td><td>Firmware versão Jul/2020</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/C_20200724.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft</a></td><td>C_20200822_TB11.bin</td><td>Ago 2020</td><td>Compatível com touchscreen TB11</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/C_20200822_TB11.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft</a></td><td>C_0508 middle cut OK.bin</td><td>2021</td><td>Corte central corrigido</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/C_0508%20middle%20cut%20OK.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft</a></td><td>C_0619.bin</td><td>2021</td><td>Firmware versão Jun/2021</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/C_0619.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft — LCD</a></td><td>LCD_TP17.bin</td><td>—</td><td>Firmware do painel LCD touchscreen TP17</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/LCD_TP17.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft — LCD</a></td><td>LCD_TP19.bin</td><td>—</td><td>Firmware do painel LCD touchscreen TP19</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/LCD_TP19.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft — LCD</a></td><td>C_TP 19.bin</td><td>—</td><td>Firmware touchpanel TP19 (variante C)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/C_TP%2019.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft — LCD</a></td><td>C_TP 20.bin</td><td>—</td><td>Firmware touchpanel TP20 (variante C)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/C_TP%2020.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft</a></td><td>BM1_C_V241010.bin</td><td>Out 2024</td><td>Firmware BM1 versão Out/2024 (mais recente)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/BM1_C_V241010.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="craft.html" style="font-weight:600;color:var(--text-1)">Craft</a></td><td>vUpDate.exe</td><td>—</td><td>Programa de atualização de firmware</td><td><a href="../FIRMWARES%20AQUI/Mod.%20C/vUpDate.exe" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-microchip" style="margin-right:6px"></i>Bannercut Profissional V48
+              </td>
+            </tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V_20190901.bin</td><td>Set 2019</td><td>Firmware versão Set/2019</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V_20190901.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V_20191025.bin</td><td>Out 2019</td><td>Firmware versão Out/2019</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V_20191025.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V_20191226_FAST_SCAN.bin</td><td>Dez 2019</td><td>Fast Scan para câmeras rápidas (60/120/150 cm)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V_20191226_FAST_SCAN.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V_V11061.bin</td><td>—</td><td>Firmware versão especial V11061</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V_V11061.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V_V90604.bin</td><td>—</td><td>Firmware versão especial V90604</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V_V90604.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V200312-fast scan.bin</td><td>Mar 2020</td><td>Suporte a Fast Scan (câmera de leitura rápida)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V200312-fast%20scan.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V_0610(1).bin</td><td>Jun 2020</td><td>Firmware versão Jun/2020</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V_0610(1).bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V_0623_A.bin</td><td>Jun 2020</td><td>Firmware versão Jun/2020 (variante A)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V_0623_A.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V_20201016(1).bin</td><td>Out 2020</td><td>Firmware versão Out/2020</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V_20201016(1).bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V_20201016_B(1).bin</td><td>Out 2020</td><td>Firmware Out/2020 (variante B)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V_20201016_B(1).bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V_20210411_COLOR(1).bin</td><td>Abr 2021</td><td>Suporte ao modo de corte colorido</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V_20210411_COLOR(1).bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48 — LCD</a></td><td>LCD_TP17.bin</td><td>—</td><td>Firmware do painel LCD touchscreen TP17</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/LCD_TP17.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48 — LCD</a></td><td>LCD_TP19.bin</td><td>—</td><td>Firmware do painel LCD touchscreen TP19</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/LCD_TP19.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V2303271.bin</td><td>Mar 2023</td><td>Firmware versão Mar/2023</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V2303271.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V230627.bin</td><td>Jun 2023</td><td>Firmware versão Jun/2023</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V230627.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>V230805.bin</td><td>Ago 2023</td><td>Firmware versão Ago/2023 (mais recente)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/V230805.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48 — Fast Cam</a></td><td>V_20191205_FAST_SCAN_.bin</td><td>Dez 2019</td><td>Fast Scan câmera rápida — Dez/2019</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/Update%20Fast%20Camera%20-%2060,120,150cm/V_20191205_FAST_SCAN_.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48 — Fast Cam</a></td><td>V_20201016(1).bin (Fast Camera)</td><td>Out 2020</td><td>Fast Scan câmera rápida — Out/2020</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/Update%20Fast%20Camera%20-%2060,120,150cm/V_20201016(1).bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48</a></td><td>UpDate.exe</td><td>—</td><td>Programa de atualização de firmware</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/UpDate.exe" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="profissional-v48.html" style="font-weight:600;color:var(--text-1)">Profissional V48 — Fast Cam</a></td><td>UpDate.exe (Fast Camera)</td><td>—</td><td>Programa de atualização para câmera rápida</td><td><a href="../FIRMWARES%20AQUI/Mod.%20V/Update%20Fast%20Camera%20-%2060,120,150cm/UpDate.exe" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-microchip" style="margin-right:6px"></i>Bannercut Saga 5373 — G1 (SG1400)
+              </td>
+            </tr>
+            <tr><td><a href="saga-5373.html" style="font-weight:600;color:var(--text-1)">Saga 5373 G1</a></td><td>cutter_plotter(SG1400CCD43H1.3.1S240525V01EN).bin</td><td>Mai 2024</td><td>Firmware SG1400, hardware H1.3.1, Mai/2024</td><td><a href="../FIRMWARES%20AQUI/G1/cutter_plotter(SG1400CCD43H1.3.1S240525V01EN).bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="saga-5373.html" style="font-weight:600;color:var(--text-1)">Saga 5373 G1</a></td><td>cutter_plotter(SG1400CCD43H1.3.1S250124V01EN).bin</td><td>Jan 2025</td><td>Firmware SG1400, hardware H1.3.1, Jan/2025</td><td><a href="../FIRMWARES%20AQUI/G1/cutter_plotter(SG1400CCD43H1.3.1S250124V01EN).bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="saga-5373.html" style="font-weight:600;color:var(--text-1)">Saga 5373 G1</a></td><td>cutter_plotter(SG1400CCD43H1.5S250124V01EN).bin</td><td>Jan 2025</td><td>Firmware SG1400, hardware H1.5, Jan/2025</td><td><a href="../FIRMWARES%20AQUI/G1/cutter_plotter(SG1400CCD43H1.5S250124V01EN).bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="saga-5373.html" style="font-weight:600;color:var(--text-1)">Saga 5373 G1</a></td><td>cutter_plotter(SG1400CCD43UPGH1.5S250606V01EN_newprotocol).bin</td><td>Jun 2025</td><td>Câmera UPG H1.5 — novo protocolo de comunicação</td><td><a href="../FIRMWARES%20AQUI/G1/cutter_plotter(SG1400CCD43UPGH1.5S250606V01EN_newprotocol).bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="saga-5373.html" style="font-weight:600;color:var(--text-1)">Saga 5373 G1</a></td><td>cutter_plotter(SG1400CCD43UPGH1.5S250620V02EN).bin</td><td>Jun 2025</td><td>Câmera UPG H1.5, Jun/2025 — v02</td><td><a href="../FIRMWARES%20AQUI/G1/cutter_plotter(SG1400CCD43UPGH1.5S250620V02EN).bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="saga-5373.html" style="font-weight:600;color:var(--text-1)">Saga 5373 G1</a></td><td>cutter_plotter(SG1400CCD43UPGH1.5S250811V01EN).bin</td><td>Ago 2025</td><td>Câmera UPG H1.5, Ago/2025 (mais recente)</td><td><a href="../FIRMWARES%20AQUI/G1/cutter_plotter(SG1400CCD43UPGH1.5S250811V01EN).bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="saga-5373.html" style="font-weight:600;color:var(--text-1)">Saga 5373 G1</a></td><td>FirmwareUpgrade SAGA - 2021.exe</td><td>2021</td><td>Programa de atualização de firmware (SAGA 2021)</td><td><a href="../FIRMWARES%20AQUI/G1/FirmwareUpgrade%20SAGA%20-%202021.exe" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="saga-5373.html" style="font-weight:600;color:var(--text-1)">Saga 5373 G1 — Câmera</a></td><td>SerialPortUpgRZ.exe</td><td>—</td><td>Atualização da placa da câmera via porta serial</td><td><a href="../FIRMWARES%20AQUI/G1/SerialPortUpgRZ.exe" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-microchip" style="margin-right:6px"></i>Bannercut Saga — G2
+              </td>
+            </tr>
+            <tr><td><a href="saga-5373.html" style="font-weight:600;color:var(--text-1)">Saga G2</a></td><td>grupdate.rom</td><td>—</td><td>Firmware principal Saga G2</td><td><a href="../FIRMWARES%20AQUI/g2/grupdate.rom" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="saga-5373.html" style="font-weight:600;color:var(--text-1)">Saga G2</a></td><td>SetXYScale_guner (3).exe</td><td>—</td><td>Ferramenta de calibração de escala XY</td><td><a href="../FIRMWARES%20AQUI/g2/SetXYScale_guner%20(3).exe" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-microchip" style="margin-right:6px"></i>Série Servo
+              </td>
+            </tr>
+            <tr><td>Série Servo</td><td>SF_210725_B.bin</td><td>Jul 2021</td><td>Firmware servo versão Jul/2021 (variante B)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20Servo/SF_210725_B.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td>Série Servo</td><td>429_SF_220209.bin</td><td>Fev 2022</td><td>Firmware servo modelo 429 — versão Fev/2022</td><td><a href="../FIRMWARES%20AQUI/Mod.%20Servo/429_SF_220209.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td>Série Servo</td><td>A_V240926.bin</td><td>Set 2024</td><td>Firmware servo versão Set/2024 (mais recente)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20Servo/A_V240926.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td>Série Servo</td><td>vUpDate.exe</td><td>—</td><td>Programa de atualização de firmware</td><td><a href="../FIRMWARES%20AQUI/Mod.%20Servo/vUpDate.exe" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-microchip" style="margin-right:6px"></i>Série SV
+              </td>
+            </tr>
+            <tr><td>Série SV</td><td>NSV_2025_05_08_PGSFML.bin</td><td>Mai 2025</td><td>Firmware NSV versão Mai/2025</td><td><a href="../FIRMWARES%20AQUI/Mod.%20SV/NSV_2025_05_08_PGSFML.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td>Série SV</td><td>NSV_2025_06_28_PGSFML.bin</td><td>Jun 2025</td><td>Firmware NSV versão Jun/2025 (mais recente)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20SV/NSV_2025_06_28_PGSFML.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-microchip" style="margin-right:6px"></i>CelCut
+              </td>
+            </tr>
+            <tr><td>CelCut</td><td>vCameraCutMch(1)(1).exe</td><td>—</td><td>Programa de atualização de câmera CelCut</td><td><a href="../FIRMWARES%20AQUI/CelCut/vCameraCutMch(1)(1).exe" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-wrench" style="margin-right:6px"></i>Ferramentas de Diagnóstico
+              </td>
+            </tr>
+            <tr><td>Todos os modelos</td><td>vMotorTest.exe</td><td>—</td><td>Ferramenta de teste de motor</td><td><a href="../FIRMWARES%20AQUI/Tools/Motor%20Teste/vMotorTest.exe" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td>Todos os modelos</td><td>ResetCount.plt</td><td>—</td><td>Script PLT para reset do contador</td><td><a href="../FIRMWARES%20AQUI/Tools/ResetCount.plt" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td>Todos os modelos</td><td>ResetX-SkyCut.plt</td><td>—</td><td>Script PLT para reset do eixo X</td><td><a href="../FIRMWARES%20AQUI/Tools/ResetX-SkyCut.plt" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-flask" style="margin-right:6px"></i>Protótipos / Em Revisão <span style="font-size:11px;font-weight:400;opacity:.7">(arquivos experimentais — usar com cautela)</span>
+              </td>
+            </tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Light</a></td><td>C_20191104.bin (Light painel)</td><td>Nov 2019</td><td>Protótipo: Light com painel que não respeita configurações</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/Revisar/Light%20Painel%20N%C3%A3o%20Respeita/C_20191104.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 MAX</a></td><td>A3MAX fast support 51 new screen_V2208154.bin</td><td>Ago 2022</td><td>Protótipo: suporte à nova tela v51 com Fast Scan</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/Revisar/painel%20n%C3%A3o%20liga%2C%20fica%20vermelho/A3MAX%20fast%20support%2051%20new%20screen_V2208154.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Light</a></td><td>2210194.bin</td><td>Out 2022</td><td>Protótipo: ajuste de câmera (em revisão)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/Revisar/ajuste%20da%20c%C3%A2mea%20errado/2210194.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Servo Label</a></td><td>Servo label-2210194.bin</td><td>Out 2022</td><td>Protótipo: servo label com suporte a QR Code</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/Revisar/Qrcode/Servo%20label-2210194.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+            <tr><td><a href="A3.html" style="font-weight:600;color:var(--text-1)">A3 Servo</a></td><td>A3 servo_V230615.bin</td><td>Jun 2023</td><td>Protótipo: A3 Servo com correção de leitura (em revisão)</td><td><a href="../FIRMWARES%20AQUI/Mod.%20A3/A3%20Light/Revisar/resolver%20leitura/A3%20servo_V230615.bin" class="download-link" download><i class="fa-solid fa-download"></i> Baixar</a></td></tr>
+
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--text-3);margin-top:14px">
+        <i class="fa-solid fa-circle-info" style="margin-right:4px"></i>
+        Sempre faça backup das configurações antes de atualizar o firmware do equipamento.
+      </p>
+    </div><!-- /panel-fw -->
+
+    <!-- PANEL: ERROS -->
+    <div class="aux-panel" id="panel-err" role="tabpanel" hidden>
+
+      <div class="params-intro fade-up" style="margin-bottom:28px">
+        <h3>Como usar esta tabela</h3>
+        <p>Localize o código ou a descrição do erro que aparece no display ou software da sua máquina. Siga os passos indicados na coluna <strong>"Como Resolver"</strong>. Se o problema persistir, entre em contato com o suporte técnico Bannerjet.</p>
+      </div>
+
+      <div class="search-wrapper">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="search" id="erros-search" class="search-input"
+          placeholder="Pesquisar por código, nome do erro ou equipamento…" autocomplete="off">
+      </div>
+
+      <div class="table-wrapper">
+        <table class="data-table" id="erros-table" style="min-width:700px">
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Nome do Erro</th>
+              <th>Equipamentos</th>
+              <th>Causa</th>
+              <th>Como Resolver</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-scissors" style="margin-right:6px"></i>Plotters de Película — Série Compacta (exibição no APP: ERR = número)
+              </td>
+            </tr>
+            <tr><td><strong>ERR 1</strong></td><td>Corte fora do limite no eixo X</td><td>A3 Pro, Craft</td><td>O tamanho de corte no eixo X ultrapassa o limite da máquina</td><td>1. Verifique os dados de corte ou teste com outros dados. 2. Verifique o sensor esquerdo da placa do cabeçote. 3. Verifique o cabo do cabeçote. 4. Verifique a conexão entre o cabo e a placa principal. 5. Verifique a placa principal.</td></tr>
+            <tr><td><strong>ERR 2</strong></td><td>Erro nos sensores de limite esquerdo e direito</td><td>A3 Pro, Craft</td><td>Falha na detecção dos sensores de fim de curso esquerdo e direito</td><td>1. Verifique os dois sensores da placa do cabeçote. 2. Verifique o cabo do cabeçote. 3. Verifique a conexão entre o cabo e a placa principal. 4. Verifique a placa principal.</td></tr>
+            <tr><td><strong>ERR 3</strong></td><td>Falha no sensor direito</td><td>A3 Pro, Craft</td><td>Erro no sensor do lado direito do cabeçote de corte</td><td>1. Verifique os dados de corte ou teste com outros dados. 2. Verifique o sensor do lado direito da placa do cabeçote. 3. Verifique o cabo do cabeçote. 4. Verifique a conexão entre o cabo e a placa principal. 5. Verifique a placa principal.</td></tr>
+            <tr><td><strong>ERR 4</strong></td><td>Falha no sensor esquerdo</td><td>A3 Pro, Craft</td><td>Erro no sensor do lado esquerdo do cabeçote de corte</td><td>1. Verifique os dados de corte ou teste com outros dados. 2. Verifique o sensor do lado esquerdo da placa do cabeçote. 3. Verifique o cabo do cabeçote. 4. Verifique a conexão entre o cabo e a placa principal. 5. Verifique a placa principal.</td></tr>
+            <tr><td><strong>ERR 5</strong></td><td>Código de identificação inválido</td><td>A3 Pro, Craft</td><td>Erro no código de identificação da máquina</td><td>Encaminhe a placa principal para troca.</td></tr>
+            <tr><td><strong>ERR 6</strong></td><td>Falha no motor servo X ou encoder</td><td>A3 Pro, Craft</td><td>Erro no motor servo do eixo X ou no encoder</td><td>1. Verifique se o cabeçote X desliza suavemente sem travar com a máquina desligada. 2. Verifique se o cabo do motor servo X está conectado corretamente. 3. Verifique se o cabo da placa principal está conectado corretamente. 4. Verifique se a correia do eixo X está tensionada adequadamente. 5. Substitua o motor X ou a placa principal.</td></tr>
+            <tr><td><strong>ERR 7</strong></td><td>Falha no motor servo Y ou encoder</td><td>A3 Pro, Craft</td><td>Erro no motor servo do eixo Y ou no encoder</td><td>1. Verifique se há objetos presos ou enrolados no eixo de alimentação. 2. Verifique se o cabo do motor servo Y está conectado corretamente. 3. Verifique se o cabo da placa principal está conectado corretamente. 4. Substitua o motor Y ou a placa principal.</td></tr>
+            <tr><td><strong>ERR 10</strong></td><td>Erro no chip EEPROM da placa principal</td><td>A3 Pro, Craft</td><td>Falha no chip de memória EEPROM da placa-mãe</td><td>Encaminhe a placa principal para troca.</td></tr>
+            <tr><td><strong>ERR 11</strong></td><td>Erro no chip de cache da placa principal</td><td>A3 Pro, Craft</td><td>Falha no chip de cache de dados da placa-mãe</td><td>Encaminhe a placa principal para troca.</td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-desktop" style="margin-right:6px"></i>Plotters Publicitários — Série Profissional (exibição no LCD: ERR: número)
+              </td>
+            </tr>
+            <tr><td><strong>ERR 1</strong></td><td>Corte fora do limite no eixo X</td><td>Profissional V48, Saga 5373</td><td>O tamanho de corte no eixo X ultrapassa o limite da máquina</td><td>1. Verifique os dados de corte ou teste com outros dados. 2. Verifique o sensor esquerdo da placa do cabeçote. 3. Verifique o cabo do cabeçote. 4. Verifique a conexão entre o cabo e a placa principal. 5. Verifique a placa principal.</td></tr>
+            <tr><td><strong>ERR 2</strong></td><td>Timeout na alimentação automática por sensor</td><td>Profissional V48, Saga 5373</td><td>Função de alimentação automática ativada; sensor não detectou o material dentro do tempo limite</td><td>1. Limpe o sensor. 2. Verifique se o material está posicionado corretamente. 3. Verifique a conexão do terminal do sensor. 4. Substitua o sensor ou a placa principal.</td></tr>
+            <tr><td><strong>ERR 4</strong></td><td>Falha no reconhecimento das marcas de registro</td><td>Profissional V48, Saga 5373</td><td>Reconhecimento de marcas durante o corte por contorno malsucedido</td><td>1. Verifique se a iluminação da câmera está normal; ajuste o brilho se necessário. 2. Verifique se o porta-lâmina está próximo ao primeiro ponto MARK antes do corte. 3. Verifique se o arquivo de corte selecionado corresponde ao material impresso. 4. Verifique se o modo MARK (ponto ou canto) corresponde à impressão do material. 5. Verifique se a saída de imagem da câmera está normal; se houver ERR, substitua o módulo da câmera ou o cabo do cabeçote.</td></tr>
+            <tr><td><strong>ERR 8</strong></td><td>Erro nos sensores de limite esquerdo e direito</td><td>Profissional V48, Saga 5373</td><td>Falha na detecção dos sensores de fim de curso esquerdo e direito</td><td>1. Verifique os dois sensores da placa do cabeçote. 2. Verifique o cabo do cabeçote. 3. Verifique a conexão entre o cabo e a placa principal. 4. Verifique a placa principal.</td></tr>
+            <tr><td><strong>ERR 16</strong></td><td>Falha no motor servo X ou encoder</td><td>Profissional V48, Saga 5373</td><td>Erro no motor servo do eixo X ou no encoder</td><td>1. Verifique se o cabeçote X desliza suavemente sem travar com a máquina desligada. 2. Verifique se o cabo do motor servo X está conectado corretamente. 3. Verifique se o cabo da placa principal está conectado corretamente. 4. Verifique se a correia do eixo X está tensionada adequadamente. 5. Substitua o motor X ou a placa principal.</td></tr>
+            <tr><td><strong>ERR 32</strong></td><td>Falha no motor servo Y ou encoder</td><td>Profissional V48, Saga 5373</td><td>Erro no motor servo do eixo Y ou no encoder</td><td>1. Verifique se há objetos presos ou enrolados no eixo de alimentação. 2. Verifique se o cabo do motor servo Y está conectado corretamente. 3. Verifique se o cabo da placa principal está conectado corretamente. 4. Substitua o motor Y ou a placa principal.</td></tr>
+            <tr><td><strong>ERR 64</strong></td><td>Máquina sem código PID</td><td>Profissional V48, Saga 5373</td><td>A máquina não possui código PID configurado</td><td>Encaminhe a placa principal para troca.</td></tr>
+            <tr><td><strong>ERR 128</strong></td><td>Erro no chip de cache da placa principal</td><td>Profissional V48, Saga 5373</td><td>Falha no chip de cache de dados da placa-mãe</td><td>Encaminhe a placa principal para troca.</td></tr>
+            <tr><td><strong>ERR 256</strong></td><td>Erro no chip EEPROM da placa principal</td><td>Profissional V48, Saga 5373</td><td>Falha no chip de memória EEPROM da placa-mãe</td><td>Encaminhe a placa principal para troca.</td></tr>
+
+            <tr style="background:var(--surface-2,#f0f4f8)">
+              <td colspan="5" style="font-weight:600;padding:10px 14px;font-size:13px;letter-spacing:.5px;color:var(--text-2)">
+                <i class="fa-solid fa-tag" style="margin-right:6px"></i>Máquinas de Etiqueta — Série com Alimentação Automática (exibição no LCD: ERR: 0-número)
+              </td>
+            </tr>
+            <tr><td><strong>ERR 1</strong></td><td>Corte fora do limite no eixo X</td><td>Máquinas de Etiqueta Bannercut</td><td>O tamanho de corte no eixo X ultrapassa o limite da máquina</td><td>1. Verifique os dados de corte ou teste com outros dados. 2. Verifique o sensor esquerdo da placa do cabeçote. 3. Verifique o cabo do cabeçote. 4. Verifique a conexão entre o cabo e a placa principal. 5. Verifique a placa principal.</td></tr>
+            <tr><td><strong>ERR 2</strong></td><td>Timeout do sensor durante a operação</td><td>Máquinas de Etiqueta Bannercut</td><td>O sensor não detectou o material dentro do tempo limite durante a operação</td><td>1. Limpe cada sensor. 2. Verifique se o material está posicionado corretamente. 3. Verifique a conexão do terminal do sensor. 4. Substitua o sensor ou a placa principal.</td></tr>
+            <tr><td><strong>ERR 4</strong></td><td>Falha no reconhecimento das marcas de registro</td><td>Máquinas de Etiqueta Bannercut</td><td>Reconhecimento de marcas durante o corte por contorno malsucedido</td><td>1. Verifique se a iluminação da câmera está normal; ajuste o brilho se necessário. 2. Verifique se o porta-lâmina está próximo ao primeiro ponto MARK antes do corte. 3. Verifique se o arquivo de corte selecionado corresponde ao material impresso. 4. Verifique se o modo MARK (ponto ou canto) corresponde à impressão do material. 5. Verifique se a saída de imagem da câmera está normal; se houver ERR, substitua o módulo da câmera ou o cabo do cabeçote.</td></tr>
+            <tr><td><strong>ERR 8</strong></td><td>Erro nos sensores de limite esquerdo e direito</td><td>Máquinas de Etiqueta Bannercut</td><td>Falha na detecção dos sensores de fim de curso esquerdo e direito</td><td>1. Verifique os dois sensores da placa do cabeçote. 2. Verifique o cabo do cabeçote. 3. Verifique a conexão entre o cabo e a placa principal. 4. Verifique a placa principal.</td></tr>
+            <tr><td><strong>ERR 16</strong></td><td>Arquivo QR code não encontrado</td><td>Máquinas de Etiqueta Bannercut</td><td>Arquivo correspondente ao QR code não localizado no modo QR</td><td>1. Nas configurações avançadas, confirme o local de busca do arquivo QR code selecionado. 2. Confirme se o arquivo com o nome reconhecido pelo QR code existe na pasta USB ou de rede correspondente.</td></tr>
+            <tr><td><strong>ERR 32</strong></td><td>Falha no motor servo X ou encoder</td><td>Máquinas de Etiqueta Bannercut</td><td>Erro no motor servo do eixo X ou no encoder</td><td>1. Verifique se o cabeçote X desliza suavemente sem travar com a máquina desligada. 2. Verifique se o cabo do motor servo X está conectado corretamente. 3. Verifique se o cabo da placa principal está conectado corretamente. 4. Verifique se a correia do eixo X está tensionada adequadamente. 5. Substitua o motor X ou a placa principal.</td></tr>
+            <tr><td><strong>ERR 64</strong></td><td>Falha no motor servo Y ou encoder</td><td>Máquinas de Etiqueta Bannercut</td><td>Erro no motor servo do eixo Y ou no encoder</td><td>1. Verifique se há objetos presos ou enrolados no eixo de alimentação. 2. Verifique se o cabo do motor servo Y está conectado corretamente. 3. Verifique se o cabo da placa principal está conectado corretamente. 4. Substitua o motor Y ou a placa principal.</td></tr>
+            <tr><td><strong>ERR 128</strong></td><td>Máquina sem código PID</td><td>Máquinas de Etiqueta Bannercut</td><td>A máquina não possui código PID configurado</td><td>Encaminhe a placa principal para troca.</td></tr>
+            <tr><td><strong>ERR 256</strong></td><td>Erro no chip de cache da placa principal</td><td>Máquinas de Etiqueta Bannercut</td><td>Falha no chip de cache de dados da placa-mãe</td><td>Encaminhe a placa principal para troca.</td></tr>
+            <tr><td><strong>ERR 512</strong></td><td>Erro no chip EEPROM da placa principal</td><td>Máquinas de Etiqueta Bannercut</td><td>Falha no chip de memória EEPROM da placa-mãe</td><td>Encaminhe a placa principal para troca.</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:12px;color:var(--text-3);margin-top:14px">
+        <i class="fa-solid fa-circle-info" style="margin-right:4px"></i>
+        Os códigos de erro variam conforme a série da máquina. Consulte o cabeçalho de cada seção para identificar o formato exibido no seu equipamento.
+      </p>
+    </div><!-- /panel-err -->
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-col"><h4>Plotters</h4><a href="A3.html">A3 Pro</a><a href="craft.html">Craft</a><a href="profissional-v48.html">Profissional V48</a><a href="saga-5373.html">Saga 5373</a></div>
+      <div class="footer-col"><h4>Auxílios</h4><a href="auxilio-plotter.html">Plotter</a><a href="auxilio-laser.html">Laser</a><a href="auxilio-impressoras.html">Impressoras</a></div>
+      <div class="footer-col"><h4>Recursos</h4><a href="manuais.html">Manuais</a><a href="videos.html">Vídeos</a><a href="anotacoes.html">Anotações</a></div>
+      <div class="footer-col"><h4>Início</h4><a href="index.html">Central Técnica</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Bannerjet Group. Todos os direitos reservados.</span>
+      <span class="footer-brand">Central Técnica</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+function switchTab(t) {
+  document.getElementById('panel-fw').hidden = (t !== 'fw');
+  document.getElementById('panel-err').hidden = (t !== 'err');
+  document.getElementById('tab-fw').classList.toggle('active', t === 'fw');
+  document.getElementById('tab-err').classList.toggle('active', t === 'err');
+}
+
+const errosSearch = document.getElementById('erros-search');
+errosSearch.addEventListener('input', () => {
+  const q = errosSearch.value.toLowerCase().trim();
+  document.querySelectorAll('#erros-table tbody tr').forEach(row => {
+    row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+});
+</script>
+</body>
+</html>
