@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peças — Bannerjet Group</title>
+  <script>document.documentElement.setAttribute('data-theme', localStorage.getItem('bj-theme') || 'light');</script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="images/Group.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* ── Breadcrumb ── */
+    .pv-breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 13px; color: var(--text-3);
+      margin-bottom: 32px; flex-wrap: wrap;
+    }
+    .pv-breadcrumb a { color: var(--text-3); text-decoration: none; }
+    .pv-breadcrumb a:hover { color: var(--text-1); }
+    .pv-breadcrumb i { font-size: 10px; }
+    .pv-breadcrumb .current { color: var(--text-1); font-weight: 600; }
+
+    /* ── Botão voltar ── */
+    .pv-back {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 13px; font-weight: 600; color: var(--text-2);
+      background: none; border: 1.5px solid var(--border);
+      border-radius: var(--r-sm); padding: 9px 16px;
+      cursor: pointer; font-family: var(--font);
+      transition: color .15s, border-color .15s, background .15s;
+      margin-bottom: 36px;
+    }
+    .pv-back:hover { color: var(--text-1); border-color: var(--border-2); background: var(--surface-2); }
+
+    /* ── Cabeçalho do equipamento ── */
+    .pv-equip-header {
+      display: flex; align-items: center; gap: 20px;
+      margin-bottom: 40px;
+    }
+    .pv-equip-thumb {
+      width: 80px; height: 80px; flex-shrink: 0;
+      border-radius: var(--r-lg);
+      border: 1.5px solid var(--border);
+      background: var(--surface-2);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .pv-equip-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
+    .pv-equip-label { font-size: 11px; font-weight: 700; letter-spacing: .7px; text-transform: uppercase; color: var(--text-3); margin-bottom: 4px; }
+    .pv-equip-name { font-size: 26px; font-weight: 800; color: var(--text-1); letter-spacing: -.02em; line-height: 1.2; }
+
+    /* ── Cards de categoria ── */
+    .pv-cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .pv-cat-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--r-xl);
+      padding: 36px 28px;
+      display: flex; flex-direction: column; align-items: flex-start; gap: 16px;
+      cursor: pointer; text-decoration: none;
+      transition: box-shadow .2s, border-color .2s, transform .2s;
+    }
+    .pv-cat-card:hover { box-shadow: var(--shadow-md); border-color: var(--border-2); transform: translateY(-3px); }
+    .pv-cat-icon {
+      width: 52px; height: 52px; border-radius: var(--r-lg);
+      background: var(--gradient);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 22px;
+    }
+    .pv-cat-name { font-size: 17px; font-weight: 800; color: var(--text-1); }
+    .pv-cat-desc { font-size: 13px; color: var(--text-2); line-height: 1.6; }
+    .pv-cat-arrow {
+      margin-top: auto;
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 700;
+      background: var(--gradient);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+
+    /* ── Catálogo de peças ── */
+    .parts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .part-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: var(--r-xl);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .part-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .part-img-wrap {
+      aspect-ratio: 4/3;
+      background: var(--surface-2);
+      border-bottom: 1.5px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; position: relative;
+    }
+    .part-img-wrap img {
+      width: 100%; height: 100%; object-fit: contain; padding: 12px;
+    }
+    .part-img-placeholder {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      color: var(--text-3); font-size: 11px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .5px;
+    }
+    .part-img-placeholder i { font-size: 28px; opacity: .4; }
+    .part-body { padding: 16px; flex: 1; display: flex; flex-direction: column; gap: 6px; }
+    .part-name { font-size: 14px; font-weight: 700; color: var(--text-1); line-height: 1.3; }
+    .part-desc { font-size: 12px; color: var(--text-2); line-height: 1.6; }
+
+    /* ── Estado vazio ── */
+    .parts-empty {
+      grid-column: 1 / -1;
+      padding: 64px 24px;
+      text-align: center;
+      color: var(--text-3);
+    }
+    .parts-empty i { font-size: 40px; opacity: .3; margin-bottom: 16px; display: block; }
+    .parts-empty p { font-size: 14px; }
+
+    /* ── Badge da categoria ── */
+    .cat-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--surface-2); border: 1.5px solid var(--border);
+      border-radius: var(--r-full); padding: 6px 14px;
+      font-size: 12px; font-weight: 700; color: var(--text-2);
+      margin-bottom: 28px;
+    }
+
+    /* ── Views ── */
+    #view-parts, #view-catalog { display: none; }
+
+    @media (max-width: 480px) {
+      .pv-equip-header { flex-direction: column; align-items: flex-start; gap: 12px; }
+      .pv-equip-thumb { width: 60px; height: 60px; }
+      .pv-equip-name { font-size: 22px; }
+      .parts-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="images/Bannerjet-Group-logo-White.png" alt="Bannerjet Group">
+    </a>
+    <nav class="header-nav">
+      <a href="index.html">Início</a>
+      <a href="index.html#categorias">Equipamentos</a>
+      <a href="manuais.html">Manuais</a>
+    </nav>
+    <div class="header-right">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Mudar tema">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<!-- ═══════════════════════════════════════════════════
+     BASE DE DADOS DE PEÇAS
+     Para adicionar peças: insira objetos no array da
+     categoria correspondente ao equipamento.
+     { img: 'images/nome.png', name: 'Nome', desc: 'Descrição' }
+     Deixe img: '' para exibir o placeholder de imagem.
+════════════════════════════════════════════════════════ -->
+<script>
+const PARTS_DB = {
+  'A3 Pro': {
+    mecanicas: [
+      { img: '', name: 'Rolete de Borracha', desc: 'Rolete responsável pela tração da mídia durante o processo de corte. Substitua ao notar marcas ou desvio de alimentação.' },
+      { img: '', name: 'Lâmina de Corte 45°', desc: 'Lâmina padrão para corte de vinil, papel e materiais finos. Ângulo de 45° para cortes precisos em curvas e detalhes.' },
+      { img: '', name: 'Mola de Pressão do Cabeçote', desc: 'Responsável por manter a pressão constante da lâmina sobre o material. Troque ao perceber variação de profundidade no corte.' },
+      { img: '', name: 'Correia de Transmissão', desc: 'Correia dentada que transmite o movimento do motor ao eixo de deslocamento lateral do cabeçote.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Placa Principal', desc: 'Placa de controle que gerencia todos os movimentos e comunicações do equipamento. Compatível com A3 Pro e A3 Servo.' },
+      { img: '', name: 'Fonte de Alimentação', desc: 'Fonte interna responsável pela tensão dos motores e eletrônica de controle. Tensão de entrada: 110/220 V.' },
+      { img: '', name: 'Cabo Flat Longo', desc: 'Cabo de fita que conecta o cabeçote à placa principal. Propenso a desgaste por flexão contínua.' },
+      { img: '', name: 'Sensor Óptico de Câmera', desc: 'Sensor responsável pela leitura das marcas de registro para o corte contorno com o CameraCut.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Tampa Superior', desc: 'Cobertura plástica da parte superior do equipamento. Protege os componentes internos e guia a mídia.' },
+      { img: '', name: 'Suporte do Cabeçote', desc: 'Peça que fixa o cabeçote de corte ao trilho de deslocamento lateral. Feita em alumínio.' },
+      { img: '', name: 'Guia Lateral de Mídia', desc: 'Guia ajustável que alinha a mídia durante a alimentação. Disponível para os dois lados do equipamento.' },
+    ]
+  },
+  'Craft': {
+    mecanicas: [
+      { img: '', name: 'Lâmina de Corte 45°', desc: 'Lâmina padrão para papel, vinil e materiais leves. Indicada para cortes detalhados na Craft.' },
+      { img: '', name: 'Lâmina de Corte 60°', desc: 'Para materiais mais espessos como borracha EVA fina e vinil de alta espessura.' },
+      { img: '', name: 'Rolete de Pressão', desc: 'Rolete que pressiona a mídia contra o rolo de tração durante o corte.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Placa de Controle Craft', desc: 'Placa principal da Craft, controla motores de passo e comunicação USB.' },
+      { img: '', name: 'Fonte Interna', desc: 'Fonte de alimentação compacta para os sistemas da Craft. Entrada 110/220 V.' },
+      { img: '', name: 'Cabo USB de Dados', desc: 'Cabo de comunicação entre o computador e a plotter Craft.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Tampa da Carcaça', desc: 'Cobertura plástica principal da Craft. Protege os mecanismos internos.' },
+      { img: '', name: 'Bandeja de Saída', desc: 'Suporte onde a mídia cortada é depositada após o processo.' },
+      { img: '', name: 'Base de Fixação', desc: 'Estrutura base que sustenta e nivela o equipamento na superfície de trabalho.' },
+    ]
+  },
+  'Profissional V48': {
+    mecanicas: [
+      { img: '', name: 'Rolete de Tração (par)', desc: 'Par de roletes de borracha que traciona a mídia ao longo da área de corte de 120 cm.' },
+      { img: '', name: 'Lâmina de Corte 45°', desc: 'Lâmina padrão para vinil, papel e materiais flexíveis até 1 mm de espessura.' },
+      { img: '', name: 'Correia GT2 Longa', desc: 'Correia de transmissão do eixo X, comprimento adequado para a largura de 120 cm.' },
+      { img: '', name: 'Eixo de Transmissão', desc: 'Eixo central que distribui o movimento do motor principal aos roletes de tração.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Placa Principal V48', desc: 'Placa de controle com suporte a CameraCut, Wi-Fi e USB. Específica para a linha Profissional V48.' },
+      { img: '', name: 'Motor Servo Lateral', desc: 'Motor responsável pelo deslocamento lateral do cabeçote de corte. Alto torque e precisão.' },
+      { img: '', name: 'Fonte de Alimentação', desc: 'Fonte de alta corrente para suportar os motores servo da V48. Entrada 110/220 V.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Trilho de Aço Inox', desc: 'Trilho de deslizamento do cabeçote. Comprimento de 120 cm, aço inoxidável temperado.' },
+      { img: '', name: 'Painel Frontal', desc: 'Painel com display touch e botões de operação da Profissional V48.' },
+      { img: '', name: 'Carcaça Lateral Esquerda', desc: 'Tampa estrutural do lado esquerdo que cobre os mecanismos de transmissão.' },
+    ]
+  },
+  'Saga 5373': {
+    mecanicas: [
+      { img: '', name: 'Rolete de Tração Grande', desc: 'Rolete de borracha de maior diâmetro para tração de mídias largas até 165 cm.' },
+      { img: '', name: 'Lâmina Saga 45°', desc: 'Lâmina de corte compatível com o porta-lâminas da linha Saga.' },
+      { img: '', name: 'Correia de Transmissão', desc: 'Correia dentada do eixo de tração. Comprimento específico para a largura de 165 cm.' },
+      { img: '', name: 'Mancal de Rolamento', desc: 'Rolamento que suporta o eixo de transmissão e reduz o atrito nos roletes de tração.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Placa de Controle Saga', desc: 'Placa principal com interface para controle de velocidade e força de corte da Saga 5373.' },
+      { img: '', name: 'Motor de Passo Lateral', desc: 'Motor que controla o deslocamento do cabeçote ao longo da largura de 165 cm.' },
+      { img: '', name: 'Painel de Controle LCD', desc: 'Display e teclado de operação frontal da Saga 5373.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Suporte de Rolo (par)', desc: 'Suportes laterais que sustentam o rolo de mídia na parte traseira do equipamento.' },
+      { img: '', name: 'Painel Lateral', desc: 'Cobertura lateral em chapa de aço pintada. Disponível lado esquerdo e direito.' },
+      { img: '', name: 'Base com Rodízios', desc: 'Estrutura de base com rodas tracionadas e trava para mobilidade e fixação.' },
+    ]
+  },
+  'Termolaminadora Pro': {
+    mecanicas: [
+      { img: '', name: 'Rolete de Silicone Superior', desc: 'Rolete de silicone de alta temperatura que aplica pressão e calor na laminação.' },
+      { img: '', name: 'Rolete de Pressão Inferior', desc: 'Rolete inferior que sustenta a mídia durante a laminação a quente.' },
+      { img: '', name: 'Engrenagem de Transmissão', desc: 'Engrenagem que transmite a rotação do motor aos roletes de laminação.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Resistência de Aquecimento', desc: 'Elemento resistivo interno ao rolete superior. Aquece até 130 °C para laminação a quente.' },
+      { img: '', name: 'Termostato de Controle', desc: 'Sensor e controlador de temperatura que mantém o rolete na temperatura programada.' },
+      { img: '', name: 'Placa de Controle', desc: 'Placa responsável pelo controle de temperatura, velocidade e segurança da Termolaminadora Pro.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Tampa de Proteção Térmica', desc: 'Cobertura superior que isola termicamente o rolete aquecido e protege o operador.' },
+      { img: '', name: 'Guia de Entrada de Mídia', desc: 'Guia ajustável que alinha a mídia na entrada dos roletes de laminação.' },
+      { img: '', name: 'Painel de Controle Frontal', desc: 'Painel com seletor de temperatura e velocidade da Termolaminadora Pro.' },
+    ]
+  },
+  'Termolaminadora': {
+    mecanicas: [
+      { img: '', name: 'Rolete de Silicone (par)', desc: 'Par de roletes de silicone resistentes a até 180 °C. Troque ao notar marcas na laminação.' },
+      { img: '', name: 'Engrenagem de Tração', desc: 'Engrenagem principal que aciona os roletes de laminação da Termolaminadora.' },
+      { img: '', name: 'Mola de Tensão dos Roletes', desc: 'Mola que regula a pressão entre os roletes superior e inferior.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Resistência de Aquecimento 180°C', desc: 'Elemento de aquecimento de alta potência para laminação até 180 °C.' },
+      { img: '', name: 'Placa de Controle de Temperatura', desc: 'Controlador digital de temperatura com display e ajuste fino.' },
+      { img: '', name: 'Fusível de Proteção Térmica', desc: 'Fusível que desliga o equipamento em caso de superaquecimento. Elemento de segurança.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Carcaça Principal', desc: 'Estrutura metálica que sustenta todos os componentes da Termolaminadora.' },
+      { img: '', name: 'Guia de Saída', desc: 'Guia que direciona a mídia laminada após os roletes de saída.' },
+      { img: '', name: 'Pé de Borracha Antiderrapante', desc: 'Pé de nivelamento e fixação em borracha. Conjunto de 4 unidades.' },
+    ]
+  },
+  'Laminadora L1': {
+    mecanicas: [
+      { img: '', name: 'Rolete de Borracha Frio', desc: 'Rolete para laminação a frio, sem aquecimento. Ideal para filmes autoadesivos.' },
+      { img: '', name: 'Rolamento do Eixo', desc: 'Rolamento que suporta o eixo do rolete e garante rotação suave e precisa.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Motor de Tração L1', desc: 'Motor elétrico que aciona os roletes de laminação da L1.' },
+      { img: '', name: 'Pedal de Acionamento', desc: 'Pedal externo para controle de avanço da mídia com as mãos livres.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Suporte de Rolo de Filme', desc: 'Suporte traseiro que sustenta o rolo de filme de laminação.' },
+      { img: '', name: 'Guia Ajustável de Largura', desc: 'Guia lateral ajustável para centralizar mídias de diferentes larguras.' },
+      { img: '', name: 'Tampa Lateral', desc: 'Cobertura plástica lateral que protege os mecanismos internos da L1.' },
+    ]
+  },
+  'Laminadora L2': {
+    mecanicas: [
+      { img: '', name: 'Rolete de Silicone 120°C', desc: 'Rolete de silicone para laminação a quente até 120 °C da L2.' },
+      { img: '', name: 'Engrenagem Redutora', desc: 'Conjunto de engrenagens que reduz a velocidade e aumenta o torque nos roletes.' },
+      { img: '', name: 'Correia de Acionamento', desc: 'Correia que transmite a rotação do motor elétrico ao eixo principal dos roletes.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Resistência 120°C', desc: 'Elemento de aquecimento do rolete superior da L2. Potência adequada para laminação a quente.' },
+      { img: '', name: 'Termostato Bimetálico', desc: 'Sensor de temperatura que controla o ciclo de aquecimento do rolete.' },
+      { img: '', name: 'Placa de Controle L2', desc: 'Placa com controle de temperatura e velocidade de laminação.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Carcaça Metálica', desc: 'Estrutura principal da L2 em chapa de aço, resistente ao calor dos roletes.' },
+      { img: '', name: 'Guia de Entrada', desc: 'Guia de alumínio que alinha a mídia antes dos roletes de laminação.' },
+    ]
+  },
+  'Fibra Laser': {
+    mecanicas: [
+      { img: '', name: 'Lente de Foco F-Theta', desc: 'Lente de focagem que distribui o feixe laser uniformemente sobre a área de trabalho.' },
+      { img: '', name: 'Espelho de Galvanômetro', desc: 'Espelho de precisão que redireciona o feixe laser no eixo X e Y em alta velocidade.' },
+      { img: '', name: 'Cabeçote de Marcação', desc: 'Conjunto completo do cabeçote com galvanômetro e lente. Compatível com 30 W e 50 W.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Fonte de Alimentação Laser', desc: 'Fonte de alta tensão que alimenta o módulo laser de fibra. 30 W ou 50 W.' },
+      { img: '', name: 'Placa de Controle EZCAD', desc: 'Placa de interface entre o software EzCad e o cabeçote de marcação a laser.' },
+      { img: '', name: 'Módulo Laser de Fibra 30W', desc: 'Módulo laser de fibra óptica de 30 W. Vida útil estimada de 100.000 horas.' },
+      { img: '', name: 'Módulo Laser de Fibra 50W', desc: 'Módulo laser de fibra óptica de 50 W para marcação mais profunda e rápida.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Mesa de Trabalho', desc: 'Plataforma ajustável em altura onde a peça a ser marcada é posicionada.' },
+      { img: '', name: 'Gabinete de Proteção', desc: 'Gabinete com janela de visualização e proteção contra reflexo do feixe laser.' },
+      { img: '', name: 'Coluna de Sustentação', desc: 'Estrutura vertical que sustenta o cabeçote e permite ajuste de foco em altura.' },
+    ]
+  },
+  'Laser CO2': {
+    mecanicas: [
+      { img: '', name: 'Tubo Laser CO2 150W', desc: 'Tubo de vidro com gás CO2 que gera o feixe laser. Vida útil média de 1.200 horas.' },
+      { img: '', name: 'Espelho de Reflexão #1', desc: 'Primeiro espelho do caminho óptico, redireciona o feixe do tubo para o eixo X.' },
+      { img: '', name: 'Lente de Foco 50,8mm', desc: 'Lente convergente que foca o feixe laser no ponto de trabalho. Distância focal 50,8 mm.' },
+      { img: '', name: 'Correia de Eixo X', desc: 'Correia dentada do eixo longitudinal de deslocamento do cabeçote.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Fonte de Alimentação Laser CO2', desc: 'Fonte de alta tensão (15-20 kV) que excita o gás no tubo CO2.' },
+      { img: '', name: 'Placa de Controle Ruida', desc: 'Controlador Ruida responsável pelo movimento dos eixos e controle do laser.' },
+      { img: '', name: 'Motor de Passo Eixo X', desc: 'Motor de passo de alta resolução para o deslocamento longitudinal do cabeçote.' },
+      { img: '', name: 'Sensor de Home (par)', desc: 'Sensores fim de curso para referenciamento dos eixos X e Y.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Tampa de Acrílico', desc: 'Tampa transparente de proteção do campo de trabalho. Bloqueia radiação laser difusa.' },
+      { img: '', name: 'Favo de Mel (mesa)', desc: 'Mesa colmeia de alumínio que suporta a peça e permite passagem do feixe sem reflexo.' },
+      { img: '', name: 'Exaustor Lateral', desc: 'Sistema de exaustão de fumaça e partículas geradas durante o corte e gravação.' },
+    ]
+  },
+  'Solda Letra': {
+    mecanicas: [
+      { img: '', name: 'Ponteira de Solda', desc: 'Ponteira de cobre que transfere calor para a solda de letras caixa em acrílico e PVC.' },
+      { img: '', name: 'Mola de Retorno da Ponteira', desc: 'Mola que retorna a ponteira ao ponto de repouso após cada solda.' },
+      { img: '', name: 'Guia de Posicionamento', desc: 'Guia ajustável para posicionamento preciso da ponteira sobre a letra.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Resistência de Aquecimento 1500W', desc: 'Elemento de aquecimento de alta potência da Solda Letra. Atinge temperatura de trabalho rapidamente.' },
+      { img: '', name: 'Controlador de Temperatura', desc: 'Display e controlador PID que mantém a ponteira na temperatura ideal de soldagem.' },
+      { img: '', name: 'Pedal de Acionamento', desc: 'Pedal externo para acionar a solda com as mãos livres para segurar as peças.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Braço Articulado', desc: 'Braço metálico articulado que posiciona a ponteira sobre a peça.' },
+      { img: '', name: 'Base com Peso', desc: 'Base pesada que garante estabilidade durante a operação de solda.' },
+    ]
+  },
+  'Laserjet Pro 1325D': {
+    mecanicas: [
+      { img: '', name: 'Tubo Laser CO2 150W', desc: 'Tubo CO2 de alta potência para corte e gravação profunda. Específico para a 1325D.' },
+      { img: '', name: 'Lente de Foco 63,5mm', desc: 'Lente com distância focal de 63,5 mm, indicada para materiais de maior espessura.' },
+      { img: '', name: 'Correia de Eixo Y', desc: 'Correia dentada do eixo transversal da mesa de 1.300 × 2.500 mm.' },
+      { img: '', name: 'Roda de Rolamento do Pórtico', desc: 'Rodas de rolamento que permitem o deslizamento do pórtico sobre os trilhos.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Fonte Laser 150W CO2', desc: 'Fonte de excitação do tubo laser da 1325D. Tensão de entrada 220 V.' },
+      { img: '', name: 'Controlador Ruida RDC6445G', desc: 'Controlador principal da 1325D, compatível com LightBurn.' },
+      { img: '', name: 'Driver Motor de Passo', desc: 'Driver que controla os motores de passo dos eixos X e Y.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Janela de Proteção (par)', desc: 'Janelas laterais de segurança com filtro para radiação laser CO2.' },
+      { img: '', name: 'Tampa da Câmara de Trabalho', desc: 'Tampa superior da área de trabalho com sensor de abertura de segurança.' },
+      { img: '', name: 'Trilho de Aço (eixo X)', desc: 'Trilho de precisão para o deslocamento do cabeçote ao longo de 1.300 mm.' },
+    ]
+  },
+  'Guilhotina Elétrica': {
+    mecanicas: [
+      { img: '', name: 'Lâmina de Corte 42cm', desc: 'Lâmina de aço temperado de 42 cm para corte de papel, cartão e laminados.' },
+      { img: '', name: 'Régua de Parada', desc: 'Régua traseira ajustável que posiciona a mídia para cortes repetidos no mesmo tamanho.' },
+      { img: '', name: 'Mola de Retorno da Lâmina', desc: 'Mola que retorna a lâmina à posição de repouso após cada corte.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Motor Elétrico 1/4 HP', desc: 'Motor que aciona o mecanismo de descida e subida da lâmina de corte.' },
+      { img: '', name: 'Botão de Dois Acionamentos', desc: 'Par de botões de segurança que exige o uso de ambas as mãos para acionar o corte.' },
+      { img: '', name: 'Placa de Controle', desc: 'Placa eletrônica que gerencia o ciclo de corte e as funções de segurança.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Mesa de Corte', desc: 'Superfície plana de trabalho onde a mídia é posicionada antes do corte.' },
+      { img: '', name: 'Protetor de Lâmina', desc: 'Proteção transparente que cobre a lâmina durante a descida para segurança do operador.' },
+      { img: '', name: 'Lateral em Chapa de Aço', desc: 'Laterais estruturais que sustentam o mecanismo e a mesa da guilhotina.' },
+    ]
+  },
+  'Guilhotina Hidráulica': {
+    mecanicas: [
+      { img: '', name: 'Lâmina de Corte 68cm', desc: 'Lâmina de aço temperado de 68 cm para cortes de alta precisão em grandes formatos.' },
+      { img: '', name: 'Cilindro Hidráulico', desc: 'Cilindro que converte pressão hidráulica em força de descida da lâmina.' },
+      { img: '', name: 'Bomba Hidráulica', desc: 'Bomba que pressuriza o óleo para acionar o cilindro da lâmina.' },
+      { img: '', name: 'Régua de Parada com Escala', desc: 'Régua com escala milimétrica para repetição precisa de cortes.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Válvula Solenóide', desc: 'Válvula eletro-hidráulica que controla o fluxo de óleo para o cilindro.' },
+      { img: '', name: 'Motor da Bomba Hidráulica', desc: 'Motor elétrico trifásico que aciona a bomba hidráulica da guilhotina.' },
+      { img: '', name: 'Painel Elétrico', desc: 'Painel com chaves e botões de controle de operação da Guilhotina Hidráulica.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Estrutura de Aço', desc: 'Estrutura principal soldada em aço carbono de alta espessura para suportar a força de corte.' },
+      { img: '', name: 'Reservatório de Óleo', desc: 'Reservatório metálico para o óleo hidráulico do sistema de acionamento.' },
+    ]
+  },
+  'Refiladora T1': {
+    mecanicas: [
+      { img: '', name: 'Lâmina Circular de Corte', desc: 'Lâmina circular de aço inox para corte longitudinal de banners, lona e vinil.' },
+      { img: '', name: 'Rolete de Tração Inferior', desc: 'Rolete que puxa a mídia durante o corte longitudinal na T1.' },
+      { img: '', name: 'Rolamento de Suporte da Lâmina', desc: 'Rolamento que permite a livre rotação da lâmina circular durante o corte.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Motor de Tração T1', desc: 'Motor que aciona os roletes de tração da Refiladora T1. Velocidade ajustável.' },
+      { img: '', name: 'Pedal de Controle', desc: 'Pedal para iniciar e pausar o avanço da mídia durante o corte.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Trilho de Guia da Lâmina', desc: 'Trilho de alumínio que guia o carro da lâmina ao longo dos 160 cm de largura.' },
+      { img: '', name: 'Suporte de Rolo Traseiro', desc: 'Suporte que sustenta o rolo de mídia na entrada da Refiladora T1.' },
+      { img: '', name: 'Base Tubular', desc: 'Estrutura tubular de aço que sustenta a mesa e permite regulagem de altura.' },
+    ]
+  },
+  'Refiladora T2': {
+    mecanicas: [
+      { img: '', name: 'Lâmina Circular Dupla', desc: 'Conjunto de duas lâminas circulares para corte simultâneo de duas faixas.' },
+      { img: '', name: 'Rolete de Pressão Superior', desc: 'Rolete que pressiona a mídia contra o rolete de tração inferior durante o corte.' },
+      { img: '', name: 'Correia de Sincronismo', desc: 'Correia que sincroniza a velocidade dos roletes de tração nos dois lados da T2.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Motor de Tração T2', desc: 'Motor de maior potência para a largura de até 320 cm da Refiladora T2.' },
+      { img: '', name: 'Inversor de Frequência', desc: 'Controla a velocidade do motor de tração da T2 de forma precisa e suave.' },
+      { img: '', name: 'Painel de Controle T2', desc: 'Painel com display e ajuste de velocidade da Refiladora T2.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Trilho Duplo de Guia', desc: 'Par de trilhos de alumínio para posicionamento das lâminas na largura de 320 cm.' },
+      { img: '', name: 'Suporte Dobrável de Rolo', desc: 'Suporte articulado que facilita o carregamento de rolos pesados.' },
+    ]
+  },
+  'UV 90 cm': {
+    mecanicas: [
+      { img: '', name: 'Cabeçote de Impressão', desc: 'Cabeçote piezoelétrico de impressão UV. Núcleo da qualidade e resolução de impressão.' },
+      { img: '', name: 'Correia de Avanço de Mídia', desc: 'Correia que move a mídia com precisão durante o ciclo de impressão.' },
+      { img: '', name: 'Rolete de Tração de Mídia', desc: 'Rolete que garante o avanço uniforme da mídia ao longo dos 90 cm de largura.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Lâmpada UV de Cura', desc: 'Lâmpada LED UV que cura instantaneamente a tinta UV após a impressão.' },
+      { img: '', name: 'Placa de Controle do Cabeçote', desc: 'Placa que gerencia os disparos do cabeçote e sincroniza com o avanço de mídia.' },
+      { img: '', name: 'Bomba de Tinta UV', desc: 'Bomba peristáltica que alimenta a tinta UV do reservatório ao cabeçote.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Tampa Superior', desc: 'Tampa de proteção que bloqueia a luz UV externa e mantém a temperatura interna.' },
+      { img: '', name: 'Guia de Entrada de Mídia Rígida', desc: 'Guia de precisão para posicionamento de substratos rígidos como acrílico e PVC.' },
+    ]
+  },
+  'Eco Solvente 180 cm': {
+    mecanicas: [
+      { img: '', name: 'Cabeçote Epson I3200', desc: 'Cabeçote de impressão Epson I3200 de alta velocidade para tintas eco solvente.' },
+      { img: '', name: 'Rolete de Tração de Mídia', desc: 'Rolete que faz o avanço preciso da mídia flexível durante a impressão.' },
+      { img: '', name: 'Correia de Carro do Cabeçote', desc: 'Correia que movimenta o cabeçote ao longo dos 180 cm de largura de impressão.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Placa de Controle Principal', desc: 'Placa principal com processamento de imagem e controle dos eixos da impressora.' },
+      { img: '', name: 'Motor de Passo do Carro', desc: 'Motor que movimenta o carro do cabeçote em alta velocidade e precisão.' },
+      { img: '', name: 'Aquecedor de Secagem', desc: 'Sistema de aquecimento que acelera a secagem da tinta eco solvente após a impressão.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Suporte de Rolo (entrada/saída)', desc: 'Par de suportes para rolo de mídia na entrada e saída. Suportam até 30 kg cada.' },
+      { img: '', name: 'Tampa de Manutenção', desc: 'Tampa de acesso aos cabeçotes e sistema de tinta para limpeza e manutenção.' },
+    ]
+  },
+  'UV A3': {
+    mecanicas: [
+      { img: '', name: 'Cabeçote UV A3', desc: 'Cabeçote de impressão UV para o formato A3. Alta resolução para impressão em substratos rígidos.' },
+      { img: '', name: 'Mesa de Vácuo A3', desc: 'Mesa com sistema de vácuo que fixa substratos flexíveis durante a impressão.' },
+      { img: '', name: 'Correia do Cabeçote', desc: 'Correia de deslizamento do cabeçote sobre a área de impressão A3.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Lâmpada LED UV A3', desc: 'Conjunto de LEDs UV de alta potência para cura instantânea no formato A3.' },
+      { img: '', name: 'Placa de Controle UV A3', desc: 'Placa controladora da impressora UV A3 com interface USB e RIP.' },
+      { img: '', name: 'Bomba de Vácuo', desc: 'Bomba que gera o vácuo na mesa de fixação de substratos.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Mesa de Impressão A3', desc: 'Base plana de alumínio para posicionamento e nivelamento do substrato.' },
+      { img: '', name: 'Carcaça Principal', desc: 'Estrutura metálica que sustenta e protege todos os componentes da UV A3.' },
+    ]
+  },
+  'Infiniti Challenger Plus H6': {
+    mecanicas: [
+      { img: '', name: 'Cabeçote Seiko SPT 510/50pl', desc: 'Cabeçote piezoelétrico Seiko de alta velocidade para impressão em 320 cm com 8 cores.' },
+      { img: '', name: 'Rolete de Pressão de Mídia', desc: 'Rolete que mantém a mídia tensionada e nivelada durante impressão em alta velocidade.' },
+      { img: '', name: 'Correia de Transmissão do Carro', desc: 'Correia de alta resistência que movimenta o carro com 6 cabeçotes ao longo dos 320 cm.' },
+    ],
+    eletronicas: [
+      { img: '', name: 'Placa Mãe Infiniti', desc: 'Placa principal de controle da Infiniti Challenger Plus H6 com processamento de 8 cores.' },
+      { img: '', name: 'Motor Servo do Carro', desc: 'Motor servo de alta velocidade e precisão para o deslocamento do carro de impressão.' },
+      { img: '', name: 'Aquecedor Frontal e Traseiro', desc: 'Sistema de aquecimento duplo para secagem da tinta solvente em alta velocidade.' },
+      { img: '', name: 'Sensor de Nível de Tinta', desc: 'Sensor óptico que monitora o nível nos subtiners e aciona o reabastecimento automático.' },
+    ],
+    estruturais: [
+      { img: '', name: 'Suporte de Rolo Grande', desc: 'Suporte para rolos de mídia de até 320 cm com eixo pneumático de fixação.' },
+      { img: '', name: 'Tampa de Acesso ao Carro', desc: 'Tampa superior articulada para acesso aos cabeçotes e limpeza de manutenção.' },
+      { img: '', name: 'Painel de Operação H6', desc: 'Painel frontal com display touchscreen para controle da Infiniti Challenger Plus H6.' },
+    ]
+  }
+};
+</script>
+
+
+<!-- ─── VIEW 1: Seleção de equipamento ─── -->
+<div id="view-select">
+
+  <section class="page-hero">
+    <div class="container" style="position:relative;z-index:1">
+      <h1 class="page-hero-title">Peças e <span class="accent">Componentes</span></h1>
+      <p class="page-hero-desc">Selecione o equipamento para encontrar as peças mecânicas, eletrônicas e estruturais disponíveis.</p>
+    </div>
+  </section>
+
+  <div style="padding: 48px 0 64px">
+    <div class="container">
+
+      <div class="section-header fade-up">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Plotters de Recorte</h2>
+      </div>
+      <div class="machine-grid fade-up">
+        <div class="machine-card" onclick="selectEquip('A3 Pro','images/image-27-1.png')">
+          <div class="card-image"><img src="images/image-27-1.png" alt="A3 Pro"></div>
+          <div class="card-body"><div class="card-name">A3 Pro</div><div class="card-desc">Equipamento de entrada</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Craft','images/image-28.png')">
+          <div class="card-image"><img src="images/image-28.png" alt="Craft"></div>
+          <div class="card-body"><div class="card-name">Craft</div><div class="card-desc">Área de corte 39 cm</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Profissional V48','images/image-29.png')">
+          <div class="card-image"><img src="images/image-29.png" alt="Profissional V48"></div>
+          <div class="card-body"><div class="card-name">Profissional V48</div><div class="card-desc">Área de corte 120 cm</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Saga 5373','images/image-30.png')">
+          <div class="card-image"><img src="images/image-30.png" alt="Saga 5373"></div>
+          <div class="card-body"><div class="card-name">Saga 5373</div><div class="card-desc">Área de corte 165 cm</div><button class="card-btn">Ver peças</button></div>
+        </div>
+      </div>
+
+      <div class="section-header fade-up" style="margin-top:48px">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Laminadoras</h2>
+      </div>
+      <div class="machine-grid fade-up">
+        <div class="machine-card" onclick="selectEquip('Termolaminadora Pro','images/image-31.png')">
+          <div class="card-image"><img src="images/image-31.png" alt="Termolaminadora Pro"></div>
+          <div class="card-body"><div class="card-name">Termolaminadora Pro</div><div class="card-desc">Até 130 °C</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Termolaminadora','images/image-32-2.png')">
+          <div class="card-image"><img src="images/image-32-2.png" alt="Termolaminadora"></div>
+          <div class="card-body"><div class="card-name">Termolaminadora</div><div class="card-desc">Até 180 °C</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Laminadora L1','images/image-33.png')">
+          <div class="card-image"><img src="images/image-33.png" alt="Laminadora L1"></div>
+          <div class="card-body"><div class="card-name">Laminadora L1</div><div class="card-desc">Fria até 60 °C</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Laminadora L2','images/image-34.png')">
+          <div class="card-image"><img src="images/image-34.png" alt="Laminadora L2"></div>
+          <div class="card-body"><div class="card-name">Laminadora L2</div><div class="card-desc">A quente até 120 °C</div><button class="card-btn">Ver peças</button></div>
+        </div>
+      </div>
+
+      <div class="section-header fade-up" style="margin-top:48px">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Lasers</h2>
+      </div>
+      <div class="machine-grid fade-up">
+        <div class="machine-card" onclick="selectEquip('Fibra Laser','images/image-35.png')">
+          <div class="card-image"><img src="images/image-35.png" alt="Fibra Laser"></div>
+          <div class="card-body"><div class="card-name">Fibra Laser</div><div class="card-desc">30 W ou 50 W</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Laser CO2','images/image-36.png')">
+          <div class="card-image"><img src="images/image-36.png" alt="Laser CO2"></div>
+          <div class="card-body"><div class="card-name">Laser CO2</div><div class="card-desc">150 W</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Solda Letra','images/image-37.png')">
+          <div class="card-image"><img src="images/image-37.png" alt="Solda Letra"></div>
+          <div class="card-body"><div class="card-name">Solda Letra</div><div class="card-desc">1500 W</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Laserjet Pro 1325D','images/image-38.png')">
+          <div class="card-image"><img src="images/image-38.png" alt="Laserjet Pro 1325D"></div>
+          <div class="card-body"><div class="card-name">Laserjet Pro 1325D</div><div class="card-desc">150 W</div><button class="card-btn">Ver peças</button></div>
+        </div>
+      </div>
+
+      <div class="section-header fade-up" style="margin-top:48px">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Acabamentos</h2>
+      </div>
+      <div class="machine-grid fade-up">
+        <div class="machine-card" onclick="selectEquip('Guilhotina Elétrica','images/image-39.png')">
+          <div class="card-image"><img src="images/image-39.png" alt="Guilhotina Elétrica"></div>
+          <div class="card-body"><div class="card-name">Guilhotina Elétrica</div><div class="card-desc">42 cm</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Guilhotina Hidráulica','images/image-40.png')">
+          <div class="card-image"><img src="images/image-40.png" alt="Guilhotina Hidráulica"></div>
+          <div class="card-body"><div class="card-name">Guilhotina Hidráulica</div><div class="card-desc">68 cm</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Refiladora T1','images/image-41.png')">
+          <div class="card-image"><img src="images/image-41.png" alt="Refiladora T1"></div>
+          <div class="card-body"><div class="card-name">Refiladora T1</div><div class="card-desc">Área de corte 160 cm</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Refiladora T2','images/image-42.png')">
+          <div class="card-image"><img src="images/image-42.png" alt="Refiladora T2"></div>
+          <div class="card-body"><div class="card-name">Refiladora T2</div><div class="card-desc">Área de corte 320 cm ou 160 cm</div><button class="card-btn">Ver peças</button></div>
+        </div>
+      </div>
+
+      <div class="section-header fade-up" style="margin-top:48px">
+        <div class="section-bar"></div>
+        <h2 class="section-title">Impressoras</h2>
+      </div>
+      <div class="machine-grid fade-up">
+        <div class="machine-card" onclick="selectEquip('UV 90 cm','images/image-43.png')">
+          <div class="card-image"><img src="images/image-43.png" alt="UV 90cm"></div>
+          <div class="card-body"><div class="card-name">UV 90 cm</div><div class="card-desc">Resina UV</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Eco Solvente 180 cm','images/image-44.png')">
+          <div class="card-image"><img src="images/image-44.png" alt="Eco Solvente 180cm"></div>
+          <div class="card-body"><div class="card-name">Eco Solvente 180 cm</div><div class="card-desc">Até 2 cores · Epson I3200</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('UV A3','images/image-45.png')">
+          <div class="card-image"><img src="images/image-45.png" alt="UV A3"></div>
+          <div class="card-body"><div class="card-name">UV A3</div><div class="card-desc">Resina UV</div><button class="card-btn">Ver peças</button></div>
+        </div>
+        <div class="machine-card" onclick="selectEquip('Infiniti Challenger Plus H6','images/image-46.png')">
+          <div class="card-image"><img src="images/image-46.png" alt="Infiniti Challenger Plus H6"></div>
+          <div class="card-body"><div class="card-name">Infiniti Challenger Plus H6</div><div class="card-desc">320 cm · 8 cores</div><button class="card-btn">Ver peças</button></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ─── VIEW 2: Categorias de peças ─── -->
+<div id="view-parts">
+  <div style="padding: 56px 0 64px">
+    <div class="container">
+
+      <div class="pv-breadcrumb">
+        <a href="index.html">Início</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="pecas.html" onclick="backToSelect();return false;">Peças</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span class="current" id="bc-equip"></span>
+      </div>
+
+      <button class="pv-back" onclick="backToSelect()">
+        <i class="fa-solid fa-arrow-left"></i> Trocar equipamento
+      </button>
+
+      <div class="pv-equip-header">
+        <div class="pv-equip-thumb">
+          <img id="parts-thumb" src="" alt="">
+        </div>
+        <div>
+          <div class="pv-equip-label">Equipamento selecionado</div>
+          <div class="pv-equip-name" id="parts-title"></div>
+        </div>
+      </div>
+
+      <div class="pv-cat-grid">
+        <div class="pv-cat-card" onclick="selectCat('mecanicas')">
+          <div class="pv-cat-icon"><i class="fa-solid fa-gears"></i></div>
+          <div class="pv-cat-name">Peças Mecânicas</div>
+          <div class="pv-cat-desc">Roletes, lâminas, correias, molas, eixos e demais componentes de movimento e transmissão mecânica.</div>
+          <div class="pv-cat-arrow">Ver catálogo <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="pv-cat-card" onclick="selectCat('eletronicas')">
+          <div class="pv-cat-icon"><i class="fa-solid fa-microchip"></i></div>
+          <div class="pv-cat-name">Peças Eletrônicas</div>
+          <div class="pv-cat-desc">Placas, fontes de alimentação, cabos flat, sensores, motores e demais componentes elétricos e eletrônicos.</div>
+          <div class="pv-cat-arrow">Ver catálogo <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+        <div class="pv-cat-card" onclick="selectCat('estruturais')">
+          <div class="pv-cat-icon"><i class="fa-solid fa-cubes"></i></div>
+          <div class="pv-cat-name">Peças Estruturais</div>
+          <div class="pv-cat-desc">Carcaças, painéis, tampas, suportes, guias e demais componentes da estrutura física do equipamento.</div>
+          <div class="pv-cat-arrow">Ver catálogo <i class="fa-solid fa-arrow-right"></i></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ─── VIEW 3: Catálogo de peças ─── -->
+<div id="view-catalog">
+  <div style="padding: 56px 0 80px">
+    <div class="container">
+
+      <div class="pv-breadcrumb">
+        <a href="index.html">Início</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="pecas.html" onclick="backToSelect();return false;">Peças</a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <a href="#" id="bc-equip2" onclick="backToParts();return false;"></a>
+        <i class="fa-solid fa-chevron-right"></i>
+        <span class="current" id="bc-cat"></span>
+      </div>
+
+      <button class="pv-back" onclick="backToParts()">
+        <i class="fa-solid fa-arrow-left"></i> Outras categorias
+      </button>
+
+      <div class="pv-equip-header">
+        <div class="pv-equip-thumb">
+          <img id="catalog-thumb" src="" alt="">
+        </div>
+        <div>
+          <div class="pv-equip-label" id="catalog-equip-label"></div>
+          <div class="pv-equip-name" id="catalog-cat-title"></div>
+        </div>
+      </div>
+
+      <div class="parts-grid" id="parts-grid"></div>
+
+    </div>
+  </div>
+</div>
+
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Plotters</h4>
+        <a href="A3.html">A3 Pro</a>
+        <a href="craft.html">Craft</a>
+        <a href="profissional-v48.html">Profissional V48</a>
+      </div>
+      <div class="footer-col">
+        <h4>Laminadoras</h4>
+        <a href="termolaminadora-pro.html">Termolaminadora Pro</a>
+        <a href="laminadora-l1.html">Laminadora L1</a>
+        <a href="laminadora-l2.html">Laminadora L2</a>
+      </div>
+      <div class="footer-col">
+        <h4>Lasers</h4>
+        <a href="fibra-laser.html">Fibra Laser</a>
+        <a href="laser-co2.html">Laser CO2</a>
+        <a href="laserjet-pro-1325d.html">Laserjet Pro 1325D</a>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="manuais.html">Manuais</a>
+        <a href="firmwares.html">Firmwares</a>
+        <a href="index.html">Central Técnica</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2025 Bannerjet Group. Todos os direitos reservados.</span>
+      <span class="footer-brand">Central Técnica</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  const CAT_LABELS = {
+    mecanicas:   { label: 'Peças Mecânicas',   icon: 'fa-gears' },
+    eletronicas: { label: 'Peças Eletrônicas', icon: 'fa-microchip' },
+    estruturais: { label: 'Peças Estruturais', icon: 'fa-cubes' }
+  };
+
+  let currentEquip = '';
+  let currentImg   = '';
+  let currentCat   = '';
+
+  function show(id) {
+    ['view-select','view-parts','view-catalog'].forEach(v => {
+      document.getElementById(v).style.display = v === id ? 'block' : 'none';
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function selectEquip(name, img) {
+    currentEquip = name;
+    currentImg   = img;
+    document.getElementById('bc-equip').textContent   = name;
+    document.getElementById('parts-title').textContent = name;
+    document.getElementById('parts-thumb').src         = img;
+    document.getElementById('parts-thumb').alt         = name;
+    show('view-parts');
+  }
+
+  function selectCat(cat) {
+    currentCat = cat;
+    const info  = CAT_LABELS[cat];
+    const parts = (PARTS_DB[currentEquip] || {})[cat] || [];
+
+    document.getElementById('bc-equip2').textContent       = currentEquip;
+    document.getElementById('bc-cat').textContent          = info.label;
+    document.getElementById('catalog-equip-label').textContent = currentEquip;
+    document.getElementById('catalog-cat-title').textContent   = info.label;
+    document.getElementById('catalog-thumb').src           = currentImg;
+    document.getElementById('catalog-thumb').alt           = currentEquip;
+
+    const grid = document.getElementById('parts-grid');
+    if (parts.length === 0) {
+      grid.innerHTML = `
+        <div class="parts-empty">
+          <i class="fa-solid fa-box-open"></i>
+          <p>Nenhuma peça cadastrada nesta categoria ainda.</p>
+        </div>`;
+    } else {
+      grid.innerHTML = parts.map(p => `
+        <div class="part-card">
+          <div class="part-img-wrap">
+            ${p.img
+              ? `<img src="${p.img}" alt="${p.name}" loading="lazy">`
+              : `<div class="part-img-placeholder"><i class="fa-solid fa-image"></i><span>Sem imagem</span></div>`
+            }
+          </div>
+          <div class="part-body">
+            <div class="part-name">${p.name}</div>
+            ${p.desc ? `<div class="part-desc">${p.desc}</div>` : ''}
+          </div>
+        </div>`).join('');
+    }
+
+    show('view-catalog');
+  }
+
+  function backToParts()  { show('view-parts');  }
+  function backToSelect() { show('view-select'); }
+</script>
+</body>
+</html>
