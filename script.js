@@ -299,3 +299,69 @@ function bjSearchHighlight(items) {
   items.forEach((el, i) => el.classList.toggle('focused', i === bjSearchFocused));
   if (bjSearchFocused >= 0) items[bjSearchFocused].scrollIntoView({ block: 'nearest' });
 }
+
+// ─── ICON CAROUSEL (Index) ────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function () {
+  const track = document.querySelector('.icon-menu');
+  if (!track) return;
+
+  // Clona itens no início e no fim para loop infinito
+  const origItems = Array.from(track.children);
+  const n = origItems.length;
+
+  origItems.forEach(function (el) {
+    const clone = el.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.appendChild(clone);
+  });
+  origItems.forEach(function (el) {
+    const clone = el.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    track.insertBefore(clone, track.firstChild);
+  });
+
+  // Salta para o conjunto real (posição central)
+  const gap    = 16;
+  const itemW  = 104 + gap; // width + gap
+  const offset = n * itemW;
+  track.scrollLeft = offset;
+
+  // Teleporta silenciosamente quando chega nas bordas dos clones
+  function checkLoop() {
+    if (track.scrollLeft < offset * 0.5) {
+      track.scrollLeft += offset;
+    } else if (track.scrollLeft >= offset * 1.5) {
+      track.scrollLeft -= offset;
+    }
+  }
+
+  let scrollTimer;
+  track.addEventListener('scroll', function () {
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(checkLoop, 80);
+  });
+
+  // Drag-to-scroll com mouse
+  var isDragging = false, startX, startScroll;
+
+  track.addEventListener('mousedown', function (e) {
+    isDragging = true;
+    startX     = e.pageX - track.offsetLeft;
+    startScroll = track.scrollLeft;
+    track.classList.add('bj-dragging');
+  });
+
+  document.addEventListener('mouseup', function () {
+    if (!isDragging) return;
+    isDragging = false;
+    track.classList.remove('bj-dragging');
+  });
+
+  document.addEventListener('mousemove', function (e) {
+    if (!isDragging) return;
+    e.preventDefault();
+    var x    = e.pageX - track.offsetLeft;
+    var walk = (x - startX) * 1.4;
+    track.scrollLeft = startScroll - walk;
+  });
+});

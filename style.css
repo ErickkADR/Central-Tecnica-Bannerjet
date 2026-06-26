@@ -210,21 +210,31 @@ header {
 /* =============================================
    ICON MENU (Index)
 ============================================= */
-.icon-section { padding: 36px 0 12px; }
+.icon-section { padding: 36px 0 12px; overflow: hidden; }
 
 .icon-menu {
   display: flex;
-  justify-content: center;
   gap: 16px;
-  flex-wrap: wrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 8px 24px 16px;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
 }
+.icon-menu::-webkit-scrollbar { display: none; }
+.icon-menu.bj-dragging { cursor: grabbing; }
 
 .icon-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 120px;
+  width: 104px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
   cursor: pointer;
   text-decoration: none;
   color: var(--text-1);
@@ -1291,9 +1301,7 @@ footer {
   .hero-title { font-size: 36px; }
   .page-hero-title { font-size: 28px; }
 
-  .icon-menu { gap: 10px; }
-  .icon-item { width: 90px; }
-  .icon-circle { width: 68px; height: 68px; font-size: 26px; }
+  .icon-circle { width: 72px; height: 72px; font-size: 26px; }
   .icon-label span { font-size: 11px; }
 
   .machine-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }

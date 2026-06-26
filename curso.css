@@ -771,10 +771,15 @@
 .quiz-opt-text { font-size: 14px; color: var(--text-1); line-height: 1.4; }
 
 .quiz-footer {
-  padding: 16px 28px 24px;
+  padding: 16px 28px 20px;
   display: flex;
   justify-content: flex-end;
   gap: 10px;
+  position: sticky;
+  bottom: 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  z-index: 2;
 }
 .quiz-btn {
   padding: 10px 24px;
