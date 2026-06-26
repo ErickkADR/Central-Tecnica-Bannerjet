@@ -301,35 +301,45 @@ function bjSearchHighlight(items) {
 }
 
 // ─── ICON CAROUSEL (Index) ────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', function () {
-  const track = document.getElementById('icon-menu');
+window.addEventListener('load', function () {
+  const track   = document.getElementById('icon-menu');
   const btnPrev = document.getElementById('icon-prev');
   const btnNext = document.getElementById('icon-next');
   if (!track || !btnPrev || !btnNext) return;
 
-  // Clona itens no início e no fim para loop infinito
+  // Guarda para não inicializar duas vezes
+  if (track.dataset.carouselReady) return;
+  track.dataset.carouselReady = '1';
+
+  // Captura os itens originais ANTES de clonar
   const origItems = Array.from(track.children);
   const n = origItems.length;
 
+  // Clona no fim
   origItems.forEach(function (el) {
     const c = el.cloneNode(true);
     c.setAttribute('aria-hidden', 'true');
     track.appendChild(c);
   });
+  // Clona no início
   origItems.forEach(function (el) {
     const c = el.cloneNode(true);
     c.setAttribute('aria-hidden', 'true');
     track.insertBefore(c, track.firstChild);
   });
 
-  const itemW = 104 + 16; // largura + gap
-  const loopW = n * itemW;
-  const step  = itemW * 3; // avança 3 itens por clique
+  // Mede a largura real do item já renderizado
+  const firstItem = track.querySelector('.icon-item');
+  const style     = getComputedStyle(track);
+  const gap       = parseFloat(style.gap) || 16;
+  const itemW     = firstItem.offsetWidth + gap;
+  const loopW     = n * itemW;
+  const step      = itemW * 3;
 
-  // Posiciona no início do conjunto real (sem animação)
+  // Posiciona no conjunto real sem animação
   track.scrollLeft = loopW;
 
-  // Teleporta silenciosamente ao atingir as bordas dos clones
+  // Teleporta silenciosamente quando chega nas bordas dos clones
   function checkLoop() {
     if (track.scrollLeft < loopW * 0.4) {
       track.scrollLeft += loopW;
@@ -338,21 +348,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Lock para evitar cliques simultâneos que causam duplicação
-  let locked = false;
+  // Lock — impede cliques simultâneos
+  var locked = false;
 
   function slide(dir) {
     if (locked) return;
     locked = true;
-
-    const target = track.scrollLeft + dir * step;
-    track.scrollTo({ left: target, behavior: 'smooth' });
-
-    // Aguarda o scroll terminar (~350ms) e só então libera + verifica loop
-    setTimeout(function () {
-      checkLoop();
-      locked = false;
-    }, 380);
+    track.scrollTo({ left: track.scrollLeft + dir * step, behavior: 'smooth' });
+    setTimeout(function () { checkLoop(); locked = false; }, 400);
   }
 
   btnNext.addEventListener('click', function () { slide(1); });
