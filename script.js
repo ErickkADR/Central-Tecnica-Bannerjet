@@ -324,38 +324,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const itemW = 104 + 16; // largura + gap
   const loopW = n * itemW;
+  const step  = itemW * 3; // avança 3 itens por clique
 
   // Posiciona no início do conjunto real (sem animação)
-  track.style.scrollBehavior = 'auto';
   track.scrollLeft = loopW;
-  track.style.scrollBehavior = '';
 
   // Teleporta silenciosamente ao atingir as bordas dos clones
   function checkLoop() {
     if (track.scrollLeft < loopW * 0.4) {
-      track.style.scrollBehavior = 'auto';
       track.scrollLeft += loopW;
-      track.style.scrollBehavior = '';
     } else if (track.scrollLeft >= loopW * 1.6) {
-      track.style.scrollBehavior = 'auto';
       track.scrollLeft -= loopW;
-      track.style.scrollBehavior = '';
     }
   }
 
-  let scrollTimer;
-  track.addEventListener('scroll', function () {
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(checkLoop, 60);
-  });
+  // Lock para evitar cliques simultâneos que causam duplicação
+  let locked = false;
 
-  // Setas — avança/recua 3 itens por clique
-  const step = itemW * 3;
+  function slide(dir) {
+    if (locked) return;
+    locked = true;
 
-  btnNext.addEventListener('click', function () {
-    track.scrollBy({ left: step, behavior: 'smooth' });
-  });
-  btnPrev.addEventListener('click', function () {
-    track.scrollBy({ left: -step, behavior: 'smooth' });
-  });
+    const target = track.scrollLeft + dir * step;
+    track.scrollTo({ left: target, behavior: 'smooth' });
+
+    // Aguarda o scroll terminar (~350ms) e só então libera + verifica loop
+    setTimeout(function () {
+      checkLoop();
+      locked = false;
+    }, 380);
+  }
+
+  btnNext.addEventListener('click', function () { slide(1); });
+  btnPrev.addEventListener('click', function () { slide(-1); });
 });
