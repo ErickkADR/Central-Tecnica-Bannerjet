@@ -302,66 +302,60 @@ function bjSearchHighlight(items) {
 
 // ─── ICON CAROUSEL (Index) ────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', function () {
-  const track = document.querySelector('.icon-menu');
-  if (!track) return;
+  const track = document.getElementById('icon-menu');
+  const btnPrev = document.getElementById('icon-prev');
+  const btnNext = document.getElementById('icon-next');
+  if (!track || !btnPrev || !btnNext) return;
 
   // Clona itens no início e no fim para loop infinito
   const origItems = Array.from(track.children);
   const n = origItems.length;
 
   origItems.forEach(function (el) {
-    const clone = el.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    track.appendChild(clone);
+    const c = el.cloneNode(true);
+    c.setAttribute('aria-hidden', 'true');
+    track.appendChild(c);
   });
   origItems.forEach(function (el) {
-    const clone = el.cloneNode(true);
-    clone.setAttribute('aria-hidden', 'true');
-    track.insertBefore(clone, track.firstChild);
+    const c = el.cloneNode(true);
+    c.setAttribute('aria-hidden', 'true');
+    track.insertBefore(c, track.firstChild);
   });
 
-  // Salta para o conjunto real (posição central)
-  const gap    = 16;
-  const itemW  = 104 + gap; // width + gap
-  const offset = n * itemW;
-  track.scrollLeft = offset;
+  const itemW = 104 + 16; // largura + gap
+  const loopW = n * itemW;
 
-  // Teleporta silenciosamente quando chega nas bordas dos clones
+  // Posiciona no início do conjunto real (sem animação)
+  track.style.scrollBehavior = 'auto';
+  track.scrollLeft = loopW;
+  track.style.scrollBehavior = '';
+
+  // Teleporta silenciosamente ao atingir as bordas dos clones
   function checkLoop() {
-    if (track.scrollLeft < offset * 0.5) {
-      track.scrollLeft += offset;
-    } else if (track.scrollLeft >= offset * 1.5) {
-      track.scrollLeft -= offset;
+    if (track.scrollLeft < loopW * 0.4) {
+      track.style.scrollBehavior = 'auto';
+      track.scrollLeft += loopW;
+      track.style.scrollBehavior = '';
+    } else if (track.scrollLeft >= loopW * 1.6) {
+      track.style.scrollBehavior = 'auto';
+      track.scrollLeft -= loopW;
+      track.style.scrollBehavior = '';
     }
   }
 
   let scrollTimer;
   track.addEventListener('scroll', function () {
     clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(checkLoop, 80);
+    scrollTimer = setTimeout(checkLoop, 60);
   });
 
-  // Drag-to-scroll com mouse
-  var isDragging = false, startX, startScroll;
+  // Setas — avança/recua 3 itens por clique
+  const step = itemW * 3;
 
-  track.addEventListener('mousedown', function (e) {
-    isDragging = true;
-    startX     = e.pageX - track.offsetLeft;
-    startScroll = track.scrollLeft;
-    track.classList.add('bj-dragging');
+  btnNext.addEventListener('click', function () {
+    track.scrollBy({ left: step, behavior: 'smooth' });
   });
-
-  document.addEventListener('mouseup', function () {
-    if (!isDragging) return;
-    isDragging = false;
-    track.classList.remove('bj-dragging');
-  });
-
-  document.addEventListener('mousemove', function (e) {
-    if (!isDragging) return;
-    e.preventDefault();
-    var x    = e.pageX - track.offsetLeft;
-    var walk = (x - startX) * 1.4;
-    track.scrollLeft = startScroll - walk;
+  btnPrev.addEventListener('click', function () {
+    track.scrollBy({ left: -step, behavior: 'smooth' });
   });
 });
