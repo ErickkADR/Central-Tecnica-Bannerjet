@@ -6,11 +6,13 @@ Portal técnico interno para a **Bannerjet Group**, reunindo em um único lugar 
 
 ## Prints
 
-<div align="center">
-  <img src="docs/02-login.png" alt="Tela de login da Central Técnica" width="420" />
-  <br /><br />
-  <img src="docs/01-home.png" alt="Dashboard com categorias e catálogo de equipamentos" width="800" />
-</div>
+| Login | Dashboard |
+|---|---|
+| ![Tela de login da Central Técnica](docs/02-login.png) | ![Dashboard com categorias e catálogo de equipamentos](docs/01-home.png) |
+
+| Página de equipamento | Curso técnico (progressão por módulos) |
+|---|---|
+| ![Página de equipamento — A3 Pro](docs/03-equipamento.png) | ![Curso técnico com módulos liberados em sequência](docs/04-curso.png) |
 
 ## Sobre o projeto
 
@@ -24,7 +26,7 @@ Centralizar o suporte técnico interno da empresa: reduzir o tempo que um técni
 
 - **Login com área restrita** — conteúdo só é acessado após autenticação
 - **Catálogo de equipamentos** organizado por categoria (plotters de recorte, laminadoras, impressoras UV/eco-solvente, laser, guilhotinas) com página própria para cada modelo
-- **Cursos técnicos** e **vídeos tutoriais**
+- **Cursos técnicos com progressão por módulos** — cada curso é liberado ao concluir o anterior — e **vídeos tutoriais**
 - **Manuais técnicos** e **catálogo de peças/componentes**
 - **Central de firmwares** e **perfis de cor**
 - **Auxílio de erros comuns** (plotter, laser, impressoras) e **anotações**
