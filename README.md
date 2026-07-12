@@ -10,9 +10,13 @@ Portal técnico interno para a **Bannerjet Group**, reunindo em um único lugar 
 |---|---|
 | ![Tela de login da Central Técnica](docs/02-login.png) | ![Dashboard com categorias e catálogo de equipamentos](docs/01-home.png) |
 
-| Página de equipamento | Curso técnico (progressão por módulos) |
+| Curso técnico (progressão por módulos) | Manuais técnicos |
 |---|---|
-| ![Página de equipamento — A3 Pro](docs/03-equipamento.png) | ![Curso técnico com módulos liberados em sequência](docs/04-curso.png) |
+| ![Curso técnico com módulos liberados em sequência](docs/04-curso.png) | ![Catálogo de manuais por equipamento](docs/05-manuais.png) |
+
+| Peças e componentes | Firmwares disponíveis |
+|---|---|
+| ![Catálogo de peças por equipamento](docs/06-pecas.png) | ![Busca e histórico de firmwares por equipamento](docs/07-firmwares.png) |
 
 ## Sobre o projeto
 
